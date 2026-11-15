@@ -1,0 +1,125 @@
+<section class="section section--{{ section.settings.background }}" id="{{ section.settings.anchor | default: 'reviews' }}">
+  <div class="container container--text">
+    {% render 'section-head', en: section.settings.en, title: section.settings.title %}
+    {%- liquid
+      assign rating = product.metafields.reviews.rating.value
+      assign rating_count = product.metafields.reviews.rating_count.value
+    -%}
+    {%- if rating != blank or section.settings.source_rating != blank -%}
+      <div class="review-summary card">
+        <div class="review-summary__main">
+          {%- if rating != blank -%}
+            <span class="review-summary__label">このストアのレビュー</span>
+            <span class="review-summary__avg"><span class="num">{{ rating.rating | round: 2 }}</span>{% render 'stars', rating: rating.rating, size: 18 %}</span>
+            <span class="review-summary__count">{{ rating_count | default: 0 }}件</span>
+          {%- else -%}
+            <span class="review-summary__label">{{ section.settings.source_label }}</span>
+            <span class="review-summary__avg"><span class="num">{{ section.settings.source_rating }}</span>{% render 'stars', rating: section.settings.source_rating, size: 18 %}</span>
+            <span class="review-summary__count">{{ section.settings.source_count }}</span>
+          {%- endif -%}
+        </div>
+        {%- if section.settings.text != blank -%}<p class="review-summary__text">{{ section.settings.text }}</p>{%- endif -%}
+      </div>
+    {%- endif -%}
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+        {%- when '@app' -%}
+          <div class="review-app">{% render block %}</div>
+      {%- endcase -%}
+    {%- endfor -%}
+    {%- if section.blocks.size == 0 and request.design_mode -%}
+      <p class="design-note">［テーマエディタのみ表示］レビューアプリ（Judge.me など）を入れたら、このセクションに「アプリブロック」を追加すると購入者レビューが表示されます。</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "レビュー",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "en",
+      "label": "英字の小見出し",
+      "default": "REVIEW"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "見出し",
+      "default": "お客様の声"
+    },
+    {
+      "type": "paragraph",
+      "content": "レビューアプリのデータ（reviews.rating）がない間は、下の外部評価を表示します。時点を必ず書いてください。"
+    },
+    {
+      "type": "text",
+      "id": "source_label",
+      "label": "外部評価の見出し",
+      "default": "楽天市場のレビュー（2026/11/16時点）"
+    },
+    {
+      "type": "text",
+      "id": "source_rating",
+      "label": "外部評価の平均（例：4.33）"
+    },
+    {
+      "type": "text",
+      "id": "source_count",
+      "label": "外部評価の件数（例：129件）"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "補足文"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "背景",
+      "default": "surface",
+      "options": [
+        {
+          "value": "white",
+          "label": "白"
+        },
+        {
+          "value": "surface",
+          "label": "グレー"
+        },
+        {
+          "value": "tint",
+          "label": "淡いグリーン"
+        },
+        {
+          "value": "dark",
+          "label": "濃い色"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "ページ内リンク用ID",
+      "default": "reviews"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ],
+  "enabled_on": {
+    "templates": [
+      "product"
+    ]
+  },
+  "presets": [
+    {
+      "name": "レビュー"
+    }
+  ]
+}
+{% endschema %}

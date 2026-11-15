@@ -1,0 +1,26 @@
+{%- comment -%}
+  フレーバーの色を返す。Shopifyのスウォッチ → テーマ設定「フレーバーの色」→ 既定色 の順。
+  {% render 'swatch-color', value: option_value %}
+{%- endcomment -%}
+{%- liquid
+  assign color = ''
+  if value.swatch.color
+    assign color = value.swatch.color
+  endif
+  if color == blank
+    assign name = value.name | default: value | append: '' | strip
+    assign lines = settings.swatch_colors | newline_to_br | split: '<br />'
+    for line in lines
+      assign parts = line | strip | split: ':'
+      assign key = parts.first | strip
+      if key == name
+        assign color = parts.last | strip
+        break
+      endif
+    endfor
+  endif
+  if color == blank
+    assign color = '#C9D0CB'
+  endif
+-%}
+{{- color -}}

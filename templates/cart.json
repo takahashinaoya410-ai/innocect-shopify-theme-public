@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-cart",
+      "settings": {
+        "upsell_products": [
+          "eaa-600g",
+          "glutamine-1kg",
+          "resistant-dextrin-2kg",
+          "creatine-1kg",
+          "soy-protein-1kg"
+        ],
+        "note": "定期便の商品は、購入手続きでお届け周期を確認できます。まとめ買い割と定期便割引は併用できません。"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

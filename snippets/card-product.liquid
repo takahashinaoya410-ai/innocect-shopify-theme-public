@@ -1,0 +1,39 @@
+{%- comment -%} {% render 'card-product', product: product, rank: 1 %} {%- endcomment -%}
+<a href="{{ product.url }}" class="card-product">
+  <div class="card-product__media">
+    {%- if rank -%}<span class="rank{% if rank > 3 %} rank--sub{% endif %}">{{ rank }}</span>{%- endif -%}
+    {%- if product.featured_media -%}
+      {{ product.featured_media | image_url: width: 600 | image_tag: loading: 'lazy', widths: '240, 360, 480, 600', sizes: '(min-width: 990px) 220px, 45vw', alt: product.featured_media.alt, class: 'card-product__img' }}
+    {%- else -%}
+      {% render 'pouch-placeholder', product: product %}
+    {%- endif -%}
+    {%- unless product.available -%}<span class="badge badge--dark card-product__soldout">売り切れ</span>{%- endunless -%}
+  </div>
+  <div class="card-product__tags">
+    {%- for tag in product.tags -%}
+      {%- if tag contains 'badge:' -%}<span class="tag-chip">{{ tag | remove_first: 'badge:' }}</span>{%- endif -%}
+    {%- endfor -%}
+  </div>
+  <h3 class="card-product__title">{{ product.title }}</h3>
+  {%- assign rating = product.metafields.reviews.rating.value -%}
+  {%- if rating != blank -%}
+    <div class="card-product__rating">
+      {% render 'stars', rating: rating.rating, size: 12 %}
+      <span class="num">{{ rating.rating | round: 2 }}</span>
+      <span>（{{ product.metafields.reviews.rating_count.value | default: 0 }}）</span>
+    </div>
+  {%- endif -%}
+  {%- assign opt = product.options_with_values.first -%}
+  {%- if opt.values.size > 1 -%}
+    <div class="card-product__dots" aria-label="{{ opt.name }}{{ opt.values.size }}種">
+      {%- for value in opt.values limit: 6 -%}
+        <span class="dot" style="background: {% render 'swatch-color', value: value %};"></span>
+      {%- endfor -%}
+      <span class="card-product__count">{{ opt.values.size }}種</span>
+    </div>
+  {%- endif -%}
+  <div class="card-product__price">
+    <span class="price num">{{ product.price | money }}{% if product.price_varies %}〜{% endif %}</span>
+    <span class="card-product__per">{% render 'per-serving', product: product %}</span>
+  </div>
+</a>

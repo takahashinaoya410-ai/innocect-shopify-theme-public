@@ -1,0 +1,117 @@
+<section class="section section--{{ section.settings.background }}" id="{{ section.settings.anchor | default: section.id }}">
+  <div class="container container--text">
+    {% render 'section-head', en: section.settings.en, title: section.settings.title, lead: section.settings.lead %}
+    <div class="faq">
+      {%- for block in section.blocks -%}
+        <details class="faq__item"{% if forloop.first and section.settings.open_first %} open{% endif %} {{ block.shopify_attributes }}>
+          <summary class="faq__q"><span class="faq__mark num">Q</span><span class="faq__qtext">{{ block.settings.question }}</span><span class="faq__plus">{% render 'icon', name: 'plus', size: 18 %}</span></summary>
+          <div class="faq__a"><span class="faq__mark faq__mark--a num">A</span><div>{{ block.settings.answer | newline_to_br }}</div></div>
+        </details>
+      {%- endfor -%}
+    </div>
+    {%- if section.blocks.size > 0 -%}
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {%- for block in section.blocks -%}
+              { "@type": "Question", "name": {{ block.settings.question | json }}, "acceptedAnswer": { "@type": "Answer", "text": {{ block.settings.answer | json }} } }{% unless forloop.last %},{% endunless %}
+            {%- endfor -%}
+          ]
+        }
+      </script>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "よくある質問",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "en",
+      "label": "英字の小見出し",
+      "default": "FAQ"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "見出し",
+      "default": "よくある質問"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "背景",
+      "default": "white",
+      "options": [
+        {
+          "value": "white",
+          "label": "白"
+        },
+        {
+          "value": "surface",
+          "label": "グレー"
+        },
+        {
+          "value": "tint",
+          "label": "淡いグリーン"
+        },
+        {
+          "value": "dark",
+          "label": "濃い色"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "ページ内リンク用ID",
+      "info": "例：reviews（半角英数字）"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first",
+      "label": "最初の質問を開いておく",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "qa",
+      "name": "質問",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "質問",
+          "default": "質問"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "回答",
+          "default": "回答"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "presets": [
+    {
+      "name": "よくある質問",
+      "blocks": [
+        {
+          "type": "qa"
+        },
+        {
+          "type": "qa"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

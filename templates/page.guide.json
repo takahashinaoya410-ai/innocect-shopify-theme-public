@@ -1,0 +1,194 @@
+{
+  "sections": {
+    "head": {
+      "type": "rich-text",
+      "settings": {
+        "en": "GUIDE",
+        "title": "はじめての方へ",
+        "text": "<p>INNOCECTは、プロテイン・アミノ酸・食物繊維を、毎日続けやすい価格でお届けする国内ニュートリションブランドです。はじめての方に、選び方と飲み方をご案内します。</p>",
+        "background": "white"
+      }
+    },
+    "compare": {
+      "type": "comparison-table",
+      "blocks": {
+        "g1": {
+          "type": "row",
+          "settings": {
+            "cells": "原料|牛乳由来（乳清）|大豆由来"
+          }
+        },
+        "g2": {
+          "type": "row",
+          "settings": {
+            "cells": "口当たり|ミルク系で溶けやすい|大豆の風味。ダマができることも"
+          }
+        },
+        "g3": {
+          "type": "row",
+          "settings": {
+            "cells": "よく飲まれるタイミング|トレーニングのあと|朝食・間食・寝る前"
+          }
+        },
+        "g4": {
+          "type": "row",
+          "settings": {
+            "cells": "INNOCECTの商品|ホエイプロテイン 3kg|ソイ 3kg（人工甘味料不使用）／ソイ 1kg"
+          }
+        }
+      },
+      "block_order": [
+        "g1",
+        "g2",
+        "g3",
+        "g4"
+      ],
+      "settings": {
+        "en": "WHEY / SOY",
+        "title": "ホエイとソイ、どちらを選ぶ？",
+        "header": "|ホエイ|ソイ",
+        "highlight_column": 0,
+        "min_width": 340,
+        "note": "どちらも1杯（30g）でたんぱく質約20gをとれます。",
+        "background": "white"
+      }
+    },
+    "purpose": {
+      "type": "purpose-links",
+      "blocks": {
+        "pu5": {
+          "type": "link",
+          "settings": {
+            "icon": "sparkle",
+            "title": "はじめてのプロテイン",
+            "text": "ソイ1kg・ホエイ3kg",
+            "link": "/collections/beginner"
+          }
+        },
+        "pu6": {
+          "type": "link",
+          "settings": {
+            "icon": "dumbbell",
+            "title": "トレーニング・ボディメイクに",
+            "text": "ホエイ・EAA・クレアチン・グルタミン",
+            "link": "/collections/training"
+          }
+        },
+        "pu7": {
+          "type": "link",
+          "settings": {
+            "icon": "sun",
+            "title": "朝食や間食のたんぱく質補給に",
+            "text": "ソイ3kg・ソイ1kg・ホエイ",
+            "link": "/collections/daily-protein"
+          }
+        },
+        "pu8": {
+          "type": "link",
+          "settings": {
+            "icon": "leaf",
+            "title": "人工甘味料が気になる方に",
+            "text": "ソイ3kg・クレアチン・グルタミン など",
+            "link": "/collections/no-artificial-sweetener"
+          }
+        }
+      },
+      "block_order": [
+        "pu5",
+        "pu6",
+        "pu7",
+        "pu8"
+      ],
+      "settings": {
+        "en": "PURPOSE",
+        "title": "目的から選ぶ",
+        "background": "surface"
+      }
+    },
+    "howto": {
+      "type": "how-to",
+      "blocks": {
+        "s9": {
+          "type": "step",
+          "settings": {
+            "icon": "cup",
+            "title": "水か牛乳を入れる",
+            "text": "シェイカーに水や牛乳を入れます。量は商品ページをご覧ください。"
+          }
+        },
+        "s10": {
+          "type": "step",
+          "settings": {
+            "icon": "spoon",
+            "title": "粉を入れる",
+            "text": "付属スプーンで量って入れます。"
+          }
+        },
+        "s11": {
+          "type": "step",
+          "settings": {
+            "icon": "shake",
+            "title": "よく振る",
+            "text": "フタをしっかり閉めて、よく振れば完成です。"
+          }
+        }
+      },
+      "block_order": [
+        "s9",
+        "s10",
+        "s11"
+      ],
+      "settings": {
+        "en": "HOW TO",
+        "title": "プロテインの作り方",
+        "tip_label": "ダマを防ぐコツ：",
+        "tip": "粉より先に水や牛乳を入れると、ダマができにくくなります。",
+        "background": "white"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "fq12": {
+          "type": "qa",
+          "settings": {
+            "question": "プロテインは1日何杯飲めばいいですか？",
+            "answer": "1日1〜2杯を目安に、食事でとれるたんぱく質の量に合わせてお召し上がりください。"
+          }
+        },
+        "fq13": {
+          "type": "qa",
+          "settings": {
+            "question": "ホエイとソイ、どちらがいいですか？",
+            "answer": "トレーニングのあとに飲むならホエイ、朝食や間食の代わりにするならソイを選ぶ方が多いです。味の好みで選んでも大丈夫です。"
+          }
+        },
+        "fq14": {
+          "type": "qa",
+          "settings": {
+            "question": "はじめてなので、まずは少量で試したいです",
+            "answer": "ソイプロテインは1kgサイズもあります。味を試してから、続けやすい3kgに切り替える方も多いです。"
+          }
+        }
+      },
+      "block_order": [
+        "fq12",
+        "fq13",
+        "fq14"
+      ],
+      "settings": {
+        "en": "FAQ",
+        "title": "よくある質問",
+        "open_first": true,
+        "background": "surface"
+      }
+    }
+  },
+  "order": [
+    "head",
+    "compare",
+    "purpose",
+    "howto",
+    "faq"
+  ]
+}

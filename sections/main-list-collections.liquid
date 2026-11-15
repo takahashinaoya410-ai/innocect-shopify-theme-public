@@ -1,0 +1,23 @@
+<div class="container section">
+  <h1 class="page-title">{{ section.settings.title }}</h1>
+  <div class="cat-cards">
+    {%- for collection in collections -%}
+      {%- unless collection.handle == 'frontpage' -%}
+        <a class="cat-card card" href="{{ collection.url }}">
+          <span class="cat-card__media">
+            {%- if collection.featured_image -%}{{ collection.featured_image | image_url: width: 240 | image_tag: loading: 'lazy', alt: collection.title }}{%- else -%}<span class="pouch pouch--sm" style="--pouch: var(--c-brand);"><span class="pouch__brand">INNOCECT</span></span>{%- endif -%}
+          </span>
+          <span class="cat-card__text"><span class="cat-card__title">{{ collection.title }}</span><span class="cat-card__sub">{{ collection.products_count }}商品</span></span>
+          <span class="cat-card__chev">{% render 'icon', name: 'chev', size: 20 %}</span>
+        </a>
+      {%- endunless -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "コレクション一覧",
+  "settings": [{ "type": "text", "id": "title", "label": "見出し", "default": "商品カテゴリ" }]
+}
+{% endschema %}

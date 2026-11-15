@@ -1,0 +1,189 @@
+<section class="section section--compact section--{{ section.settings.background }}">
+  <div class="container">
+    <ul class="trust" role="list">
+      {%- for block in section.blocks -%}
+        <li class="trust__item" {{ block.shopify_attributes }}>
+          <span class="icon-circle">{% render 'icon', name: block.settings.icon, size: 22 %}</span>
+          <span class="trust__text">
+            <span class="trust__title">{% render 'tokens', text: block.settings.title, product: product %}</span>
+            {%- if block.settings.text != blank -%}<span class="trust__sub">{% render 'tokens', text: block.settings.text, product: product %}</span>{%- endif -%}
+          </span>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "信頼バー",
+  "tag": "div",
+  "class": "section-trust",
+  "settings": [
+    {
+      "type": "select",
+      "id": "background",
+      "label": "背景",
+      "default": "surface",
+      "options": [
+        {
+          "value": "white",
+          "label": "白"
+        },
+        {
+          "value": "surface",
+          "label": "グレー"
+        },
+        {
+          "value": "tint",
+          "label": "淡いグリーン"
+        },
+        {
+          "value": "dark",
+          "label": "濃い色"
+        }
+      ]
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "項目",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "アイコン",
+          "default": "check",
+          "options": [
+            {
+              "value": "check",
+              "label": "チェック"
+            },
+            {
+              "value": "factory",
+              "label": "工場"
+            },
+            {
+              "value": "leaf",
+              "label": "葉（無添加）"
+            },
+            {
+              "value": "shield",
+              "label": "盾（安心）"
+            },
+            {
+              "value": "yen",
+              "label": "円"
+            },
+            {
+              "value": "scale",
+              "label": "はかり（容量）"
+            },
+            {
+              "value": "chat",
+              "label": "吹き出し（実績）"
+            },
+            {
+              "value": "sparkle",
+              "label": "キラキラ（味）"
+            },
+            {
+              "value": "dumbbell",
+              "label": "ダンベル"
+            },
+            {
+              "value": "flask",
+              "label": "フラスコ（成分）"
+            },
+            {
+              "value": "cup",
+              "label": "カップ"
+            },
+            {
+              "value": "spoon",
+              "label": "スプーン"
+            },
+            {
+              "value": "shake",
+              "label": "シェイカー"
+            },
+            {
+              "value": "sun",
+              "label": "太陽（朝）"
+            },
+            {
+              "value": "moon",
+              "label": "月（夜）"
+            },
+            {
+              "value": "clock",
+              "label": "時計（間食）"
+            },
+            {
+              "value": "drop",
+              "label": "しずく"
+            },
+            {
+              "value": "bean",
+              "label": "豆"
+            },
+            {
+              "value": "box",
+              "label": "箱"
+            },
+            {
+              "value": "tag",
+              "label": "タグ"
+            },
+            {
+              "value": "repeat",
+              "label": "定期便"
+            },
+            {
+              "value": "truck",
+              "label": "配送"
+            },
+            {
+              "value": "gift",
+              "label": "ギフト"
+            },
+            {
+              "value": "info",
+              "label": "情報"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "見出し",
+          "info": "{per} などで価格から自動計算した値を入れられます"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "補足"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "信頼バー",
+      "blocks": [
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        },
+        {
+          "type": "item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

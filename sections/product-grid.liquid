@@ -1,0 +1,111 @@
+<section class="section section--{{ section.settings.background }}" id="{{ section.settings.anchor | default: section.id }}">
+  <div class="container">
+    {% render 'section-head', en: section.settings.en, title: section.settings.title, lead: section.settings.lead %}
+    {%- assign c = section.settings.collection -%}
+    <div class="product-grid">
+      {%- if c != blank and c.products_count > 0 -%}
+        {%- for p in c.products limit: section.settings.limit -%}
+          {%- if section.settings.show_rank -%}{% render 'card-product', product: p, rank: forloop.index %}{%- else -%}{% render 'card-product', product: p %}{%- endif -%}
+        {%- endfor -%}
+      {%- else -%}
+        {%- for i in (1..4) -%}<div class="card-product card-product--ph"><div class="card-product__media">{{ 'product-1' | placeholder_svg_tag: 'placeholder' }}</div><p class="card-product__title">商品名</p></div>{%- endfor -%}
+      {%- endif -%}
+    </div>
+    {%- if section.settings.button_label != blank -%}
+      <div class="btn-row btn-row--center"><a class="btn btn--outline" href="{{ section.settings.button_link | default: c.url | default: routes.all_products_collection_url }}">{{ section.settings.button_label }}</a></div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "商品一覧（ランキング）",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "en",
+      "label": "英字の小見出し",
+      "default": "RANKING"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "見出し",
+      "default": "人気ランキング"
+    },
+    {
+      "type": "textarea",
+      "id": "lead",
+      "label": "リード文"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "背景",
+      "default": "white",
+      "options": [
+        {
+          "value": "white",
+          "label": "白"
+        },
+        {
+          "value": "surface",
+          "label": "グレー"
+        },
+        {
+          "value": "tint",
+          "label": "淡いグリーン"
+        },
+        {
+          "value": "dark",
+          "label": "濃い色"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "ページ内リンク用ID",
+      "info": "例：reviews（半角英数字）"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "コレクション",
+      "info": "コレクションの並び順がそのまま順位になります"
+    },
+    {
+      "type": "range",
+      "id": "limit",
+      "label": "表示数",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "checkbox",
+      "id": "show_rank",
+      "label": "順位の数字を出す",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "ボタン",
+      "default": "すべての商品を見る"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "ボタンのリンク"
+    }
+  ],
+  "presets": [
+    {
+      "name": "商品一覧（ランキング）"
+    }
+  ]
+}
+{% endschema %}

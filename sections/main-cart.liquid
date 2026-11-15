@@ -1,0 +1,169 @@
+{%- liquid
+  assign threshold = settings.free_shipping_threshold | default: 0 | times: 100
+  assign remaining = threshold | minus: cart.total_price
+  assign progress = 100
+  if threshold > 0 and remaining > 0
+    assign progress = cart.total_price | times: 100 | divided_by: threshold
+  endif
+  assign onetime_qty = 0
+  for item in cart.items
+    unless item.selling_plan_allocation
+      assign onetime_qty = onetime_qty | plus: item.quantity
+    endunless
+  endfor
+  assign t1 = settings.bundle_tier1_qty
+  assign t2 = settings.bundle_tier2_qty
+-%}
+<div class="cart-page container" data-cart-root data-section-id="{{ section.id }}">
+  <h1 class="page-title">カート</h1>
+
+  {%- if cart.item_count > 0 -%}
+    <div class="cart-layout">
+      <div class="cart-main">
+        {%- if threshold > 0 -%}
+          <div class="cart-box cart-box--ship">
+            {%- if remaining > 0 -%}
+              <p class="cart-box__title">あと<span class="num">{{ remaining | money }}</span>で送料無料</p>
+            {%- else -%}
+              <p class="cart-box__title">{% render 'icon', name: 'check', size: 18, stroke: 2.4 %}送料無料ラインを達成しました</p>
+            {%- endif -%}
+            <div class="progress" role="progressbar" aria-label="送料無料まで" aria-valuemin="0" aria-valuemax="100" aria-valuenow="{{ progress }}"><span style="width: {{ progress }}%;"></span></div>
+          </div>
+        {%- endif -%}
+
+        {%- if settings.bundle_enabled and onetime_qty > 0 -%}
+          <div class="cart-box cart-box--bundle">
+            <p class="cart-box__title cart-box__title--accent">{% render 'icon', name: 'tag', size: 18 %}
+              {%- if onetime_qty < t1 -%}
+                {%- assign need = t1 | minus: onetime_qty -%}あと{{ need }}点追加で、まとめ買い割{{ settings.bundle_tier1_percent }}%OFF
+              {%- elsif onetime_qty < t2 -%}
+                {%- assign need = t2 | minus: onetime_qty -%}まとめ買い割{{ settings.bundle_tier1_percent }}%OFF適用中｜あと{{ need }}点で{{ settings.bundle_tier2_percent }}%OFFに
+              {%- else -%}
+                まとめ買い割{{ settings.bundle_tier2_percent }}%OFF適用中
+              {%- endif -%}
+            </p>
+            {%- if onetime_qty < t2 and section.settings.upsell_products != blank -%}
+              <div class="upsell">
+                {%- assign shown = 0 -%}
+                {%- for p in section.settings.upsell_products -%}
+                  {%- liquid
+                    assign in_cart = false
+                    for item in cart.items
+                      if item.product_id == p.id
+                        assign in_cart = true
+                      endif
+                    endfor
+                  -%}
+                  {%- if in_cart == false and p.available and shown < 3 -%}
+                    {%- assign shown = shown | plus: 1 -%}
+                    {%- assign pv = p.selected_or_first_available_variant -%}
+                    <div class="upsell__item">
+                      <a class="upsell__media" href="{{ p.url }}">
+                        {%- if p.featured_media -%}{{ p.featured_media | image_url: width: 120 | image_tag: loading: 'lazy', alt: p.title }}{%- else -%}{% render 'pouch-placeholder', product: p %}{%- endif -%}
+                      </a>
+                      <span class="upsell__text"><a href="{{ p.url }}" class="upsell__name">{{ p.title }}</a><span class="num">{{ pv.price | money }}</span></span>
+                      <button type="button" class="upsell__add" data-add-variant="{{ pv.id }}" aria-label="{{ p.title | escape }}をカートに追加">{% render 'icon', name: 'plus', size: 20 %}</button>
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        <form action="{{ routes.cart_url }}" method="post" id="CartForm" novalidate>
+          <ul class="cart-items" role="list">
+            {%- for item in cart.items -%}
+              <li class="cart-item" data-line="{{ forloop.index }}" data-key="{{ item.key }}">
+                <a class="cart-item__media" href="{{ item.url }}">
+                  {%- if item.image -%}{{ item.image | image_url: width: 200 | image_tag: loading: 'lazy', alt: item.product.title }}{%- else -%}{% render 'pouch-placeholder', product: item.product %}{%- endif -%}
+                </a>
+                <div class="cart-item__body">
+                  <a class="cart-item__title" href="{{ item.url }}">{{ item.product.title }}</a>
+                  {%- unless item.product.has_only_default_variant -%}<p class="cart-item__variant">{{ item.variant.title }}</p>{%- endunless -%}
+                  {%- if item.selling_plan_allocation -%}<p class="cart-item__plan">{% render 'icon', name: 'repeat', size: 16 %}{{ item.selling_plan_allocation.selling_plan.name }}</p>{%- endif -%}
+
+                  {%- if item.product.selling_plan_groups.size > 0 -%}
+                    {%- assign plan = item.product.selling_plan_groups.first.selling_plans.first -%}
+                    <div class="cart-item__po" role="group" aria-label="購入方法">
+                      {%- unless item.product.requires_selling_plan -%}
+                        <button type="button" class="seg{% unless item.selling_plan_allocation %} is-active{% endunless %}" aria-pressed="{% if item.selling_plan_allocation %}false{% else %}true{% endif %}" data-line-plan="" data-line="{{ forloop.index }}" data-qty="{{ item.quantity }}">1回のみ</button>
+                      {%- endunless -%}
+                      <button type="button" class="seg{% if item.selling_plan_allocation %} is-active{% endif %}" aria-pressed="{% if item.selling_plan_allocation %}true{% else %}false{% endif %}" data-line-plan="{{ plan.id }}" data-line="{{ forloop.index }}" data-qty="{{ item.quantity }}">定期便{% unless item.selling_plan_allocation %}に変更（{{ settings.subscription_percent }}%OFF）{% endunless %}</button>
+                    </div>
+                  {%- endif -%}
+
+                  <div class="cart-item__row">
+                    <div class="qty qty--sm">
+                      <button type="button" class="qty__btn" data-cart-qty="{{ item.quantity | minus: 1 }}" data-line="{{ forloop.index }}" aria-label="{{ item.product.title | escape }}の数量を減らす">{% render 'icon', name: 'minus', size: 16 %}</button>
+                      <label class="visually-hidden" for="Qty-{{ item.key }}">{{ item.product.title }}の数量</label>
+                      <input id="Qty-{{ item.key }}" class="qty__input num" type="number" name="updates[]" value="{{ item.quantity }}" min="0" inputmode="numeric" data-cart-qty-input data-line="{{ forloop.index }}">
+                      <button type="button" class="qty__btn" data-cart-qty="{{ item.quantity | plus: 1 }}" data-line="{{ forloop.index }}" aria-label="{{ item.product.title | escape }}の数量を増やす">{% render 'icon', name: 'plus', size: 16 %}</button>
+                    </div>
+                    <div class="cart-item__price">
+                      {%- if item.original_line_price != item.final_line_price -%}<s class="num">{{ item.original_line_price | money }}</s>{%- endif -%}
+                      <span class="num">{{ item.final_line_price | money }}</span>
+                    </div>
+                  </div>
+                  {%- for discount in item.line_level_discount_allocations -%}
+                    <p class="cart-item__discount">{% render 'icon', name: 'tag', size: 14 %}{{ discount.discount_application.title }}（−{{ discount.amount | money }}）</p>
+                  {%- endfor -%}
+                  <a class="cart-item__remove" href="{{ item.url_to_remove }}" data-cart-remove data-line="{{ forloop.index }}">削除する</a>
+                </div>
+              </li>
+            {%- endfor -%}
+          </ul>
+          <noscript><button type="submit" class="btn btn--outline" name="update">数量を更新</button></noscript>
+        </form>
+      </div>
+
+      <aside class="cart-summary" aria-label="ご注文内容">
+        <p class="cart-summary__title">ご注文内容</p>
+        <dl class="cart-summary__list">
+          <div><dt>小計（{{ cart.item_count }}点）</dt><dd class="num">{{ cart.items_subtotal_price | money }}</dd></div>
+          {%- for app in cart.cart_level_discount_applications -%}
+            <div class="is-discount"><dt>{{ app.title }}</dt><dd class="num">−{{ app.total_allocated_amount | money }}</dd></div>
+          {%- endfor -%}
+          <div><dt>送料</dt><dd>{% if remaining <= 0 and threshold > 0 %}<span class="num">{{ 0 | money }}</span>{% else %}購入手続きで計算{% endif %}</dd></div>
+        </dl>
+        <div class="cart-summary__total"><span>合計（税込）</span><span class="num">{{ cart.total_price | money }}</span></div>
+
+        <div class="coupon">
+          <label for="CartDiscount" class="coupon__label">クーポンコード</label>
+          <div class="coupon__row">
+            <input id="CartDiscount" class="input" type="text" autocomplete="off" placeholder="コードを入力" data-discount-input>
+            <button type="button" class="btn btn--dark btn--sm" data-discount-apply>適用</button>
+          </div>
+          {%- for code in cart.discount_codes -%}
+            <p class="coupon__applied{% unless code.applicable %} is-invalid{% endunless %}" data-code="{{ code.code | escape }}">{{ code.code }}{% if code.applicable %}を適用中{% else %}はこのカートでは使えません{% endif %}
+              <button type="button" class="link-btn" data-discount-remove>解除</button></p>
+          {%- endfor -%}
+          <p class="form-error" data-discount-error role="alert" hidden></p>
+        </div>
+
+        <button type="submit" form="CartForm" name="checkout" class="btn btn--primary btn--xl btn--block">ご購入手続きへ</button>
+        {%- if additional_checkout_buttons -%}
+          <div class="cart-summary__dynamic">{{ content_for_additional_checkout_buttons }}</div>
+        {%- endif -%}
+        <p class="note">{{ section.settings.note }}</p>
+      </aside>
+    </div>
+  {%- else -%}
+    <div class="empty-state">
+      <p>カートに商品が入っていません。</p>
+      <div class="btn-row btn-row--center"><a class="btn btn--primary" href="{{ routes.all_products_collection_url }}">商品を見る</a></div>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "カート",
+  "tag": "section",
+  "class": "section-main-cart",
+  "settings": [
+    { "type": "product_list", "id": "upsell_products", "label": "まとめ買いの提案に出す商品", "limit": 8, "info": "カートに入っていない商品から最大3つ表示します" },
+    { "type": "textarea", "id": "note", "label": "注記", "default": "定期便の商品は、購入手続きでお届け周期を確認できます。まとめ買い割と定期便割引は併用できません。" }
+  ]
+}
+{% endschema %}

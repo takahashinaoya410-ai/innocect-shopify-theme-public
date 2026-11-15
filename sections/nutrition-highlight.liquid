@@ -1,0 +1,117 @@
+<section class="section section--{{ section.settings.background }}" id="{{ section.settings.anchor | default: section.id }}">
+  <div class="container container--narrow">
+    {% render 'section-head', en: section.settings.en, title: section.settings.title, lead: section.settings.lead %}
+    <div class="nutri-grid">
+      {%- for block in section.blocks -%}
+        <div class="nutri-cell{% if forloop.first %} nutri-cell--main{% endif %}" {{ block.shopify_attributes }}>
+          <span class="nutri-cell__label">{{ block.settings.label }}</span>
+          <span class="nutri-cell__value"><span class="num">{{ block.settings.value }}</span>{{ block.settings.unit }}</span>
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.note != blank -%}<p class="note note--center">{{ section.settings.note }}</p>{%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "栄養成分のハイライト",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "en",
+      "label": "英字の小見出し",
+      "default": "NUTRITION"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "見出し",
+      "default": "1杯あたりの栄養成分"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "背景",
+      "default": "white",
+      "options": [
+        {
+          "value": "white",
+          "label": "白"
+        },
+        {
+          "value": "surface",
+          "label": "グレー"
+        },
+        {
+          "value": "tint",
+          "label": "淡いグリーン"
+        },
+        {
+          "value": "dark",
+          "label": "濃い色"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "ページ内リンク用ID",
+      "info": "例：reviews（半角英数字）"
+    },
+    {
+      "type": "text",
+      "id": "note",
+      "label": "注記",
+      "default": "推定値。"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "cell",
+      "name": "数値",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "項目",
+          "default": "たんぱく質"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "数値",
+          "default": "20.0"
+        },
+        {
+          "type": "text",
+          "id": "unit",
+          "label": "単位",
+          "default": "g"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "栄養成分のハイライト",
+      "blocks": [
+        {
+          "type": "cell"
+        },
+        {
+          "type": "cell"
+        },
+        {
+          "type": "cell"
+        },
+        {
+          "type": "cell"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

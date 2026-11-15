@@ -1,0 +1,217 @@
+<section class="section section--{{ section.settings.background }}" id="{{ section.settings.anchor | default: section.id }}">
+  <div class="container container--medium">
+    {% render 'section-head', en: section.settings.en, title: section.settings.title, lead: section.settings.lead %}
+    <div class="deals">
+      {%- for block in section.blocks -%}
+        <div class="deal card" {{ block.shopify_attributes }}>
+          <div class="deal__head"><span class="icon-circle icon-circle--fill">{% render 'icon', name: block.settings.icon, size: 22 %}</span><span class="deal__title">{{ block.settings.title }}</span></div>
+          <p class="deal__big">{{ block.settings.highlight }}</p>
+          <ul class="checklist" role="list">
+            {%- assign lines = block.settings.points | newline_to_br | split: '<br />' -%}
+            {%- for line in lines -%}{%- assign l = line | strip -%}{%- if l != blank -%}<li>{% render 'icon', name: 'check', size: 18, stroke: 2.2 %}<span>{{ l }}</span></li>{%- endif -%}{%- endfor -%}
+          </ul>
+          {%- if block.settings.link != blank -%}<a class="deal__link" href="{{ block.settings.link }}">詳しく見る{% render 'icon', name: 'chev', size: 16 %}</a>{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "おトクな買い方",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "en",
+      "label": "英字の小見出し",
+      "default": "SAVE"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "見出し",
+      "default": "おトクに続ける2つの方法"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "背景",
+      "default": "tint",
+      "options": [
+        {
+          "value": "white",
+          "label": "白"
+        },
+        {
+          "value": "surface",
+          "label": "グレー"
+        },
+        {
+          "value": "tint",
+          "label": "淡いグリーン"
+        },
+        {
+          "value": "dark",
+          "label": "濃い色"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "ページ内リンク用ID",
+      "info": "例：reviews（半角英数字）"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "deal",
+      "name": "買い方",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "アイコン",
+          "default": "repeat",
+          "options": [
+            {
+              "value": "check",
+              "label": "チェック"
+            },
+            {
+              "value": "factory",
+              "label": "工場"
+            },
+            {
+              "value": "leaf",
+              "label": "葉（無添加）"
+            },
+            {
+              "value": "shield",
+              "label": "盾（安心）"
+            },
+            {
+              "value": "yen",
+              "label": "円"
+            },
+            {
+              "value": "scale",
+              "label": "はかり（容量）"
+            },
+            {
+              "value": "chat",
+              "label": "吹き出し（実績）"
+            },
+            {
+              "value": "sparkle",
+              "label": "キラキラ（味）"
+            },
+            {
+              "value": "dumbbell",
+              "label": "ダンベル"
+            },
+            {
+              "value": "flask",
+              "label": "フラスコ（成分）"
+            },
+            {
+              "value": "cup",
+              "label": "カップ"
+            },
+            {
+              "value": "spoon",
+              "label": "スプーン"
+            },
+            {
+              "value": "shake",
+              "label": "シェイカー"
+            },
+            {
+              "value": "sun",
+              "label": "太陽（朝）"
+            },
+            {
+              "value": "moon",
+              "label": "月（夜）"
+            },
+            {
+              "value": "clock",
+              "label": "時計（間食）"
+            },
+            {
+              "value": "drop",
+              "label": "しずく"
+            },
+            {
+              "value": "bean",
+              "label": "豆"
+            },
+            {
+              "value": "box",
+              "label": "箱"
+            },
+            {
+              "value": "tag",
+              "label": "タグ"
+            },
+            {
+              "value": "repeat",
+              "label": "定期便"
+            },
+            {
+              "value": "truck",
+              "label": "配送"
+            },
+            {
+              "value": "gift",
+              "label": "ギフト"
+            },
+            {
+              "value": "info",
+              "label": "情報"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "名前",
+          "default": "定期便"
+        },
+        {
+          "type": "text",
+          "id": "highlight",
+          "label": "大きな文字",
+          "default": "ずっと10%OFF"
+        },
+        {
+          "type": "textarea",
+          "id": "points",
+          "label": "ポイント（1行に1つ）"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "リンク"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "おトクな買い方",
+      "blocks": [
+        {
+          "type": "deal"
+        },
+        {
+          "type": "deal"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

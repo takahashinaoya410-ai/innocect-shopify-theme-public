@@ -1,0 +1,30 @@
+<div class="container section">
+  <h1 class="page-title">検索</h1>
+  <form class="search-form" action="{{ routes.search_url }}" method="get" role="search">
+    <label class="visually-hidden" for="SearchPage">キーワード</label>
+    <input id="SearchPage" class="input" type="search" name="q" value="{{ search.terms | escape }}" placeholder="商品名・フレーバーで検索">
+    <input type="hidden" name="options[prefix]" value="last">
+    <button class="btn btn--primary" type="submit">検索</button>
+  </form>
+  {%- if search.performed -%}
+    {%- paginate search.results by 24 -%}
+      <p class="collection-count">「{{ search.terms | escape }}」の検索結果：{{ search.results_count }}件</p>
+      <div class="product-grid">
+        {%- for item in search.results -%}
+          {%- if item.object_type == 'product' -%}
+            {% render 'card-product', product: item %}
+          {%- else -%}
+            <a class="card search-hit" href="{{ item.url }}"><span class="search-hit__title">{{ item.title }}</span><span class="search-hit__text">{{ item.content | strip_html | truncate: 60 }}</span></a>
+          {%- endif -%}
+        {%- else -%}
+          <p class="empty">見つかりませんでした。別のキーワードでお試しください。</p>
+        {%- endfor -%}
+      </div>
+      {% render 'pagination', paginate: paginate %}
+    {%- endpaginate -%}
+  {%- endif -%}
+</div>
+
+{% schema %}
+{ "name": "検索結果", "settings": [] }
+{% endschema %}

@@ -1,0 +1,113 @@
+<section class="section section--{{ section.settings.background }}" id="{{ section.settings.anchor | default: section.id }}">
+  <div class="container container--narrow">
+    {% render 'section-head', en: section.settings.en, title: section.settings.title, lead: section.settings.lead %}
+    <div class="proof">
+      {%- for block in section.blocks -%}
+        <div class="proof__item" {{ block.shopify_attributes }}>
+          <span class="proof__label">{{ block.settings.label }}</span>
+          <span class="proof__value"><span class="num">{{ block.settings.value }}</span>{{ block.settings.unit }}</span>
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.note != blank -%}<p class="note note--center">{{ section.settings.note }}</p>{%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "実績の数字",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "en",
+      "label": "英字の小見出し",
+      "default": "RESULTS"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "見出し",
+      "default": "たくさんの方に選ばれています"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "背景",
+      "default": "white",
+      "options": [
+        {
+          "value": "white",
+          "label": "白"
+        },
+        {
+          "value": "surface",
+          "label": "グレー"
+        },
+        {
+          "value": "tint",
+          "label": "淡いグリーン"
+        },
+        {
+          "value": "dark",
+          "label": "濃い色"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "ページ内リンク用ID",
+      "info": "例：reviews（半角英数字）"
+    },
+    {
+      "type": "textarea",
+      "id": "note",
+      "label": "注記（期間・調査方法・出典）"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "数字",
+      "settings": [
+        {
+          "type": "text",
+          "id": "value",
+          "label": "数字",
+          "default": "60"
+        },
+        {
+          "type": "text",
+          "id": "unit",
+          "label": "単位",
+          "default": "万食"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "説明",
+          "default": "累計販売数"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 4,
+  "presets": [
+    {
+      "name": "実績の数字",
+      "blocks": [
+        {
+          "type": "stat"
+        },
+        {
+          "type": "stat"
+        },
+        {
+          "type": "stat"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

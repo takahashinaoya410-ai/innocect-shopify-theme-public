@@ -1,0 +1,169 @@
+<section class="section section--{{ section.settings.background }}" id="{{ section.settings.anchor | default: section.id }}">
+  <div class="container container--narrow">
+    {% render 'section-head', en: section.settings.en, title: section.settings.title, lead: section.settings.lead %}
+    {%- liquid
+      assign head = section.settings.nutrition_header | split: '|'
+      assign rows = section.settings.nutrition_rows | newline_to_br | split: '<br />'
+    -%}
+    {%- if section.settings.nutrition_rows != blank -%}
+      <details class="acc" open>
+        <summary class="acc__summary">{{ section.settings.nutrition_title }}<span class="faq__plus">{% render 'icon', name: 'plus', size: 18 %}</span></summary>
+        <div class="table-wrap table-wrap--flush">
+          <table class="nutri-table">
+            <thead><tr>{%- for c in head -%}<th scope="col">{{ c | strip }}</th>{%- endfor -%}</tr></thead>
+            <tbody>
+              {%- for row in rows -%}
+                {%- assign r = row | strip -%}
+                {%- if r != blank -%}
+                  {%- assign cells = r | split: '|' -%}
+                  <tr>{%- for c in cells -%}{%- if forloop.first -%}<th scope="row">{{ c | strip }}</th>{%- else -%}<td class="num">{{ c | strip }}</td>{%- endif -%}{%- endfor -%}</tr>
+                {%- endif -%}
+              {%- endfor -%}
+            </tbody>
+          </table>
+        </div>
+        {%- if section.settings.nutrition_note != blank -%}<p class="note acc__note">{{ section.settings.nutrition_note }}</p>{%- endif -%}
+      </details>
+    {%- endif -%}
+    <details class="acc" open>
+      <summary class="acc__summary">{{ section.settings.spec_title }}<span class="faq__plus">{% render 'icon', name: 'plus', size: 18 %}</span></summary>
+      <table class="spec-table">
+        <tbody>
+          {%- for block in section.blocks -%}
+            <tr {{ block.shopify_attributes }}><th scope="row">{{ block.settings.label }}</th><td>{{ block.settings.value | newline_to_br }}</td></tr>
+          {%- endfor -%}
+        </tbody>
+      </table>
+    </details>
+    {%- if section.settings.show_description and product.description != blank -%}
+      <details class="acc">
+        <summary class="acc__summary">商品説明<span class="faq__plus">{% render 'icon', name: 'plus', size: 18 %}</span></summary>
+        <div class="rte acc__body">{{ product.description }}</div>
+      </details>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "成分表・商品情報",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "en",
+      "label": "英字の小見出し",
+      "default": "SPEC"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "見出し",
+      "default": "商品情報・原材料・栄養成分"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "背景",
+      "default": "white",
+      "options": [
+        {
+          "value": "white",
+          "label": "白"
+        },
+        {
+          "value": "surface",
+          "label": "グレー"
+        },
+        {
+          "value": "tint",
+          "label": "淡いグリーン"
+        },
+        {
+          "value": "dark",
+          "label": "濃い色"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "ページ内リンク用ID",
+      "info": "例：reviews（半角英数字）"
+    },
+    {
+      "type": "text",
+      "id": "nutrition_title",
+      "label": "栄養成分の見出し",
+      "default": "栄養成分表示"
+    },
+    {
+      "type": "text",
+      "id": "nutrition_header",
+      "label": "栄養成分の見出し行（| で区切る）",
+      "default": "1杯あたり|エネルギー|たんぱく質|脂質|炭水化物|食塩相当量"
+    },
+    {
+      "type": "textarea",
+      "id": "nutrition_rows",
+      "label": "栄養成分（1行に1フレーバー、| で区切る）"
+    },
+    {
+      "type": "text",
+      "id": "nutrition_note",
+      "label": "栄養成分の注記",
+      "default": "推定値。"
+    },
+    {
+      "type": "text",
+      "id": "spec_title",
+      "label": "商品情報の見出し",
+      "default": "商品情報"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_description",
+      "label": "商品説明（管理画面の説明文）も表示する",
+      "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "項目",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "項目",
+          "default": "名称"
+        },
+        {
+          "type": "textarea",
+          "id": "value",
+          "label": "内容"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 20,
+  "enabled_on": {
+    "templates": [
+      "product"
+    ]
+  },
+  "presets": [
+    {
+      "name": "成分表・商品情報",
+      "blocks": [
+        {
+          "type": "row"
+        },
+        {
+          "type": "row"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

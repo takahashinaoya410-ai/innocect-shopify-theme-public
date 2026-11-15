@@ -1,0 +1,30 @@
+<div class="container container--text section">
+  <p><a href="{{ routes.account_url }}">← マイページ</a></p>
+  <h1 class="page-title">お届け先</h1>
+  {%- paginate customer.addresses by 10 -%}
+    {%- for address in customer.addresses -%}
+      <div class="card address-card">
+        {%- if address == customer.default_address -%}<span class="badge">いつものお届け先</span>{%- endif -%}
+        {{ address | format_address }}
+        {%- form 'customer_address', address, class: 'form-stack' -%}
+          <details class="acc acc--plain">
+            <summary class="acc__summary">編集する</summary>
+            {% render 'address-fields', form: form, address: address %}
+            <button class="btn btn--primary" type="submit">保存する</button>
+          </details>
+        {%- endform -%}
+      </div>
+    {%- endfor -%}
+    {% render 'pagination', paginate: paginate %}
+  {%- endpaginate -%}
+  <div class="card address-card">
+    <h2 class="h3">新しいお届け先</h2>
+    {%- form 'customer_address', customer.new_address, class: 'form-stack' -%}
+      {% render 'address-fields', form: form, address: customer.new_address %}
+      <button class="btn btn--primary" type="submit">追加する</button>
+    {%- endform -%}
+  </div>
+</div>
+{% schema %}
+{ "name": "お届け先", "settings": [] }
+{% endschema %}

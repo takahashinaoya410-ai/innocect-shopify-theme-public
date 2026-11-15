@@ -1,0 +1,313 @@
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign form_id = 'ProductForm-' | append: section.id
+  assign servings = product.metafields.innocect.servings.value | default: 0
+  assign serving_label = product.metafields.innocect.serving_label.value | default: '1回あたり'
+  assign has_plans = false
+  if product.selling_plan_groups.size > 0
+    assign has_plans = true
+  endif
+  assign start_sub = false
+  if has_plans
+    if section.settings.default_subscription or product.requires_selling_plan
+      assign start_sub = true
+    endif
+  endif
+  assign first_plan = product.selling_plan_groups.first.selling_plans.first
+  assign coming_list = section.settings.coming_soon | newline_to_br | split: '<br />'
+  assign current_coming = false
+  for c in coming_list
+    assign cn = c | strip
+    if cn != blank and current_variant.title == cn
+      assign current_coming = true
+    endif
+  endfor
+  assign sub_rate = 100 | minus: settings.subscription_percent
+  assign sub_price = current_variant.price | times: sub_rate | divided_by: 100
+  if current_variant.selling_plan_allocations.size > 0
+    assign sub_price = current_variant.selling_plan_allocations.first.price
+  endif
+  assign crumb_collection = collection | default: product.collections.first
+-%}
+
+<div class="product-page" data-product-root data-section-id="{{ section.id }}">
+  <nav class="breadcrumb container" aria-label="パンくずリスト">
+    <a href="{{ routes.root_url }}">TOP</a><span aria-hidden="true">›</span>
+    {%- if crumb_collection -%}<a href="{{ crumb_collection.url }}">{{ crumb_collection.title }}</a><span aria-hidden="true">›</span>{%- endif -%}
+    <span aria-current="page">{{ product.title }}</span>
+  </nav>
+
+  <div class="product container">
+    {%- comment -%} ---------- 画像 ---------- {%- endcomment -%}
+    <div class="product__media">
+      <div class="gallery" data-gallery>
+        <div class="gallery__track" data-gallery-track>
+          {%- if product.media.size > 0 -%}
+            {%- for media in product.media -%}
+              <div class="gallery__slide" data-media-id="{{ media.id }}">
+                {%- case media.media_type -%}
+                  {%- when 'image' -%}
+                    {%- if forloop.first -%}
+                      {{ media | image_url: width: 1200 | image_tag: widths: '390, 600, 800, 1000, 1200', sizes: '(min-width: 990px) 560px, 100vw', fetchpriority: 'high', alt: media.alt }}
+                    {%- else -%}
+                      {{ media | image_url: width: 1200 | image_tag: widths: '390, 600, 800, 1000, 1200', sizes: '(min-width: 990px) 560px, 100vw', loading: 'lazy', alt: media.alt }}
+                    {%- endif -%}
+                  {%- else -%}
+                    {{ media | media_tag: image_size: '1200x' }}
+                {%- endcase -%}
+              </div>
+            {%- endfor -%}
+          {%- else -%}
+            <div class="gallery__slide gallery__slide--ph">{% render 'pouch-placeholder', product: product %}</div>
+          {%- endif -%}
+        </div>
+        {%- if section.settings.media_badges != blank -%}
+          <div class="gallery__badges">
+            {%- assign mb = section.settings.media_badges | newline_to_br | split: '<br />' -%}
+            {%- for b in mb -%}{%- assign t = b | strip -%}{%- if t != blank -%}<span class="badge badge--dark">{{ t }}</span>{%- endif -%}{%- endfor -%}
+          </div>
+        {%- endif -%}
+        {%- if product.media.size > 1 -%}
+          <div class="gallery__thumbs">
+            {%- for media in product.media -%}
+              <button type="button" class="gallery__thumb{% if forloop.first %} is-active{% endif %}" data-thumb="{{ media.id }}" aria-label="画像{{ forloop.index }}を表示">
+                {{ media.preview_image | image_url: width: 160 | image_tag: loading: 'lazy', alt: '' }}
+              </button>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+
+    {%- comment -%} ---------- 購入ボックス ---------- {%- endcomment -%}
+    <div class="product__info">
+      <p class="product__vendor">{{ product.vendor }}</p>
+      <h1 class="product__title">{{ product.title }}</h1>
+      {%- assign rating = product.metafields.reviews.rating.value -%}
+      {%- if rating != blank -%}
+        <a class="product__rating" href="#reviews">{% render 'stars', rating: rating.rating, size: 14 %}<span class="num">{{ rating.rating | round: 2 }}</span><span>（{{ product.metafields.reviews.rating_count.value | default: 0 }}件）</span></a>
+      {%- elsif section.settings.rating_label != blank -%}
+        <a class="product__rating" href="#reviews">{% render 'stars', rating: section.settings.rating_value, size: 14 %}<span class="num">{{ section.settings.rating_value }}</span><span>{{ section.settings.rating_label }}</span></a>
+      {%- endif -%}
+      {%- if section.settings.lead != blank -%}<p class="product__lead">{{ section.settings.lead }}</p>{%- endif -%}
+      {%- if section.settings.badges != blank -%}
+        <div class="badge-row">
+          {%- assign bl = section.settings.badges | newline_to_br | split: '<br />' -%}
+          {%- for b in bl -%}{%- assign t = b | strip -%}{%- if t != blank -%}<span class="badge">{{ t }}</span>{%- endif -%}{%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- form 'product', product, id: form_id, class: 'product-form', novalidate: 'novalidate', data-product-form: '' -%}
+        <input type="hidden" name="id" value="{{ current_variant.id }}" data-variant-id>
+        <input type="hidden" name="selling_plan" value="{% if start_sub %}{{ first_plan.id }}{% endif %}" data-selling-plan-input>
+
+        {%- unless product.has_only_default_variant -%}
+          {%- for option in product.options_with_values -%}
+            {%- assign option_index = forloop.index0 -%}
+            <fieldset class="option" data-option data-option-index="{{ option_index }}">
+              <legend class="option__legend">{{ option.name }}：<span class="option__selected" data-option-selected>{{ option.selected_value }}</span></legend>
+              <div class="swatches">
+                {%- for value in option.values -%}
+                  {%- liquid
+                    assign status = ''
+                    for c in coming_list
+                      assign cn = c | strip
+                      if cn != blank and cn == value.name
+                        assign status = '近日発売'
+                      endif
+                    endfor
+                    if status == blank and value.available == false
+                      assign status = '売り切れ'
+                    endif
+                  -%}
+                  <label class="swatch">
+                    <input type="radio" class="swatch__input" name="{{ option.name | handleize }}-{{ section.id }}" value="{{ value.name | escape }}" form="{{ form_id }}-options"{% if value.selected %} checked{% endif %} data-option-input>
+                    <span class="swatch__box">
+                      <span class="swatch__dot" style="background: {% render 'swatch-color', value: value %};"></span>
+                      <span class="swatch__text"><span class="swatch__name">{{ value.name }}</span><span class="swatch__status">{{ status }}</span></span>
+                    </span>
+                  </label>
+                {%- endfor -%}
+              </div>
+            </fieldset>
+          {%- endfor -%}
+          <noscript>
+            <label class="option__legend" for="NoJsVariant-{{ section.id }}">種類</label>
+            <select id="NoJsVariant-{{ section.id }}" class="select" name="id">
+              {%- for variant in product.variants -%}
+                <option value="{{ variant.id }}"{% if variant == current_variant %} selected{% endif %}{% unless variant.available %} disabled{% endunless %}>{{ variant.title }} - {{ variant.price | money }}</option>
+              {%- endfor -%}
+            </select>
+          </noscript>
+        {%- else -%}
+          {%- if section.settings.single_label != blank -%}
+            <div class="option">
+              <p class="option__legend">内容量</p>
+              <div class="swatches"><span class="swatch__box is-static"><span class="swatch__dot" style="background: var(--c-brand);"></span><span class="swatch__name">{{ section.settings.single_label }}</span></span></div>
+            </div>
+          {%- endif -%}
+        {%- endunless -%}
+
+        <div class="buy" data-buy-area{% if current_coming %} hidden{% endif %}>
+          {%- if has_plans -%}
+            <fieldset class="po">
+              <legend class="option__legend">購入方法</legend>
+              <label class="po__card">
+                <input type="radio" class="po__input" name="purchase-{{ section.id }}" value="subscription" form="{{ form_id }}-options"{% if start_sub %} checked{% endif %} data-purchase-option>
+                <span class="po__box">
+                  <span class="po__row">
+                    <span class="po__radio" aria-hidden="true"></span>
+                    <span class="po__name">定期便</span>
+                    <span class="badge badge--accent">ずっと{{ settings.subscription_percent }}%OFF</span>
+                    <span class="po__price num" data-price-sub>{{ sub_price | money }}</span>
+                  </span>
+                  <span class="po__sub"><span>{{ settings.subscription_note }}</span><span class="po__per" data-per-sub></span></span>
+                </span>
+              </label>
+              {%- unless product.requires_selling_plan -%}
+                <label class="po__card">
+                  <input type="radio" class="po__input" name="purchase-{{ section.id }}" value="onetime" form="{{ form_id }}-options"{% unless start_sub %} checked{% endunless %} data-purchase-option>
+                  <span class="po__box">
+                    <span class="po__row">
+                      <span class="po__radio" aria-hidden="true"></span>
+                      <span class="po__name">1回のみ購入</span>
+                      <span class="po__price num" data-price-once>{{ current_variant.price | money }}</span>
+                    </span>
+                    <span class="po__sub">
+                      <span>{%- if settings.bundle_enabled -%}{{ settings.bundle_tier1_qty }}点で{{ settings.bundle_tier1_percent }}%OFF・{{ settings.bundle_tier2_qty }}点以上で{{ settings.bundle_tier2_percent }}%OFF{%- endif -%}</span>
+                      <span class="po__per" data-per-once></span>
+                    </span>
+                  </span>
+                </label>
+              {%- endunless -%}
+              {%- assign plan_count = 0 -%}
+              {%- for group in product.selling_plan_groups -%}{%- assign plan_count = plan_count | plus: group.selling_plans.size -%}{%- endfor -%}
+              <div class="po__plans" data-plan-wrap{% if plan_count < 2 or start_sub == false %} hidden{% endif %}>
+                <label class="po__plans-label" for="Plan-{{ section.id }}">お届け周期</label>
+                <select id="Plan-{{ section.id }}" class="select" form="{{ form_id }}-options" data-selling-plan-select>
+                  {%- for group in product.selling_plan_groups -%}
+                    {%- for plan in group.selling_plans -%}<option value="{{ plan.id }}">{{ plan.name }}</option>{%- endfor -%}
+                  {%- endfor -%}
+                </select>
+              </div>
+            </fieldset>
+          {%- else -%}
+            <div class="price-block">
+              <span class="price-block__price num" data-price-once>{{ current_variant.price | money }}</span>
+              <span class="price-block__tax">税込</span>
+              <s class="price-block__compare num" data-compare{% unless current_variant.compare_at_price > current_variant.price %} hidden{% endunless %}>{{ current_variant.compare_at_price | money }}</s>
+              <span class="po__per" data-per-once></span>
+            </div>
+          {%- endif -%}
+          <p class="tax-note">価格はすべて税込です。</p>
+
+          <div class="qty-row">
+            <label class="option__legend" for="Qty-{{ section.id }}">数量</label>
+            <div class="qty">
+              <button type="button" class="qty__btn" data-qty-minus aria-label="数量を減らす">{% render 'icon', name: 'minus', size: 18 %}</button>
+              <input id="Qty-{{ section.id }}" class="qty__input num" type="number" name="quantity" min="1" max="99" value="1" inputmode="numeric" data-qty-input>
+              <button type="button" class="qty__btn" data-qty-plus aria-label="数量を増やす">{% render 'icon', name: 'plus', size: 18 %}</button>
+            </div>
+            <p class="qty-row__total"><span>合計</span><span class="num" data-total>{% if start_sub %}{{ sub_price | money }}{% else %}{{ current_variant.price | money }}{% endif %}</span></p>
+          </div>
+          {%- if settings.bundle_enabled or has_plans -%}
+            <p class="nudge" data-nudge>{% render 'icon', name: 'tag', size: 18 %}<span data-nudge-text></span></p>
+          {%- endif -%}
+          <div class="atc">
+            <button type="submit" name="add" class="btn btn--primary btn--xl btn--block" data-add-button{% unless current_variant.available %} disabled{% endunless %}>
+              {% render 'icon', name: 'cart', size: 20 %}<span data-add-text>{% if current_variant.available %}カートに入れる{% else %}売り切れ{% endif %}</span>
+            </button>
+            {%- if section.settings.show_dynamic_checkout -%}{{ form | payment_button }}{%- endif -%}
+          </div>
+          <p class="form-error" data-form-error role="alert" hidden></p>
+        </div>
+
+        <div class="coming" data-coming-panel{% unless current_coming %} hidden{% endunless %}>
+          <p class="coming__title"><span data-coming-name>{{ current_variant.title }}</span>は近日発売です</p>
+          <p class="coming__text">{{ section.settings.coming_text }}</p>
+          <a class="btn btn--dark btn--block" href="{{ section.settings.coming_link | default: settings.line_url | default: '#' }}">{% render 'icon', name: 'chat', size: 18 %}{{ section.settings.coming_button }}</a>
+        </div>
+      {%- endform -%}
+
+      {%- for block in section.blocks -%}
+        {%- if block.type == '@app' -%}<div class="product__app">{% render block %}</div>{%- endif -%}
+      {%- endfor -%}
+
+      {%- if section.settings.show_ship_info -%}
+        <ul class="ship-info" role="list">
+          <li>{% render 'icon', name: 'truck', size: 20 %}<span>{{ settings.ship_cutoff_text }}</span></li>
+          <li>{% render 'icon', name: 'gift', size: 20 %}<span>税込{{ settings.free_shipping_threshold }}円以上で送料無料／{{ settings.shipping_fee_text }}</span></li>
+          {%- if has_plans -%}<li>{% render 'icon', name: 'repeat', size: 20 %}<span>{{ settings.subscription_skip_text }}</span></li>{%- endif -%}
+        </ul>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <div class="sticky-atc" data-sticky-atc hidden>
+    <div class="sticky-atc__info">
+      <span class="sticky-atc__name" data-sticky-name>{{ current_variant.title | replace: 'Default Title', product.title }}</span>
+      <span class="sticky-atc__price num" data-sticky-price>{% if start_sub %}{{ sub_price | money }}{% else %}{{ current_variant.price | money }}{% endif %}</span>
+    </div>
+    <button type="submit" form="{{ form_id }}" class="btn btn--primary" data-sticky-button{% unless current_variant.available %} disabled{% endunless %}>{% render 'icon', name: 'cart', size: 18 %}カートに入れる</button>
+  </div>
+
+  {%- capture overrides -%}
+    {%- assign sep = '' -%}
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'serving' -%}
+        {{- sep -}}{"value": {{ block.settings.value | strip | json }}, "servings": {{ block.settings.servings | default: 0 | json }}, "label": {{ block.settings.label | json }}}
+        {%- assign sep = ',' -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endcapture -%}
+  <script type="application/json" data-product-json>{{ product | json }}</script>
+  <script type="application/json" data-product-config>
+    {
+      "servings": {{ servings | json }},
+      "label": {{ serving_label | json }},
+      "overrides": [{{ overrides }}],
+      "coming": {{ coming_list | json }},
+      "startSubscription": {{ start_sub | json }}
+    }
+  </script>
+  <script type="application/ld+json">{{ product | structured_data }}</script>
+</div>
+
+{% schema %}
+{
+  "name": "商品（購入ボックス）",
+  "tag": "section",
+  "class": "section-main-product",
+  "settings": [
+    { "type": "textarea", "id": "lead", "label": "リード文" },
+    { "type": "textarea", "id": "badges", "label": "バッジ（1行に1つ）" },
+    { "type": "textarea", "id": "media_badges", "label": "画像の上のバッジ（1行に1つ）" },
+    { "type": "text", "id": "single_label", "label": "種類が1つの商品の表示（例：1kg（約200回分））" },
+    { "type": "header", "content": "評価（レビューアプリ導入前）" },
+    { "type": "text", "id": "rating_label", "label": "外部評価の表示（例：楽天市場レビュー（129件））" },
+    { "type": "text", "id": "rating_value", "label": "外部評価の平均（例：4.33）" },
+    { "type": "header", "content": "近日発売" },
+    { "type": "textarea", "id": "coming_soon", "label": "近日発売のフレーバー名（1行に1つ）", "info": "在庫を0・在庫切れ販売オフにしておくと、カートには入らずお知らせ導線が出ます" },
+    { "type": "text", "id": "coming_text", "label": "近日発売の案内文", "default": "発売日が決まりしだい、メールとLINEでお知らせします。" },
+    { "type": "text", "id": "coming_button", "label": "近日発売のボタン", "default": "発売のお知らせを受け取る" },
+    { "type": "url", "id": "coming_link", "label": "近日発売ボタンのリンク", "info": "未設定ならLINE公式アカウントのURL" },
+    { "type": "header", "content": "購入" },
+    { "type": "checkbox", "id": "default_subscription", "label": "定期便を最初から選択しておく", "default": true },
+    { "type": "checkbox", "id": "show_dynamic_checkout", "label": "「今すぐ購入」ボタンを表示", "default": false },
+    { "type": "checkbox", "id": "show_ship_info", "label": "配送・送料の案内を表示", "default": true }
+  ],
+  "blocks": [
+    {
+      "type": "serving",
+      "name": "杯数の個別設定",
+      "settings": [
+        { "type": "paragraph", "content": "プレーンなど、1袋あたりの杯数がほかのフレーバーと違う種類だけ設定します" },
+        { "type": "text", "id": "value", "label": "フレーバー名（オプション値と同じ文字）" },
+        { "type": "number", "id": "servings", "label": "1袋あたりの杯数・回数" },
+        { "type": "text", "id": "label", "label": "表示（例：1杯（20g）あたり）" }
+      ]
+    },
+    { "type": "@app" }
+  ]
+}
+{% endschema %}

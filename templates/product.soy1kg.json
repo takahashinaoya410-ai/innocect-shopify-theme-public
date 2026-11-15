@@ -1,0 +1,620 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "sv1": {
+          "type": "serving",
+          "settings": {
+            "value": "プレーン",
+            "servings": 50,
+            "label": "1杯（20g）あたり"
+          }
+        }
+      },
+      "block_order": [
+        "sv1"
+      ],
+      "settings": {
+        "lead": "おいしいから、続けられる。乳酸菌とビタミン11種をプラスした、はじめてのソイにもちょうどいい1kgサイズです。",
+        "badges": "乳酸菌（殺菌）配合\nビタミン11種\n1kg・約33杯分\n国内製造",
+        "media_badges": "乳酸菌・ビタミン11種\n1kg",
+        "single_label": "",
+        "rating_label": "楽天市場レビュー（136件）",
+        "rating_value": "4.46",
+        "coming_soon": "",
+        "coming_text": "発売日が決まりしだい、メールとLINEでお知らせします。",
+        "coming_button": "発売のお知らせを受け取る",
+        "default_subscription": true,
+        "show_dynamic_checkout": false,
+        "show_ship_info": true
+      }
+    },
+    "trust-1": {
+      "type": "trust-bar",
+      "blocks": {
+        "t2": {
+          "type": "item",
+          "settings": {
+            "icon": "sparkle",
+            "title": "乳酸菌・ビタミン11種",
+            "text": "たんぱく質と一緒に"
+          }
+        },
+        "t3": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "国内工場で製造",
+            "text": "ISO22000認証工場"
+          }
+        },
+        "t4": {
+          "type": "item",
+          "settings": {
+            "icon": "chat",
+            "title": "93%が星4・5の評価",
+            "text": "自社調べ・30名"
+          }
+        },
+        "t5": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "楽天市場 月間優良ショップ",
+            "text": "2026年1月度 受賞"
+          }
+        }
+      },
+      "block_order": [
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "settings": {
+        "background": "surface"
+      }
+    },
+    "reasons-2": {
+      "type": "product-reasons",
+      "blocks": {
+        "r6": {
+          "type": "reason",
+          "settings": {
+            "number": "01",
+            "icon": "sparkle",
+            "title": "おいしさに自信",
+            "big": "",
+            "big_sub": "",
+            "body": "濃厚チョコレート、和菓子のような黒蜜きなこ、贅沢な生キャラメル。専属の開発スタッフが試飲テストを繰り返して仕上げました。",
+            "bullets": "専属の開発スタッフが担当\n妥協なしのフレーバー調整\n納得いくまで繰り返した試飲テスト"
+          }
+        },
+        "r7": {
+          "type": "reason",
+          "settings": {
+            "number": "02",
+            "icon": "yen",
+            "title": "価格に自信",
+            "big": "約{per}円",
+            "big_sub": "1杯（30g）あたり",
+            "body": "大手原料メーカーと共同開発して中身のコストを、パッケージはシンプルにして見た目のコストを抑えました。",
+            "bullets": ""
+          }
+        },
+        "r8": {
+          "type": "reason",
+          "settings": {
+            "number": "03",
+            "icon": "leaf",
+            "title": "＋αの乳酸菌・ビタミン11種",
+            "big": "",
+            "big_sub": "",
+            "body": "植物性乳酸菌（殺菌）とビタミン11種を配合。たんぱく質と一緒に、毎日の栄養バランスが気になる方に。",
+            "bullets": ""
+          }
+        }
+      },
+      "block_order": [
+        "r6",
+        "r7",
+        "r8"
+      ],
+      "settings": {
+        "en": "FEATURES",
+        "title": "ソイプロテイン1kgをおすすめする3つの特徴",
+        "lead": "",
+        "background": "surface"
+      }
+    },
+    "proof-3": {
+      "type": "proof-stats",
+      "blocks": {
+        "p9": {
+          "type": "stat",
+          "settings": {
+            "value": "93",
+            "unit": "%",
+            "label": "自社調査で 星4・5をつけた人の割合"
+          }
+        },
+        "p10": {
+          "type": "stat",
+          "settings": {
+            "value": "4.46",
+            "unit": "",
+            "label": "楽天市場 レビュー平均（136件）"
+          }
+        },
+        "p11": {
+          "type": "stat",
+          "settings": {
+            "value": "60",
+            "unit": "万食",
+            "label": "ソイプロテインシリーズ 累計販売数"
+          }
+        }
+      },
+      "block_order": [
+        "p9",
+        "p10",
+        "p11"
+      ],
+      "settings": {
+        "en": "RESULTS",
+        "title": "たくさんの方に選ばれています",
+        "note": "自社調べ：調査人数30名。レビュー平均は2026年11月16日時点。累計販売数は2024年6月〜2025年7月のAmazon・楽天市場の合計。",
+        "background": "white"
+      }
+    },
+    "flavors-4": {
+      "type": "flavor-guide",
+      "blocks": {
+        "f12": {
+          "type": "flavor",
+          "settings": {
+            "name": "リッチチョコレート",
+            "color": "#4A2C1F",
+            "tag": "",
+            "catch": "甘くとろける、濃厚チョコレート。",
+            "text": "ひと口で満たされる、甘くとろけるチョコのご褒美。濃厚なのに飲みやすい味わいです。",
+            "mix": "豆乳で割ると、よりまろやかに"
+          }
+        },
+        "f13": {
+          "type": "flavor",
+          "settings": {
+            "name": "黒蜜きなこ",
+            "color": "#A97A28",
+            "tag": "",
+            "catch": "まるで和菓子、本格黒蜜きなこ。",
+            "text": "黒蜜ときなこの濃厚な甘さに包まれる、和スイーツのような味わい。乳成分を使っていない風味です。",
+            "mix": "牛乳で割ると、きなこミルク風に"
+          }
+        },
+        "f14": {
+          "type": "flavor",
+          "settings": {
+            "name": "生キャラメル",
+            "color": "#B0641E",
+            "tag": "",
+            "catch": "やさしく濃密、贅沢生キャラメル。",
+            "text": "やさしい甘さと深いコク。生キャラメルの余韻を楽しめる味わいです。",
+            "mix": "冷たい牛乳で、デザート感覚に"
+          }
+        },
+        "f15": {
+          "type": "flavor",
+          "settings": {
+            "name": "バナナ",
+            "color": "#EBCB4F",
+            "tag": "",
+            "catch": "[キャッチコピー]",
+            "text": "[味の特徴を入力]",
+            "mix": ""
+          }
+        },
+        "f16": {
+          "type": "flavor",
+          "settings": {
+            "name": "プレーン",
+            "color": "#EFE8D8",
+            "tag": "",
+            "catch": "無添加・人工甘味料不使用",
+            "text": "フレーバーなしのシンプルなタイプ（1杯20g）。乳酸菌・ビタミンは配合していません。",
+            "mix": "スムージー・料理に"
+          }
+        }
+      },
+      "block_order": [
+        "f12",
+        "f13",
+        "f14",
+        "f15",
+        "f16"
+      ],
+      "settings": {
+        "en": "FLAVOR",
+        "title": "ご褒美みたいな4つの味と、プレーン",
+        "lead": "",
+        "background": "surface"
+      }
+    },
+    "compare-table-5": {
+      "type": "comparison-table",
+      "blocks": {
+        "x17": {
+          "type": "row",
+          "settings": {
+            "cells": "こんな方に|はじめての方・味を試したい方|毎日飲む方・まとめて買いたい方"
+          }
+        },
+        "x18": {
+          "type": "row",
+          "settings": {
+            "cells": "甘味料|ステビア・スクラロース など|ステビアのみ（人工甘味料不使用）"
+          }
+        },
+        "x19": {
+          "type": "row",
+          "settings": {
+            "cells": "プラス成分|乳酸菌・ビタミン11種|—"
+          }
+        },
+        "x20": {
+          "type": "row",
+          "settings": {
+            "cells": "フレーバー|チョコ・黒蜜きなこ・生キャラメル・バナナ|チョコ・カフェオレ・ミルクティー・抹茶"
+          }
+        },
+        "x21": {
+          "type": "row",
+          "settings": {
+            "cells": "1杯あたり|約[◯]円|約[◯]円"
+          }
+        }
+      },
+      "block_order": [
+        "x17",
+        "x18",
+        "x19",
+        "x20",
+        "x21"
+      ],
+      "settings": {
+        "en": "SIZE",
+        "title": "1kgと3kg、どちらを選ぶ？",
+        "lead": "はじめての方は1kg、毎日飲む方は3kgがおすすめです。",
+        "header": "|ソイ 1kg|ソイ 3kg",
+        "highlight_column": 1,
+        "min_width": 340,
+        "note": "プレーンを除く。1杯30gで計算（1kg：¥[価格]、3kg：¥[価格]）。",
+        "background": "white"
+      }
+    },
+    "steps-6": {
+      "type": "how-to",
+      "blocks": {
+        "s22": {
+          "type": "step",
+          "settings": {
+            "icon": "cup",
+            "title": "水か牛乳を入れる",
+            "text": "シェイカーに200〜300mlを入れます。"
+          }
+        },
+        "s23": {
+          "type": "step",
+          "settings": {
+            "icon": "spoon",
+            "title": "粉を入れる",
+            "text": "付属スプーンすり切り3杯（約30g）を入れます。"
+          }
+        },
+        "s24": {
+          "type": "step",
+          "settings": {
+            "icon": "shake",
+            "title": "よく混ぜる",
+            "text": "フタをしっかり閉めて、よく振れば完成です。"
+          }
+        }
+      },
+      "block_order": [
+        "s22",
+        "s23",
+        "s24"
+      ],
+      "settings": {
+        "en": "HOW TO",
+        "title": "かんたん3ステップ",
+        "tip_label": "ダマを防ぐコツ：",
+        "tip": "水・牛乳を先に入れてから粉を入れると、ダマができにくくなります。",
+        "background": "surface"
+      }
+    },
+    "scenes-7": {
+      "type": "feature-cards",
+      "blocks": {
+        "sc25": {
+          "type": "card",
+          "settings": {
+            "icon": "sun",
+            "title": "朝食の代わりに",
+            "text": "食欲がない朝も、さっと飲める一杯で。"
+          }
+        },
+        "sc26": {
+          "type": "card",
+          "settings": {
+            "icon": "clock",
+            "title": "間食に",
+            "text": "おやつの代わりに、たんぱく質をとれる一杯を。"
+          }
+        },
+        "sc27": {
+          "type": "card",
+          "settings": {
+            "icon": "moon",
+            "title": "寝る前に",
+            "text": "ゆっくり過ごす夜の、リラックスタイムに。"
+          }
+        }
+      },
+      "block_order": [
+        "sc25",
+        "sc26",
+        "sc27"
+      ],
+      "settings": {
+        "en": "TIMING",
+        "title": "おすすめの飲み方",
+        "style": "scene",
+        "background": "white"
+      }
+    },
+    "why-cheap-8": {
+      "type": "why-cheap",
+      "blocks": {
+        "w28": {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "title": "シンプルな設計のパッケージ",
+            "text": "見た目にお金をかけすぎず、そのぶんを中身と価格に回しています。"
+          }
+        },
+        "w29": {
+          "type": "item",
+          "settings": {
+            "icon": "tag",
+            "title": "広告宣伝費をかけすぎない",
+            "text": "過度な広告を打たず、使ってくださる方の声で広げています。"
+          }
+        },
+        "w30": {
+          "type": "item",
+          "settings": {
+            "icon": "flask",
+            "title": "原料・資材を自社で開発",
+            "text": "原料メーカー・工場と直接やりとりし、中間コストを抑えています。"
+          }
+        },
+        "w31": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "大ロット製造で加工費を低減",
+            "text": "まとめて製造することで、1袋あたりの加工費を下げています。"
+          }
+        },
+        "w32": {
+          "type": "item",
+          "settings": {
+            "icon": "repeat",
+            "title": "システムで運営を効率化",
+            "text": "受注から出荷までの仕組みを整え、人件費を抑えています。"
+          }
+        }
+      },
+      "block_order": [
+        "w28",
+        "w29",
+        "w30",
+        "w31",
+        "w32"
+      ],
+      "settings": {
+        "en": "WHY",
+        "title": "INNOCECTが、この価格で出せる理由",
+        "lead": "安さには、ちゃんと理由があります。品質を落とすのではなく、品質以外のコストを削っています。",
+        "background": "dark"
+      }
+    },
+    "reviews-9": {
+      "type": "product-reviews",
+      "settings": {
+        "en": "REVIEW",
+        "title": "お客様の声",
+        "background": "surface",
+        "anchor": "reviews",
+        "source_label": "楽天市場のレビュー（2026/11/16時点）",
+        "source_rating": "4.46",
+        "source_count": "136件"
+      }
+    },
+    "faq-10": {
+      "type": "faq",
+      "blocks": {
+        "faq33": {
+          "type": "qa",
+          "settings": {
+            "question": "牛乳アレルギーですが、飲めますか？",
+            "answer": "リッチチョコレート風味・生キャラメル風味には乳成分を含む原料を使用しています。黒蜜きなこ風味のアレルギー物質は大豆のみです。アレルギーが心配な方は原材料をご確認のうえ、医師にご相談ください。"
+          }
+        },
+        "faq34": {
+          "type": "qa",
+          "settings": {
+            "question": "人工甘味料は入っていますか？",
+            "answer": "フレーバーつきの商品には、スクラロース・アセスルファムKなどの甘味料を使用しています（黒蜜きなこ風味はアスパルテーム・L-フェニルアラニン化合物も使用）。気になる方はプレーン、または「ソイプロテイン 3kg 人工甘味料不使用」をお選びください。"
+          }
+        },
+        "faq35": {
+          "type": "qa",
+          "settings": {
+            "question": "ビタミン11種の内容は？",
+            "answer": "ビタミンC、ビタミンE、ナイアシン、パントテン酸、ビタミンB1、ビタミンB6、ビタミンB2、ビタミンA、葉酸、ビタミンD、ビタミンB12の11種です。"
+          }
+        },
+        "faq36": {
+          "type": "qa",
+          "settings": {
+            "question": "どのくらいの頻度で飲めばいいですか？",
+            "answer": "1日1〜2杯を目安に、朝食代わりや間食代わりとして飲まれる方が多いです。"
+          }
+        },
+        "faq37": {
+          "type": "qa",
+          "settings": {
+            "question": "原産国はどこですか？",
+            "answer": "国内製造・中国製造の大豆たんぱくを使用し、国内工場で製造しています。"
+          }
+        }
+      },
+      "block_order": [
+        "faq33",
+        "faq34",
+        "faq35",
+        "faq36",
+        "faq37"
+      ],
+      "settings": {
+        "en": "FAQ",
+        "title": "よくある質問",
+        "open_first": true,
+        "background": "white"
+      }
+    },
+    "spec-11": {
+      "type": "product-spec",
+      "blocks": {
+        "sp38": {
+          "type": "row",
+          "settings": {
+            "label": "商品区分",
+            "value": "健康食品"
+          }
+        },
+        "sp39": {
+          "type": "row",
+          "settings": {
+            "label": "原材料名（リッチチョコレート風味）",
+            "value": "大豆たんぱく（中国製造、国内製造）、マルトデキストリン、ココアパウダー、クリーミングパウダー、食塩、植物性乳酸菌（殺菌）、デキストリン／DL-アラニン、香料、甘味料（ステビア、スクラロース、アセスルファムK）、乳化剤、V.C、抽出V.E、ナイアシン、パントテン酸Ca、V.B1、V.B6、V.B2、V.A、葉酸、V.D、V.B12、（一部に乳成分・大豆を含む）"
+          }
+        },
+        "sp40": {
+          "type": "row",
+          "settings": {
+            "label": "原材料名（黒蜜きなこ風味）",
+            "value": "大豆たんぱく（中国製造、国内製造）、きな粉、マルトデキストリン、加工黒糖、植物性乳酸菌（殺菌）、デキストリン／甘味料（スクラロース、アスパルテーム、L-フェニルアラニン化合物、アセスルファムK）、V.C、抽出V.E、ナイアシン、パントテン酸Ca、V.B1、V.B6、V.B2、V.A、葉酸、V.D、V.B12、（一部に大豆を含む）"
+          }
+        },
+        "sp41": {
+          "type": "row",
+          "settings": {
+            "label": "原材料名（生キャラメル・バナナ・プレーン）",
+            "value": "[パッケージの表示を入力]"
+          }
+        },
+        "sp42": {
+          "type": "row",
+          "settings": {
+            "label": "内容量",
+            "value": "1kg"
+          }
+        },
+        "sp43": {
+          "type": "row",
+          "settings": {
+            "label": "アレルギー物質（28品目中）",
+            "value": "リッチチョコレート：乳成分・大豆｜黒蜜きなこ：大豆｜生キャラメル：乳成分・大豆"
+          }
+        },
+        "sp44": {
+          "type": "row",
+          "settings": {
+            "label": "保存方法",
+            "value": "高温多湿および直射日光を避けて保管してください。"
+          }
+        },
+        "sp45": {
+          "type": "row",
+          "settings": {
+            "label": "製造国",
+            "value": "日本"
+          }
+        },
+        "sp46": {
+          "type": "row",
+          "settings": {
+            "label": "販売者",
+            "value": "[販売者名・所在地]"
+          }
+        }
+      },
+      "block_order": [
+        "sp38",
+        "sp39",
+        "sp40",
+        "sp41",
+        "sp42",
+        "sp43",
+        "sp44",
+        "sp45",
+        "sp46"
+      ],
+      "settings": {
+        "en": "SPEC",
+        "title": "商品情報・原材料・栄養成分",
+        "nutrition_title": "栄養成分表示",
+        "nutrition_header": "1杯あたり|エネルギー|たんぱく質|脂質|炭水化物|食塩相当量",
+        "nutrition_rows": "リッチチョコレート（30g）|100.8kcal|21.7g|1.5g|5.6g|0.65g\n黒蜜きなこ（30g）|117.8kcal|21.1g|2.0g|6.9g|0.44g\n生キャラメル（30g）|104.4kcal|20.6g|1.2g|7.9g|0.7g\nバナナ（30g）|[入力]|[入力]|[入力]|[入力]|[入力]\nプレーン（20g）|[入力]|[入力]|[入力]|[入力]|[入力]",
+        "nutrition_note": "推定値。",
+        "spec_title": "商品情報",
+        "show_description": false,
+        "background": "white"
+      }
+    },
+    "cross-12": {
+      "type": "product-recommendations",
+      "settings": {
+        "en": "RECOMMEND",
+        "title": "あわせて選ばれているアイテム",
+        "lead": "2点以上のご注文で、まとめ買い割が適用されます。",
+        "products": [
+          "soy-protein-3kg",
+          "resistant-dextrin-2kg",
+          "whey-protein-3kg"
+        ],
+        "background": "white"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "trust-1",
+    "reasons-2",
+    "proof-3",
+    "flavors-4",
+    "compare-table-5",
+    "steps-6",
+    "scenes-7",
+    "why-cheap-8",
+    "reviews-9",
+    "faq-10",
+    "spec-11",
+    "cross-12"
+  ]
+}

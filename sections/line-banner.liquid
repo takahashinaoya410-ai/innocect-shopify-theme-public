@@ -1,0 +1,23 @@
+<section class="line-banner">
+  <div class="container container--narrow line-banner__inner">
+    <div class="line-banner__text">
+      <p class="line-banner__label">{{ section.settings.label }}</p>
+      <p class="line-banner__title">{{ section.settings.title }}</p>
+      <p class="line-banner__desc">{{ section.settings.text }}</p>
+    </div>
+    <a class="btn btn--dark" href="{{ settings.line_url | default: '#' }}"{% if settings.line_url != blank %} target="_blank" rel="noopener"{% endif %}>{% render 'icon', name: 'line', size: 20 %}{{ section.settings.button }}</a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "LINE登録の帯",
+  "settings": [
+    { "type": "text", "id": "label", "label": "小見出し", "default": "LINE公式アカウント" },
+    { "type": "text", "id": "title", "label": "見出し", "default": "友だち登録で[500]円OFFクーポン" },
+    { "type": "text", "id": "text", "label": "説明", "default": "新フレーバーや再入荷のお知らせもLINEでお届けします。" },
+    { "type": "text", "id": "button", "label": "ボタン", "default": "友だち追加する" }
+  ],
+  "presets": [{ "name": "LINE登録の帯" }]
+}
+{% endschema %}

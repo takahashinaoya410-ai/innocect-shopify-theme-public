@@ -1,0 +1,392 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "lead": "中身で勝負する。香料・甘味料不使用で、原材料はL-グルタミンだけ。1kg・約200回分です。",
+        "badges": "L-グルタミン100%\n香料・甘味料不使用\n1kg・約200回分\n国内充填",
+        "media_badges": "L-グルタミン100%\n約200回分",
+        "single_label": "1kg（約200回分）",
+        "rating_label": "楽天市場レビュー（147件）",
+        "rating_value": "4.52",
+        "coming_soon": "",
+        "coming_text": "発売日が決まりしだい、メールとLINEでお知らせします。",
+        "coming_button": "発売のお知らせを受け取る",
+        "default_subscription": true,
+        "show_dynamic_checkout": false,
+        "show_ship_info": true
+      }
+    },
+    "trust-1": {
+      "type": "trust-bar",
+      "blocks": {
+        "t1": {
+          "type": "item",
+          "settings": {
+            "icon": "flask",
+            "title": "L-グルタミン100%",
+            "text": "原材料はグルタミンのみ"
+          }
+        },
+        "t2": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "香料・甘味料不使用",
+            "text": "シンプルな設計"
+          }
+        },
+        "t3": {
+          "type": "item",
+          "settings": {
+            "icon": "yen",
+            "title": "1回あたり約{per}円",
+            "text": "1回5gで計算"
+          }
+        },
+        "t4": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "国内で充填",
+            "text": "HACCPに準拠した衛生管理"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "settings": {
+        "background": "surface"
+      }
+    },
+    "reasons-2": {
+      "type": "product-reasons",
+      "blocks": {
+        "r5": {
+          "type": "reason",
+          "settings": {
+            "number": "01",
+            "icon": "leaf",
+            "title": "添加物を使わない、シンプル設計",
+            "big": "100%",
+            "big_sub": "L-グルタミン",
+            "body": "甘味料・保存料などの添加物は使わず、L-グルタミンだけを詰めました。",
+            "bullets": ""
+          }
+        },
+        "r6": {
+          "type": "reason",
+          "settings": {
+            "number": "02",
+            "icon": "cup",
+            "title": "いつもの飲み物に混ぜやすい",
+            "big": "",
+            "big_sub": "",
+            "body": "水やお好みの飲み物、プロテインに溶かして飲めます。",
+            "bullets": ""
+          }
+        },
+        "r7": {
+          "type": "reason",
+          "settings": {
+            "number": "03",
+            "icon": "yen",
+            "title": "工場と直接取引で、この価格",
+            "big": "約{per}円",
+            "big_sub": "1回（5g）あたり",
+            "body": "工場との直接取引で中間コストを抑え、毎日続けやすい価格にしました。",
+            "bullets": ""
+          }
+        }
+      },
+      "block_order": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "settings": {
+        "en": "REASONS",
+        "title": "INNOCECTのグルタミンが選ばれる理由",
+        "lead": "",
+        "background": "surface"
+      }
+    },
+    "steps-3": {
+      "type": "how-to",
+      "blocks": {
+        "s8": {
+          "type": "step",
+          "settings": {
+            "icon": "spoon",
+            "title": "1回5gを目安に",
+            "text": "目安量を量ります。"
+          }
+        },
+        "s9": {
+          "type": "step",
+          "settings": {
+            "icon": "cup",
+            "title": "飲み物に混ぜる",
+            "text": "水やフルーツジュース、プロテインに混ぜます。"
+          }
+        },
+        "s10": {
+          "type": "step",
+          "settings": {
+            "icon": "shake",
+            "title": "よく混ぜる",
+            "text": "よく混ぜてからお召し上がりください。"
+          }
+        }
+      },
+      "block_order": [
+        "s8",
+        "s9",
+        "s10"
+      ],
+      "settings": {
+        "en": "HOW TO",
+        "title": "使い方",
+        "tip_label": "飲みやすくするコツ：",
+        "tip": "グルタミン特有のほのかな風味があるため、フルーツジュースに加えたり、クエン酸を加えたりすると飲みやすくなります。",
+        "background": "surface"
+      }
+    },
+    "scenes-4": {
+      "type": "feature-cards",
+      "blocks": {
+        "sc11": {
+          "type": "card",
+          "settings": {
+            "icon": "dumbbell",
+            "title": "運動・トレーニングのあとに",
+            "text": "摂取タイミングの目安は、運動・トレーニングのあとです。"
+          }
+        },
+        "sc12": {
+          "type": "card",
+          "settings": {
+            "icon": "cup",
+            "title": "プロテインと一緒に",
+            "text": "いつものプロテインに混ぜれば、手間なく続けられます。"
+          }
+        }
+      },
+      "block_order": [
+        "sc11",
+        "sc12"
+      ],
+      "settings": {
+        "en": "TIMING",
+        "title": "こんなタイミングに",
+        "style": "scene",
+        "background": "white"
+      }
+    },
+    "why-cheap-5": {
+      "type": "why-cheap",
+      "blocks": {
+        "w13": {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "title": "シンプルな設計のパッケージ",
+            "text": "見た目にお金をかけすぎず、そのぶんを中身と価格に回しています。"
+          }
+        },
+        "w14": {
+          "type": "item",
+          "settings": {
+            "icon": "tag",
+            "title": "広告宣伝費をかけすぎない",
+            "text": "過度な広告を打たず、使ってくださる方の声で広げています。"
+          }
+        },
+        "w15": {
+          "type": "item",
+          "settings": {
+            "icon": "flask",
+            "title": "原料・資材を自社で開発",
+            "text": "原料メーカー・工場と直接やりとりし、中間コストを抑えています。"
+          }
+        },
+        "w16": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "大ロット製造で加工費を低減",
+            "text": "まとめて製造することで、1袋あたりの加工費を下げています。"
+          }
+        },
+        "w17": {
+          "type": "item",
+          "settings": {
+            "icon": "repeat",
+            "title": "システムで運営を効率化",
+            "text": "受注から出荷までの仕組みを整え、人件費を抑えています。"
+          }
+        }
+      },
+      "block_order": [
+        "w13",
+        "w14",
+        "w15",
+        "w16",
+        "w17"
+      ],
+      "settings": {
+        "en": "WHY",
+        "title": "INNOCECTが、この価格で出せる理由",
+        "lead": "安さには、ちゃんと理由があります。品質を落とすのではなく、品質以外のコストを削っています。",
+        "background": "dark"
+      }
+    },
+    "reviews-6": {
+      "type": "product-reviews",
+      "settings": {
+        "en": "REVIEW",
+        "title": "お客様の声",
+        "background": "surface",
+        "anchor": "reviews",
+        "source_label": "楽天市場のレビュー（2026/11/16時点）",
+        "source_rating": "4.52",
+        "source_count": "147件"
+      }
+    },
+    "faq-7": {
+      "type": "faq",
+      "blocks": {
+        "faq18": {
+          "type": "qa",
+          "settings": {
+            "question": "味はありますか？",
+            "answer": "グルタミン特有のほのかな風味があります。フルーツジュースに混ぜたり、クエン酸を加えたりすると飲みやすくなります。"
+          }
+        },
+        "faq19": {
+          "type": "qa",
+          "settings": {
+            "question": "いつ飲めばいいですか？",
+            "answer": "摂取タイミングの目安は、運動・トレーニングのあとです。"
+          }
+        },
+        "faq20": {
+          "type": "qa",
+          "settings": {
+            "question": "原産国はどこですか？",
+            "answer": "原料の原産国は中国で、最終加工（充填）は日本国内で行っています。厚生労働省の定める食品検査に合格した商品です。"
+          }
+        },
+        "faq21": {
+          "type": "qa",
+          "settings": {
+            "question": "EAAと一緒に飲めますか？",
+            "answer": "あわせて使う方も多いです。INNOCECTのEAAにもL-グルタミンが含まれているため、量を調整してお召し上がりください。"
+          }
+        }
+      },
+      "block_order": [
+        "faq18",
+        "faq19",
+        "faq20",
+        "faq21"
+      ],
+      "settings": {
+        "en": "FAQ",
+        "title": "よくある質問",
+        "open_first": true,
+        "background": "white"
+      }
+    },
+    "spec-8": {
+      "type": "product-spec",
+      "blocks": {
+        "sp22": {
+          "type": "row",
+          "settings": {
+            "label": "原材料名",
+            "value": "L-グルタミン"
+          }
+        },
+        "sp23": {
+          "type": "row",
+          "settings": {
+            "label": "内容量",
+            "value": "1,000g（1回5gで約200回分）"
+          }
+        },
+        "sp24": {
+          "type": "row",
+          "settings": {
+            "label": "保存方法",
+            "value": "高温多湿および直射日光を避けて保管してください。"
+          }
+        },
+        "sp25": {
+          "type": "row",
+          "settings": {
+            "label": "原産国",
+            "value": "中国（最終加工地：日本）"
+          }
+        },
+        "sp26": {
+          "type": "row",
+          "settings": {
+            "label": "販売者",
+            "value": "[販売者名・所在地]"
+          }
+        }
+      },
+      "block_order": [
+        "sp22",
+        "sp23",
+        "sp24",
+        "sp25",
+        "sp26"
+      ],
+      "settings": {
+        "en": "SPEC",
+        "title": "商品情報・原材料・栄養成分",
+        "nutrition_title": "栄養成分表示",
+        "nutrition_header": "5gあたり|エネルギー|たんぱく質|脂質|炭水化物|食塩相当量",
+        "nutrition_rows": "L-グルタミン|[入力]|[入力]|[入力]|[入力]|[入力]",
+        "nutrition_note": "パッケージの表示値を入力してください。",
+        "spec_title": "商品情報",
+        "show_description": false,
+        "background": "white"
+      }
+    },
+    "cross-9": {
+      "type": "product-recommendations",
+      "settings": {
+        "en": "RECOMMEND",
+        "title": "グルタミンと一緒に選ばれているアイテム",
+        "lead": "2点以上のご注文で、まとめ買い割が適用されます。",
+        "products": [
+          "creatine-1kg",
+          "eaa-600g",
+          "whey-protein-3kg"
+        ],
+        "background": "white"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "trust-1",
+    "reasons-2",
+    "steps-3",
+    "scenes-4",
+    "why-cheap-5",
+    "reviews-6",
+    "faq-7",
+    "spec-8",
+    "cross-9"
+  ]
+}

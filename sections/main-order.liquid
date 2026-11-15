@@ -1,0 +1,28 @@
+<div class="container section">
+  <p><a href="{{ routes.account_url }}">← マイページ</a></p>
+  <h1 class="page-title">ご注文 {{ order.name }}</h1>
+  <p>{{ order.created_at | date: '%Y/%m/%d %H:%M' }}</p>
+  {%- if order.cancelled -%}<p class="form-error">この注文はキャンセルされました（{{ order.cancelled_at | date: '%Y/%m/%d' }}）</p>{%- endif -%}
+  <div class="table-wrap">
+    <table class="spec-table">
+      <thead><tr><th scope="col">商品</th><th scope="col">単価</th><th scope="col">数量</th><th scope="col">小計</th></tr></thead>
+      <tbody>
+        {%- for line_item in order.line_items -%}
+          <tr><td>{{ line_item.title }}{% if line_item.selling_plan_allocation %}<br><small>{{ line_item.selling_plan_allocation.selling_plan.name }}</small>{% endif %}</td><td class="num">{{ line_item.final_price | money }}</td><td class="num">{{ line_item.quantity }}</td><td class="num">{{ line_item.final_line_price | money }}</td></tr>
+        {%- endfor -%}
+      </tbody>
+      <tfoot>
+        <tr><th scope="row" colspan="3">小計</th><td class="num">{{ order.line_items_subtotal_price | money }}</td></tr>
+        {%- for shipping_method in order.shipping_methods -%}<tr><th scope="row" colspan="3">送料（{{ shipping_method.title }}）</th><td class="num">{{ shipping_method.price | money }}</td></tr>{%- endfor -%}
+        <tr><th scope="row" colspan="3">合計</th><td class="num">{{ order.total_price | money }}</td></tr>
+      </tfoot>
+    </table>
+  </div>
+  <div class="account-grid">
+    <div class="card"><h2 class="h3">お届け先</h2>{{ order.shipping_address | format_address }}</div>
+    <div class="card"><h2 class="h3">ご請求先</h2>{{ order.billing_address | format_address }}</div>
+  </div>
+</div>
+{% schema %}
+{ "name": "注文詳細", "settings": [] }
+{% endschema %}

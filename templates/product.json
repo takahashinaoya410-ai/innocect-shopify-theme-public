@@ -1,0 +1,34 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "default_subscription": true,
+        "show_ship_info": true
+      }
+    },
+    "spec": {
+      "type": "product-spec",
+      "settings": {
+        "en": "SPEC",
+        "title": "商品情報",
+        "nutrition_rows": "",
+        "show_description": true,
+        "background": "white"
+      }
+    },
+    "recs": {
+      "type": "product-recommendations",
+      "settings": {
+        "en": "RECOMMEND",
+        "title": "あわせて選ばれているアイテム",
+        "background": "surface"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "spec",
+    "recs"
+  ]
+}

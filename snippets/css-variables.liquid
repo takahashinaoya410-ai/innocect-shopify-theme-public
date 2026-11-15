@@ -1,0 +1,30 @@
+{%- liquid
+  assign num_font = settings.type_number_font
+  assign num_font_bold = num_font | font_modify: 'weight', '800'
+  assign num_font_italic = nil
+  if num_font_bold
+    assign num_font_italic = num_font_bold | font_modify: 'style', 'italic'
+  endif
+-%}
+<style>
+  {{ num_font | font_face: font_display: 'swap' }}
+  {%- if num_font_bold -%}{{ num_font_bold | font_face: font_display: 'swap' }}{%- endif -%}
+  {%- if num_font_italic -%}{{ num_font_italic | font_face: font_display: 'swap' }}{%- endif -%}
+  :root {
+    --c-primary: {{ settings.color_primary }};
+    --c-primary-hover: {{ settings.color_primary | color_darken: 6 }};
+    --c-brand: {{ settings.color_brand }};
+    --c-tint: {{ settings.color_tint }};
+    --c-ink: {{ settings.color_text }};
+    --c-sub: {{ settings.color_sub }};
+    --c-muted: {{ settings.color_sub | color_lighten: 12 }};
+    --c-surface: {{ settings.color_surface }};
+    --c-line: {{ settings.color_line }};
+    --c-accent: {{ settings.color_accent }};
+    --c-accent-tint: {{ settings.color_accent | color_mix: '#ffffff', 10 }};
+    --c-dark: {{ settings.color_dark }};
+    --c-gold: #C98A00;
+    --font-ja: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", YuGothic, Meiryo, system-ui, sans-serif;
+    --font-num: {{ num_font.family }}, {{ num_font.fallback_families }}, var(--font-ja);
+  }
+</style>

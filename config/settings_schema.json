@@ -1,0 +1,88 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "INNOCECT Store",
+    "theme_version": "1.0.0",
+    "theme_author": "INNOCECT",
+    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
+    "theme_support_url": "https://help.shopify.com/"
+  },
+  {
+    "name": "カラー",
+    "settings": [
+      { "type": "color", "id": "color_primary", "label": "メインカラー（ボタン・強調文字）", "default": "#0B6E35" },
+      { "type": "color", "id": "color_brand", "label": "ブランドグリーン（ロゴ・大きな装飾）", "default": "#15A84A" },
+      { "type": "color", "id": "color_tint", "label": "淡いグリーン（背景）", "default": "#E9F6EE" },
+      { "type": "color", "id": "color_text", "label": "文字色", "default": "#17191C" },
+      { "type": "color", "id": "color_sub", "label": "補足文字色", "default": "#454B52" },
+      { "type": "color", "id": "color_surface", "label": "グレー背景", "default": "#F5F7F5" },
+      { "type": "color", "id": "color_line", "label": "罫線", "default": "#E2E6E3" },
+      { "type": "color", "id": "color_accent", "label": "割引・注意の色", "default": "#B8321F" },
+      { "type": "color", "id": "color_dark", "label": "濃い背景（安さの理由など）", "default": "#17211B" }
+    ]
+  },
+  {
+    "name": "フォント",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "type_number_font",
+        "label": "英数字・価格のフォント",
+        "default": "inter_n7",
+        "info": "日本語は端末の標準ゴシック体で表示します（表示速度を優先）"
+      }
+    ]
+  },
+  {
+    "name": "販売ルール",
+    "settings": [
+      { "type": "paragraph", "content": "割引そのものは［ディスカウント］と定期便アプリで設定します。ここは画面に出す案内文と計算に使う値です。" },
+      { "type": "number", "id": "free_shipping_threshold", "label": "送料無料になる金額（税込・円）", "default": 5000 },
+      { "type": "text", "id": "shipping_fee_text", "label": "送料の案内", "default": "未満は[送料]円" },
+      { "type": "text", "id": "ship_cutoff_text", "label": "出荷の案内", "default": "平日[12]時までのご注文で当日出荷（土日祝は翌営業日）" },
+      { "type": "header", "content": "定期便" },
+      { "type": "number", "id": "subscription_percent", "label": "定期便の割引率（%）", "default": 10, "info": "定期便アプリの割引率と同じ値にしてください。アプリ未導入時の価格試算にも使います" },
+      { "type": "text", "id": "subscription_note", "label": "定期便の補足", "default": "回数しばりなし・スキップ／解約はマイページから" },
+      { "type": "text", "id": "subscription_skip_text", "label": "スキップ・解約の締め切り", "default": "定期便は次回お届け日の[5]日前までスキップ・解約OK" },
+      { "type": "header", "content": "まとめ買い割" },
+      { "type": "checkbox", "id": "bundle_enabled", "label": "まとめ買い割の案内を表示する", "default": true },
+      { "type": "number", "id": "bundle_tier1_qty", "label": "1段階目：点数", "default": 2 },
+      { "type": "number", "id": "bundle_tier1_percent", "label": "1段階目：割引率（%）", "default": 5 },
+      { "type": "number", "id": "bundle_tier2_qty", "label": "2段階目：点数", "default": 3 },
+      { "type": "number", "id": "bundle_tier2_percent", "label": "2段階目：割引率（%）", "default": 10 },
+      { "type": "header", "content": "カート" },
+      {
+        "type": "select",
+        "id": "cart_after_add",
+        "label": "カートに入れたあと",
+        "options": [
+          { "value": "toast", "label": "その場でお知らせを表示" },
+          { "value": "cart", "label": "カートページへ移動" }
+        ],
+        "default": "toast"
+      }
+    ]
+  },
+  {
+    "name": "フレーバーの色",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "swatch_colors",
+        "label": "フレーバー名:色（1行に1つ）",
+        "info": "商品のオプション値（フレーバー名）と同じ文字で書きます。Shopifyのスウォッチを設定した場合はそちらを優先します",
+        "default": "チョコレート:#3E2419\n抹茶ラテ:#3F5E2A\nブルーベリーヨーグルト:#3D3470\nキャラメル:#9A5A1C\nバナナミルク:#EBCB4F\nリッチチョコレート:#4A2C1F\nカフェオレ:#8C5F3B\nミルクティー:#22306A\n抹茶:#4D6B2D\nプレーン:#EFE8D8\n黒蜜きなこ:#A97A28\n生キャラメル:#B0641E\nバナナ:#EBCB4F\nマスカット:#7CB342\nレモンライム:#D4C82A\nみかん:#F08A1C\nマンゴーピーチ:#F59E6B"
+      }
+    ]
+  },
+  {
+    "name": "SNS・会社情報",
+    "settings": [
+      { "type": "url", "id": "line_url", "label": "LINE公式アカウントのURL" },
+      { "type": "url", "id": "instagram_url", "label": "InstagramのURL" },
+      { "type": "url", "id": "x_url", "label": "XのURL" },
+      { "type": "text", "id": "seller_name", "label": "販売事業者名（フッター）", "default": "[販売事業者名]" },
+      { "type": "image_picker", "id": "favicon", "label": "ファビコン" }
+    ]
+  }
+]

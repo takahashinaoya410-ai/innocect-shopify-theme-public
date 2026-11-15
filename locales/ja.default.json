@@ -1,0 +1,8 @@
+{
+  "general": {
+    "cart": "カート",
+    "search": "検索",
+    "add_to_cart": "カートに入れる",
+    "sold_out": "売り切れ"
+  }
+}

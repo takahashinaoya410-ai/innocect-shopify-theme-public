@@ -1,0 +1,122 @@
+{%- capture cost_title -%}{% render 'tokens', text: section.settings.title, product: product %}{%- endcapture -%}
+<section class="section section--{{ section.settings.background }}" id="{{ section.settings.anchor | default: section.id }}">
+  <div class="container container--text">
+    {% render 'section-head', en: section.settings.en, title: cost_title, lead: section.settings.lead %}
+    <div class="cost">
+      {%- for block in section.blocks -%}
+        <div class="cost__row{% if block.settings.highlight %} cost__row--hl{% endif %}" {{ block.shopify_attributes }}>
+          <div class="cost__label"><span class="cost__title">{% render 'tokens', text: block.settings.label, product: product %}</span><span class="cost__sub">{% render 'tokens', text: block.settings.sub, product: product %}</span></div>
+          <div class="cost__value num">{% render 'tokens', text: block.settings.value, product: product %}</div>
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.note != blank -%}<p class="note">{% render 'tokens', text: section.settings.note, product: product %}</p>{%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "1杯あたりの価格",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "en",
+      "label": "英字の小見出し",
+      "default": "COST"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "見出し",
+      "default": "毎日続けやすい価格"
+    },
+    {
+      "type": "textarea",
+      "id": "lead",
+      "label": "リード文"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "背景",
+      "default": "white",
+      "options": [
+        {
+          "value": "white",
+          "label": "白"
+        },
+        {
+          "value": "surface",
+          "label": "グレー"
+        },
+        {
+          "value": "tint",
+          "label": "淡いグリーン"
+        },
+        {
+          "value": "dark",
+          "label": "濃い色"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "ページ内リンク用ID",
+      "info": "例：reviews（半角英数字）"
+    },
+    {
+      "type": "textarea",
+      "id": "note",
+      "label": "注記"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "row",
+      "name": "行",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "項目",
+          "default": "1回のみ購入"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "金額",
+          "default": "約{per}円",
+          "info": "{per} {per_sub} {per_bundle} {month} {month_sub} {price} が使えます"
+        },
+        {
+          "type": "text",
+          "id": "sub",
+          "label": "補足"
+        },
+        {
+          "type": "checkbox",
+          "id": "highlight",
+          "label": "強調する",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "1杯あたりの価格",
+      "blocks": [
+        {
+          "type": "row"
+        },
+        {
+          "type": "row"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

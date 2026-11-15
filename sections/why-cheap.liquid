@@ -1,0 +1,243 @@
+<section class="section section--{{ section.settings.background }}" id="{{ section.settings.anchor | default: section.id }}">
+  <div class="container container--text">
+    {% render 'section-head', en: section.settings.en, title: section.settings.title, lead: section.settings.lead %}
+    <ul class="why" role="list">
+      {%- for block in section.blocks -%}
+        <li class="why__item" {{ block.shopify_attributes }}>
+          <span class="icon-circle icon-circle--dark">{% render 'icon', name: block.settings.icon, size: 22 %}</span>
+          <div><h3 class="why__title">{{ block.settings.title }}</h3><p class="why__text">{{ block.settings.text }}</p></div>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "安さの理由",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "en",
+      "label": "英字の小見出し",
+      "default": "WHY"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "見出し",
+      "default": "INNOCECTが、この価格で出せる理由"
+    },
+    {
+      "type": "textarea",
+      "id": "lead",
+      "label": "リード文"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "背景",
+      "default": "dark",
+      "options": [
+        {
+          "value": "white",
+          "label": "白"
+        },
+        {
+          "value": "surface",
+          "label": "グレー"
+        },
+        {
+          "value": "tint",
+          "label": "淡いグリーン"
+        },
+        {
+          "value": "dark",
+          "label": "濃い色"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "ページ内リンク用ID",
+      "info": "例：reviews（半角英数字）"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "item",
+      "name": "理由",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "アイコン",
+          "default": "box",
+          "options": [
+            {
+              "value": "check",
+              "label": "チェック"
+            },
+            {
+              "value": "factory",
+              "label": "工場"
+            },
+            {
+              "value": "leaf",
+              "label": "葉（無添加）"
+            },
+            {
+              "value": "shield",
+              "label": "盾（安心）"
+            },
+            {
+              "value": "yen",
+              "label": "円"
+            },
+            {
+              "value": "scale",
+              "label": "はかり（容量）"
+            },
+            {
+              "value": "chat",
+              "label": "吹き出し（実績）"
+            },
+            {
+              "value": "sparkle",
+              "label": "キラキラ（味）"
+            },
+            {
+              "value": "dumbbell",
+              "label": "ダンベル"
+            },
+            {
+              "value": "flask",
+              "label": "フラスコ（成分）"
+            },
+            {
+              "value": "cup",
+              "label": "カップ"
+            },
+            {
+              "value": "spoon",
+              "label": "スプーン"
+            },
+            {
+              "value": "shake",
+              "label": "シェイカー"
+            },
+            {
+              "value": "sun",
+              "label": "太陽（朝）"
+            },
+            {
+              "value": "moon",
+              "label": "月（夜）"
+            },
+            {
+              "value": "clock",
+              "label": "時計（間食）"
+            },
+            {
+              "value": "drop",
+              "label": "しずく"
+            },
+            {
+              "value": "bean",
+              "label": "豆"
+            },
+            {
+              "value": "box",
+              "label": "箱"
+            },
+            {
+              "value": "tag",
+              "label": "タグ"
+            },
+            {
+              "value": "repeat",
+              "label": "定期便"
+            },
+            {
+              "value": "truck",
+              "label": "配送"
+            },
+            {
+              "value": "gift",
+              "label": "ギフト"
+            },
+            {
+              "value": "info",
+              "label": "情報"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "見出し",
+          "default": "見出し"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "説明"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "安さの理由",
+      "settings": {
+        "lead": "安さには、ちゃんと理由があります。品質を落とすのではなく、品質以外のコストを削っています。"
+      },
+      "blocks": [
+        {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "title": "シンプルな設計のパッケージ",
+            "text": "見た目にお金をかけすぎず、そのぶんを中身と価格に回しています。"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "icon": "tag",
+            "title": "広告宣伝費をかけすぎない",
+            "text": "過度な広告を打たず、使ってくださる方の声で広げています。"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "icon": "flask",
+            "title": "原料・資材を自社で開発",
+            "text": "原料メーカー・工場と直接やりとりし、中間コストを抑えています。"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "大ロット製造で加工費を低減",
+            "text": "まとめて製造することで、1袋あたりの加工費を下げています。"
+          }
+        },
+        {
+          "type": "item",
+          "settings": {
+            "icon": "repeat",
+            "title": "システムで運営を効率化",
+            "text": "受注から出荷までの仕組みを整え、人件費を抑えています。"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

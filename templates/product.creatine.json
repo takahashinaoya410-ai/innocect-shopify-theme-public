@@ -1,0 +1,459 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "lead": "中身で勝負する。原材料はクレアチンモノハイドレートだけ。1kg・約200回分の大容量です。",
+        "badges": "純度99.9%\n原材料1つだけ\n1kg・約200回分\n国内充填",
+        "media_badges": "純度99.9%\n約200回分",
+        "single_label": "1kg（約200回分）",
+        "rating_label": "楽天市場レビュー（163件）",
+        "rating_value": "4.64",
+        "coming_soon": "",
+        "coming_text": "発売日が決まりしだい、メールとLINEでお知らせします。",
+        "coming_button": "発売のお知らせを受け取る",
+        "default_subscription": true,
+        "show_dynamic_checkout": false,
+        "show_ship_info": true
+      }
+    },
+    "trust-1": {
+      "type": "trust-bar",
+      "blocks": {
+        "t1": {
+          "type": "item",
+          "settings": {
+            "icon": "flask",
+            "title": "純度99.9%",
+            "text": "クレアチンモノハイドレート"
+          }
+        },
+        "t2": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "国内で充填",
+            "text": "HACCPに準拠した衛生管理"
+          }
+        },
+        "t3": {
+          "type": "item",
+          "settings": {
+            "icon": "yen",
+            "title": "1回あたり約{per}円",
+            "text": "1回5gで計算"
+          }
+        },
+        "t4": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "楽天市場 月間優良ショップ",
+            "text": "2026年1月度 受賞"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "settings": {
+        "background": "surface"
+      }
+    },
+    "proof-2": {
+      "type": "proof-stats",
+      "blocks": {
+        "p5": {
+          "type": "stat",
+          "settings": {
+            "value": "4.64",
+            "unit": "",
+            "label": "楽天市場 レビュー平均（163件）"
+          }
+        },
+        "p6": {
+          "type": "stat",
+          "settings": {
+            "value": "3",
+            "unit": "冠",
+            "label": "楽天市場ランキング 1位獲得"
+          }
+        },
+        "p7": {
+          "type": "stat",
+          "settings": {
+            "value": "200",
+            "unit": "回分",
+            "label": "1kgあたり （1回5g）"
+          }
+        }
+      },
+      "block_order": [
+        "p5",
+        "p6",
+        "p7"
+      ],
+      "settings": {
+        "en": "RESULTS",
+        "title": "たくさんの方に選ばれています",
+        "note": "レビュー平均は2026年11月16日時点。ランキング：［獲得したジャンル・日付を入力］",
+        "background": "white"
+      }
+    },
+    "reasons-3": {
+      "type": "product-reasons",
+      "blocks": {
+        "r8": {
+          "type": "reason",
+          "settings": {
+            "number": "01",
+            "icon": "flask",
+            "title": "原材料は、クレアチンだけ",
+            "big": "99.9%",
+            "big_sub": "純度",
+            "body": "香料・甘味料などは加えず、原材料はクレアチンモノハイドレートのみ。味や香りが少ないので、いつもの飲み物に混ぜやすいパウダーです。",
+            "bullets": ""
+          }
+        },
+        "r9": {
+          "type": "reason",
+          "settings": {
+            "number": "02",
+            "icon": "yen",
+            "title": "工場と直接取引で、この価格",
+            "big": "約{per}円",
+            "big_sub": "1回（5g）あたり",
+            "body": "工場と直接取引して中間マージンを削減。高純度のクレアチンを、毎日続けやすい価格でお届けします。",
+            "bullets": ""
+          }
+        },
+        "r10": {
+          "type": "reason",
+          "settings": {
+            "number": "03",
+            "icon": "factory",
+            "title": "国内で充填・梱包",
+            "big": "",
+            "big_sub": "",
+            "body": "管理体制の整った日本国内の工場で、充填・包装・発送まで一貫して行っています。",
+            "bullets": ""
+          }
+        }
+      },
+      "block_order": [
+        "r8",
+        "r9",
+        "r10"
+      ],
+      "settings": {
+        "en": "REASONS",
+        "title": "INNOCECTのクレアチンが選ばれる理由",
+        "lead": "",
+        "background": "surface"
+      }
+    },
+    "steps-4": {
+      "type": "how-to",
+      "blocks": {
+        "s11": {
+          "type": "step",
+          "settings": {
+            "icon": "spoon",
+            "title": "1日3〜5gが目安",
+            "text": "目安量を量ります。"
+          }
+        },
+        "s12": {
+          "type": "step",
+          "settings": {
+            "icon": "cup",
+            "title": "飲み物に混ぜる",
+            "text": "水やお好みのドリンク、プロテインに混ぜます。"
+          }
+        },
+        "s13": {
+          "type": "step",
+          "settings": {
+            "icon": "shake",
+            "title": "よく混ぜる",
+            "text": "常温の飲み物の場合は、よく混ぜてからお召し上がりください。"
+          }
+        }
+      },
+      "block_order": [
+        "s11",
+        "s12",
+        "s13"
+      ],
+      "settings": {
+        "en": "HOW TO",
+        "title": "使い方",
+        "tip_label": "溶かすコツ：",
+        "tip": "製品の特性上、冷たい飲み物には溶けにくく、温かい飲み物に混ぜると溶けやすくなります。",
+        "background": "surface"
+      }
+    },
+    "honest-5": {
+      "type": "honest-notes",
+      "blocks": {
+        "h14": {
+          "type": "note",
+          "settings": {
+            "title": "一度に大量にとらないでください",
+            "text": "目安量（1日3〜5g）を守ってお召し上がりください。",
+            "tip": "食後など、胃への負担が少ないタイミングがおすすめです。"
+          }
+        },
+        "h15": {
+          "type": "note",
+          "settings": {
+            "title": "水分もしっかりと",
+            "text": "十分な水分と一緒にとるようにしてください。",
+            "tip": "体調に異変を感じたら摂取を中止し、必要に応じて医師にご相談ください。"
+          }
+        },
+        "h16": {
+          "type": "note",
+          "settings": {
+            "title": "湿気に注意してください",
+            "text": "吸湿すると固まったり、変色したりするおそれがあります。",
+            "tip": "使ったあとはチャックをしっかり閉めて保管してください。"
+          }
+        },
+        "h17": {
+          "type": "note",
+          "settings": {
+            "title": "旧パッケージが届くことがあります",
+            "text": "出荷のタイミングによって旧パッケージの商品が届く場合がありますが、内容量や成分に違いはありません。",
+            "tip": "新パッケージ（黒）への切り替えを順次進めています。"
+          }
+        }
+      },
+      "block_order": [
+        "h14",
+        "h15",
+        "h16",
+        "h17"
+      ],
+      "settings": {
+        "en": "SAFETY",
+        "title": "安全にお使いいただくために",
+        "lead": "良いところだけでなく、気になりやすい点も先にお伝えします。",
+        "background": "surface"
+      }
+    },
+    "why-cheap-6": {
+      "type": "why-cheap",
+      "blocks": {
+        "w18": {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "title": "シンプルな設計のパッケージ",
+            "text": "見た目にお金をかけすぎず、そのぶんを中身と価格に回しています。"
+          }
+        },
+        "w19": {
+          "type": "item",
+          "settings": {
+            "icon": "tag",
+            "title": "広告宣伝費をかけすぎない",
+            "text": "過度な広告を打たず、使ってくださる方の声で広げています。"
+          }
+        },
+        "w20": {
+          "type": "item",
+          "settings": {
+            "icon": "flask",
+            "title": "原料・資材を自社で開発",
+            "text": "原料メーカー・工場と直接やりとりし、中間コストを抑えています。"
+          }
+        },
+        "w21": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "大ロット製造で加工費を低減",
+            "text": "まとめて製造することで、1袋あたりの加工費を下げています。"
+          }
+        },
+        "w22": {
+          "type": "item",
+          "settings": {
+            "icon": "repeat",
+            "title": "システムで運営を効率化",
+            "text": "受注から出荷までの仕組みを整え、人件費を抑えています。"
+          }
+        }
+      },
+      "block_order": [
+        "w18",
+        "w19",
+        "w20",
+        "w21",
+        "w22"
+      ],
+      "settings": {
+        "en": "WHY",
+        "title": "INNOCECTが、この価格で出せる理由",
+        "lead": "安さには、ちゃんと理由があります。品質を落とすのではなく、品質以外のコストを削っています。",
+        "background": "dark"
+      }
+    },
+    "reviews-7": {
+      "type": "product-reviews",
+      "settings": {
+        "en": "REVIEW",
+        "title": "お客様の声",
+        "background": "surface",
+        "anchor": "reviews",
+        "source_label": "楽天市場のレビュー（2026/11/16時点）",
+        "source_rating": "4.64",
+        "source_count": "163件"
+      }
+    },
+    "faq-8": {
+      "type": "faq",
+      "blocks": {
+        "faq23": {
+          "type": "qa",
+          "settings": {
+            "question": "味はありますか？",
+            "answer": "味や香りは少なめです。水やお好みのドリンク、プロテインに混ぜてお召し上がりください。"
+          }
+        },
+        "faq24": {
+          "type": "qa",
+          "settings": {
+            "question": "いつ飲めばいいですか？",
+            "answer": "摂取タイミングの目安は、運動前・運動後です。"
+          }
+        },
+        "faq25": {
+          "type": "qa",
+          "settings": {
+            "question": "溶け残りがあります",
+            "answer": "製品の特性上、冷たい飲み物には溶けにくくなっています。温かい飲み物に混ぜるか、よく混ぜてからお召し上がりください。"
+          }
+        },
+        "faq26": {
+          "type": "qa",
+          "settings": {
+            "question": "原産国はどこですか？",
+            "answer": "原料の原産国は中国で、最終加工（充填）は日本国内で行っています。厚生労働省の規格基準に合格した原料を使用しています。"
+          }
+        }
+      },
+      "block_order": [
+        "faq23",
+        "faq24",
+        "faq25",
+        "faq26"
+      ],
+      "settings": {
+        "en": "FAQ",
+        "title": "よくある質問",
+        "open_first": true,
+        "background": "white"
+      }
+    },
+    "spec-9": {
+      "type": "product-spec",
+      "blocks": {
+        "sp27": {
+          "type": "row",
+          "settings": {
+            "label": "名称",
+            "value": "クレアチン原末"
+          }
+        },
+        "sp28": {
+          "type": "row",
+          "settings": {
+            "label": "原材料名",
+            "value": "クレアチンモノハイドレート"
+          }
+        },
+        "sp29": {
+          "type": "row",
+          "settings": {
+            "label": "内容量",
+            "value": "1,000g（1回5gで約200回分）"
+          }
+        },
+        "sp30": {
+          "type": "row",
+          "settings": {
+            "label": "保存方法",
+            "value": "高温多湿を避け、密閉容器にて保管してください。"
+          }
+        },
+        "sp31": {
+          "type": "row",
+          "settings": {
+            "label": "原産国",
+            "value": "中国（最終加工地：日本）"
+          }
+        },
+        "sp32": {
+          "type": "row",
+          "settings": {
+            "label": "販売者",
+            "value": "[販売者名・所在地]"
+          }
+        }
+      },
+      "block_order": [
+        "sp27",
+        "sp28",
+        "sp29",
+        "sp30",
+        "sp31",
+        "sp32"
+      ],
+      "settings": {
+        "en": "SPEC",
+        "title": "商品情報・原材料・栄養成分",
+        "nutrition_title": "栄養成分表示",
+        "nutrition_header": "5gあたり|エネルギー|たんぱく質|脂質|炭水化物|食塩相当量",
+        "nutrition_rows": "クレアチン|20kcal|4.99g|0g|0.01g|0g",
+        "nutrition_note": "推定値（パッケージ表示より）。",
+        "spec_title": "商品情報",
+        "show_description": false,
+        "background": "white"
+      }
+    },
+    "cross-10": {
+      "type": "product-recommendations",
+      "settings": {
+        "en": "RECOMMEND",
+        "title": "クレアチンと一緒に選ばれているアイテム",
+        "lead": "2点以上のご注文で、まとめ買い割が適用されます。",
+        "products": [
+          "whey-protein-3kg",
+          "eaa-600g",
+          "glutamine-1kg"
+        ],
+        "background": "white"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "trust-1",
+    "proof-2",
+    "reasons-3",
+    "steps-4",
+    "honest-5",
+    "why-cheap-6",
+    "reviews-7",
+    "faq-8",
+    "spec-9",
+    "cross-10"
+  ]
+}

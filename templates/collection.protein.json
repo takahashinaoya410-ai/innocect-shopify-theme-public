@@ -1,0 +1,138 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "blocks": {
+        "tab1": {
+          "type": "tab",
+          "settings": {
+            "collection": "protein",
+            "label": "すべて"
+          }
+        },
+        "tab2": {
+          "type": "tab",
+          "settings": {
+            "collection": "whey-protein",
+            "label": "ホエイ"
+          }
+        },
+        "tab3": {
+          "type": "tab",
+          "settings": {
+            "collection": "soy-protein",
+            "label": "ソイ"
+          }
+        }
+      },
+      "block_order": [
+        "tab1",
+        "tab2",
+        "tab3"
+      ],
+      "settings": {
+        "per_page": 24,
+        "enable_filtering": true
+      }
+    },
+    "compare": {
+      "type": "comparison-table",
+      "blocks": {
+        "x4": {
+          "type": "row",
+          "settings": {
+            "cells": "価格（税込）|¥[価格]|¥[価格]|¥[価格]"
+          }
+        },
+        "x5": {
+          "type": "row",
+          "settings": {
+            "cells": "1杯（30g）あたり|約[◯]円|約[◯]円|約[◯]円"
+          }
+        },
+        "x6": {
+          "type": "row",
+          "settings": {
+            "cells": "たんぱく質（1杯）|20.1g|20.2〜21.8g|20.6〜21.7g"
+          }
+        },
+        "x7": {
+          "type": "row",
+          "settings": {
+            "cells": "原料|乳清（ホエイ）|大豆|大豆"
+          }
+        },
+        "x8": {
+          "type": "row",
+          "settings": {
+            "cells": "甘味料|スクラロース・アセスルファムK|ステビアのみ|ステビア・スクラロース など"
+          }
+        },
+        "x9": {
+          "type": "row",
+          "settings": {
+            "cells": "フレーバー|5種（2種は近日発売）|5種（プレーン含む）|5種（プレーン含む）"
+          }
+        }
+      },
+      "block_order": [
+        "x4",
+        "x5",
+        "x6",
+        "x7",
+        "x8",
+        "x9"
+      ],
+      "settings": {
+        "en": "COMPARE",
+        "title": "3つのプロテインを比べる",
+        "header": "|ホエイ 3kg|ソイ 3kg|ソイ 1kg",
+        "highlight_column": 0,
+        "min_width": 520,
+        "note": "価格は税込です。たんぱく質はフレーバーにより異なります（推定値）。",
+        "background": "white"
+      }
+    },
+    "deal": {
+      "type": "deal-cards",
+      "blocks": {
+        "d10": {
+          "type": "deal",
+          "settings": {
+            "icon": "repeat",
+            "title": "プロテインは定期便がおトク",
+            "highlight": "ずっと10%OFF",
+            "points": "回数しばりなし\nお届け周期は1・2・3か月から選べる",
+            "link": "/pages/save"
+          }
+        }
+      },
+      "block_order": [
+        "d10"
+      ],
+      "settings": {
+        "title": "",
+        "en": "",
+        "background": "white"
+      }
+    },
+    "others": {
+      "type": "product-grid",
+      "settings": {
+        "en": "OTHERS",
+        "title": "アミノ酸・食物繊維もチェック",
+        "collection": "amino-fiber",
+        "limit": 4,
+        "show_rank": false,
+        "button_label": "",
+        "background": "white"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "compare",
+    "deal",
+    "others"
+  ]
+}

@@ -1,0 +1,137 @@
+<section class="section section--{{ section.settings.background }}" id="{{ section.settings.anchor | default: section.id }}">
+  <div class="container">
+    {% render 'section-head', en: section.settings.en, title: section.settings.title, lead: section.settings.lead %}
+    <div class="cat-cards">
+      {%- for block in section.blocks -%}
+        {%- assign c = block.settings.collection -%}
+        <a class="cat-card card" href="{{ block.settings.link | default: c.url | default: '#' }}" {{ block.shopify_attributes }}>
+          <span class="cat-card__media">
+            {%- if block.settings.image != blank -%}
+              {{ block.settings.image | image_url: width: 240 | image_tag: loading: 'lazy', alt: block.settings.title }}
+            {%- elsif c.featured_image -%}
+              {{ c.featured_image | image_url: width: 240 | image_tag: loading: 'lazy', alt: block.settings.title }}
+            {%- else -%}
+              <span class="pouch pouch--sm" style="--pouch: {{ block.settings.color }};"><span class="pouch__brand">INNOCECT</span></span>
+            {%- endif -%}
+          </span>
+          <span class="cat-card__text"><span class="cat-card__en num">{{ block.settings.en }}</span><span class="cat-card__title">{{ block.settings.title }}</span><span class="cat-card__sub">{{ block.settings.text }}</span></span>
+          <span class="cat-card__chev">{% render 'icon', name: 'chev', size: 20 %}</span>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "カテゴリから探す",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "en",
+      "label": "英字の小見出し",
+      "default": "CATEGORY"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "見出し",
+      "default": "カテゴリから探す"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "背景",
+      "default": "white",
+      "options": [
+        {
+          "value": "white",
+          "label": "白"
+        },
+        {
+          "value": "surface",
+          "label": "グレー"
+        },
+        {
+          "value": "tint",
+          "label": "淡いグリーン"
+        },
+        {
+          "value": "dark",
+          "label": "濃い色"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "ページ内リンク用ID",
+      "info": "例：reviews（半角英数字）"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "カテゴリ",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "コレクション"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "リンク（コレクション以外へ飛ばすとき）"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "名前",
+          "default": "プロテイン"
+        },
+        {
+          "type": "text",
+          "id": "en",
+          "label": "英字",
+          "default": "PROTEIN"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "補足"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "画像"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "仮パッケージの色",
+          "default": "#4A2C1F"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 6,
+  "presets": [
+    {
+      "name": "カテゴリから探す",
+      "blocks": [
+        {
+          "type": "category"
+        },
+        {
+          "type": "category"
+        },
+        {
+          "type": "category"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

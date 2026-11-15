@@ -1,0 +1,114 @@
+<div class="collection-page" data-collection-root>
+  <nav class="breadcrumb container" aria-label="パンくずリスト">
+    <a href="{{ routes.root_url }}">TOP</a><span aria-hidden="true">›</span><span aria-current="page">{{ collection.title }}</span>
+  </nav>
+  <div class="container">
+    <div class="collection-head">
+      <h1 class="collection-head__title">{{ collection.title }}</h1>
+      {%- if collection.description != blank -%}<div class="collection-head__desc rte">{{ collection.description }}</div>{%- endif -%}
+      {%- if section.blocks.size > 0 -%}
+        <nav class="pill-row" aria-label="カテゴリ">
+          {%- for block in section.blocks -%}
+            {%- assign c = block.settings.collection -%}
+            <a class="pill{% if c.handle == collection.handle %} is-active{% endif %}" href="{{ c.url | default: '#' }}"{% if c.handle == collection.handle %} aria-current="page"{% endif %} {{ block.shopify_attributes }}>{{ block.settings.label | default: c.title }}</a>
+          {%- endfor -%}
+        </nav>
+      {%- endif -%}
+    </div>
+
+    {%- paginate collection.products by section.settings.per_page -%}
+      <form class="facets" action="{{ collection.url }}" method="get" data-facets-form>
+        <div class="facets__row">
+          {%- if section.settings.enable_filtering -%}
+            {%- for filter in collection.filters -%}
+              <details class="facet">
+                {%- assign active_count = filter.active_values.size -%}
+                <summary class="facet__summary">{{ filter.label }}{% if active_count > 0 %}<span class="facet__count num">{{ active_count }}</span>{% endif %}{% render 'icon', name: 'chevd', size: 16 %}</summary>
+                <div class="facet__panel">
+                  {%- case filter.type -%}
+                    {%- when 'price_range' -%}
+                      <div class="facet__price">
+                        <label>下限<input class="input" type="number" name="{{ filter.min_value.param_name }}" value="{{ filter.min_value.value | money_without_currency | remove: ',' }}" placeholder="0" min="0" inputmode="numeric"></label>
+                        <label>上限<input class="input" type="number" name="{{ filter.max_value.param_name }}" value="{{ filter.max_value.value | money_without_currency | remove: ',' }}" placeholder="{{ filter.range_max | money_without_currency | remove: ',' }}" min="0" inputmode="numeric"></label>
+                      </div>
+                    {%- else -%}
+                      {%- for value in filter.values -%}
+                        <label class="facet__check">
+                          <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}"{% if value.active %} checked{% endif %}{% if value.count == 0 and value.active == false %} disabled{% endif %}>
+                          <span>{{ value.label }}</span><span class="facet__num num">{{ value.count }}</span>
+                        </label>
+                      {%- endfor -%}
+                  {%- endcase -%}
+                </div>
+              </details>
+            {%- endfor -%}
+          {%- endif -%}
+          <label class="facets__sort">並び替え
+            <select class="select" name="sort_by" data-sort>
+              {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+              {%- for option in collection.sort_options -%}
+                <option value="{{ option.value }}"{% if option.value == sort_by %} selected{% endif %}>{{ option.name }}</option>
+              {%- endfor -%}
+            </select>
+          </label>
+          <noscript><button type="submit" class="btn btn--dark btn--sm">絞り込む</button></noscript>
+        </div>
+        {%- liquid
+          assign has_active = false
+          for filter in collection.filters
+            if filter.active_values.size > 0 or filter.min_value.value != nil or filter.max_value.value != nil
+              assign has_active = true
+            endif
+          endfor
+        -%}
+        {%- if has_active -%}
+          <div class="active-filters">
+            {%- for filter in collection.filters -%}
+              {%- for value in filter.active_values -%}
+                <a class="chip" href="{{ value.url_to_remove }}">{{ value.label }}{% render 'icon', name: 'close', size: 14 %}<span class="visually-hidden">を解除</span></a>
+              {%- endfor -%}
+              {%- if filter.type == 'price_range' -%}
+                {%- if filter.min_value.value != nil or filter.max_value.value != nil -%}
+                  <a class="chip" href="{{ filter.url_to_remove }}">価格{% render 'icon', name: 'close', size: 14 %}<span class="visually-hidden">を解除</span></a>
+                {%- endif -%}
+              {%- endif -%}
+            {%- endfor -%}
+            <a class="chip chip--clear" href="{{ collection.url }}?sort_by={{ collection.sort_by }}">すべて解除</a>
+          </div>
+        {%- endif -%}
+      </form>
+
+      <p class="collection-count">{{ collection.products_count }}商品</p>
+      <div class="product-grid">
+        {%- for product in collection.products -%}
+          {% render 'card-product', product: product %}
+        {%- else -%}
+          <p class="empty">条件に合う商品がありません。絞り込みを変えてお試しください。</p>
+        {%- endfor -%}
+      </div>
+      {% render 'pagination', paginate: paginate %}
+    {%- endpaginate -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "コレクション",
+  "tag": "section",
+  "class": "section-main-collection",
+  "settings": [
+    { "type": "range", "id": "per_page", "label": "1ページの商品数", "min": 4, "max": 48, "step": 4, "default": 24 },
+    { "type": "checkbox", "id": "enable_filtering", "label": "絞り込みを表示", "default": true, "info": "絞り込みの項目は「Search & Discovery」アプリで設定します" }
+  ],
+  "blocks": [
+    {
+      "type": "tab",
+      "name": "カテゴリタブ",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "コレクション" },
+        { "type": "text", "id": "label", "label": "表示名" }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,472 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "settings": {
+        "badge": "INNOCECT 公式オンラインストア",
+        "heading": "毎日続けるものだから、",
+        "heading_accent": "低価格×高品質。",
+        "text": "INNOCECTは、余計なコストを徹底的に削減する国内ニュートリションブランドです。プロテイン・アミノ酸・食物繊維を、続けやすい価格でお届けします。",
+        "button_label": "人気の商品を見る",
+        "button_link": "/collections/ranking",
+        "button2_label": "はじめての方へ",
+        "button2_link": "/pages/guide",
+        "price_note": "ソイプロテイン3kgなら、1杯 約[◯]円から",
+        "background": "surface"
+      }
+    },
+    "trust": {
+      "type": "trust-bar",
+      "blocks": {
+        "t1": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "楽天市場 月間優良ショップ",
+            "text": "2026年1月度 受賞"
+          }
+        },
+        "t2": {
+          "type": "item",
+          "settings": {
+            "icon": "chat",
+            "title": "ソイシリーズ累計60万食",
+            "text": "2024/6〜2025/7 Amazon・楽天合計"
+          }
+        },
+        "t3": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "国内工場で製造・充填",
+            "text": "ISO22000・GMP認定工場など"
+          }
+        },
+        "t4": {
+          "type": "item",
+          "settings": {
+            "icon": "repeat",
+            "title": "定期便はずっと{sub_pct}%OFF",
+            "text": "回数しばりなし"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "settings": {
+        "background": "white"
+      }
+    },
+    "new": {
+      "type": "featured-banner",
+      "blocks": {
+        "fb5": {
+          "type": "stat",
+          "settings": {
+            "label": "1杯あたり",
+            "value": "約{per}円"
+          }
+        },
+        "fb6": {
+          "type": "stat",
+          "settings": {
+            "label": "たんぱく質（1杯30g）",
+            "value": "20.1g"
+          }
+        },
+        "fb7": {
+          "type": "stat",
+          "settings": {
+            "label": "フレーバー",
+            "value": "5種"
+          }
+        }
+      },
+      "block_order": [
+        "fb5",
+        "fb6",
+        "fb7"
+      ],
+      "settings": {
+        "product": "whey-protein-3kg",
+        "label": "NEW",
+        "heading": "ホエイプロテイン 3kg、登場。",
+        "text": "安さも、おいしさも、あきらめない。自社で試作を重ねた3kg・約100杯分のホエイプロテイン。",
+        "button_label": "詳しく見る",
+        "bg_color": "#2A1A12",
+        "accent_color": "#F2D3A2"
+      }
+    },
+    "categories": {
+      "type": "category-cards",
+      "blocks": {
+        "cat8": {
+          "type": "category",
+          "settings": {
+            "collection": "protein",
+            "title": "プロテイン",
+            "en": "PROTEIN",
+            "text": "ホエイプロテイン・ソイプロテイン 3kg・ソイプロテイン 1kg",
+            "color": "#4A2C1F"
+          }
+        },
+        "cat9": {
+          "type": "category",
+          "settings": {
+            "collection": "amino",
+            "title": "アミノ酸",
+            "en": "AMINO ACIDS",
+            "text": "EAA・クレアチン・L-グルタミン",
+            "color": "#15171A"
+          }
+        },
+        "cat10": {
+          "type": "category",
+          "settings": {
+            "collection": "fiber",
+            "title": "食物繊維",
+            "en": "FIBER",
+            "text": "難消化性デキストリン",
+            "color": "#C9A646"
+          }
+        }
+      },
+      "block_order": [
+        "cat8",
+        "cat9",
+        "cat10"
+      ],
+      "settings": {
+        "en": "CATEGORY",
+        "title": "カテゴリから探す",
+        "background": "white"
+      }
+    },
+    "purpose": {
+      "type": "purpose-links",
+      "blocks": {
+        "pu11": {
+          "type": "link",
+          "settings": {
+            "icon": "sparkle",
+            "title": "はじめてのプロテイン",
+            "text": "ソイ1kg・ホエイ3kg",
+            "link": "/collections/beginner"
+          }
+        },
+        "pu12": {
+          "type": "link",
+          "settings": {
+            "icon": "dumbbell",
+            "title": "トレーニング・ボディメイクに",
+            "text": "ホエイ・EAA・クレアチン・グルタミン",
+            "link": "/collections/training"
+          }
+        },
+        "pu13": {
+          "type": "link",
+          "settings": {
+            "icon": "sun",
+            "title": "朝食や間食のたんぱく質補給に",
+            "text": "ソイ3kg・ソイ1kg・ホエイ",
+            "link": "/collections/daily-protein"
+          }
+        },
+        "pu14": {
+          "type": "link",
+          "settings": {
+            "icon": "leaf",
+            "title": "人工甘味料が気になる方に",
+            "text": "ソイ3kg・クレアチン・グルタミン など",
+            "link": "/collections/no-artificial-sweetener"
+          }
+        },
+        "pu15": {
+          "type": "link",
+          "settings": {
+            "icon": "bean",
+            "title": "植物性たんぱく質を選びたい方に",
+            "text": "ソイ3kg・ソイ1kg",
+            "link": "/collections/plant-protein"
+          }
+        },
+        "pu16": {
+          "type": "link",
+          "settings": {
+            "icon": "drop",
+            "title": "食物繊維をプラスしたい方に",
+            "text": "難消化性デキストリン",
+            "link": "/collections/fiber"
+          }
+        }
+      },
+      "block_order": [
+        "pu11",
+        "pu12",
+        "pu13",
+        "pu14",
+        "pu15",
+        "pu16"
+      ],
+      "settings": {
+        "en": "PURPOSE",
+        "title": "目的から探す",
+        "background": "surface"
+      }
+    },
+    "ranking": {
+      "type": "product-grid",
+      "settings": {
+        "en": "RANKING",
+        "title": "人気ランキング",
+        "lead": "楽天市場 INNOCECT公式の週間ランキング（2026/11/8〜11/14）をもとにしています。",
+        "collection": "ranking",
+        "limit": 5,
+        "show_rank": true,
+        "button_label": "すべての商品を見る",
+        "background": "white",
+        "anchor": "ranking"
+      }
+    },
+    "deals": {
+      "type": "deal-cards",
+      "blocks": {
+        "d17": {
+          "type": "deal",
+          "settings": {
+            "icon": "repeat",
+            "title": "定期便",
+            "highlight": "ずっと10%OFF",
+            "points": "回数しばりなし\nお届け周期は1・2・3か月から選べる\n次回お届けの[5]日前までスキップ・解約OK",
+            "link": "/pages/save"
+          }
+        },
+        "d18": {
+          "type": "deal",
+          "settings": {
+            "icon": "tag",
+            "title": "まとめ買い割",
+            "highlight": "2点で5%OFF・3点以上で10%OFF",
+            "points": "フレーバー違い・商品違いでもOK\n定期便との併用はできません\nカートで自動で割引",
+            "link": "/pages/save"
+          }
+        }
+      },
+      "block_order": [
+        "d17",
+        "d18"
+      ],
+      "settings": {
+        "en": "SAVE",
+        "title": "おトクに続ける2つの方法",
+        "background": "tint"
+      }
+    },
+    "guide": {
+      "type": "comparison-table",
+      "blocks": {
+        "g19": {
+          "type": "row",
+          "settings": {
+            "cells": "原料|牛乳由来（乳清）|大豆由来"
+          }
+        },
+        "g20": {
+          "type": "row",
+          "settings": {
+            "cells": "口当たり|ミルク系で溶けやすい|大豆の風味。ダマができることも"
+          }
+        },
+        "g21": {
+          "type": "row",
+          "settings": {
+            "cells": "よく飲まれるタイミング|トレーニングのあと|朝食・間食・寝る前"
+          }
+        },
+        "g22": {
+          "type": "row",
+          "settings": {
+            "cells": "INNOCECTの商品|ホエイプロテイン 3kg|ソイ 3kg（人工甘味料不使用）／ソイ 1kg"
+          }
+        }
+      },
+      "block_order": [
+        "g19",
+        "g20",
+        "g21",
+        "g22"
+      ],
+      "settings": {
+        "en": "GUIDE",
+        "title": "ホエイとソイ、どちらを選ぶ？",
+        "lead": "迷ったら、飲むタイミングと好みで選ぶのがおすすめです。",
+        "header": "|ホエイ|ソイ",
+        "highlight_column": 0,
+        "min_width": 340,
+        "note": "どちらも1杯（30g）でたんぱく質約20gをとれます。",
+        "background": "white",
+        "anchor": "guide"
+      }
+    },
+    "why": {
+      "type": "why-cheap",
+      "blocks": {
+        "w23": {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "title": "シンプルな設計のパッケージ",
+            "text": "見た目にお金をかけすぎず、そのぶんを中身と価格に回しています。"
+          }
+        },
+        "w24": {
+          "type": "item",
+          "settings": {
+            "icon": "tag",
+            "title": "広告宣伝費をかけすぎない",
+            "text": "過度な広告を打たず、使ってくださる方の声で広げています。"
+          }
+        },
+        "w25": {
+          "type": "item",
+          "settings": {
+            "icon": "flask",
+            "title": "原料・資材を自社で開発",
+            "text": "原料メーカー・工場と直接やりとりし、中間コストを抑えています。"
+          }
+        },
+        "w26": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "大ロット製造で加工費を低減",
+            "text": "まとめて製造することで、1袋あたりの加工費を下げています。"
+          }
+        },
+        "w27": {
+          "type": "item",
+          "settings": {
+            "icon": "repeat",
+            "title": "システムで運営を効率化",
+            "text": "受注から出荷までの仕組みを整え、人件費を抑えています。"
+          }
+        }
+      },
+      "block_order": [
+        "w23",
+        "w24",
+        "w25",
+        "w26",
+        "w27"
+      ],
+      "settings": {
+        "en": "WHY",
+        "title": "INNOCECTが、この価格で出せる理由",
+        "lead": "安さには、ちゃんと理由があります。品質を落とすのではなく、品質以外のコストを削っています。",
+        "background": "dark"
+      }
+    },
+    "quality": {
+      "type": "feature-cards",
+      "blocks": {
+        "q28": {
+          "type": "card",
+          "settings": {
+            "icon": "factory",
+            "title": "国内工場で製造・充填",
+            "text": "製品の混合・充填・梱包は国内工場で行っています。"
+          }
+        },
+        "q29": {
+          "type": "card",
+          "settings": {
+            "icon": "shield",
+            "title": "認証工場で製造",
+            "text": "ソイプロテインはISO22000、EAAはGMP認定の国内工場で製造しています。"
+          }
+        },
+        "q30": {
+          "type": "card",
+          "settings": {
+            "icon": "leaf",
+            "title": "原材料と産地を表示",
+            "text": "原料の原産国も、商品ページとパッケージに表示しています。"
+          }
+        }
+      },
+      "block_order": [
+        "q28",
+        "q29",
+        "q30"
+      ],
+      "settings": {
+        "en": "QUALITY",
+        "title": "品質への取り組み",
+        "style": "card",
+        "background": "white"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "fq31": {
+          "type": "qa",
+          "settings": {
+            "question": "送料はいくらですか？",
+            "answer": "税込5,000円以上のご注文で送料無料です。5,000円未満の場合は[送料]円です。"
+          }
+        },
+        "fq32": {
+          "type": "qa",
+          "settings": {
+            "question": "定期便はいつでも解約できますか？",
+            "answer": "回数のしばりはありません。次回お届け予定日の[5]日前までに、マイページからスキップ・解約ができます。"
+          }
+        },
+        "fq33": {
+          "type": "qa",
+          "settings": {
+            "question": "支払い方法は何がありますか？",
+            "answer": "[クレジットカード／Amazon Pay／楽天ペイ／PayPay／コンビニ後払い など、導入する決済を入力]"
+          }
+        },
+        "fq34": {
+          "type": "qa",
+          "settings": {
+            "question": "いつ届きますか？",
+            "answer": "平日[12]時までのご注文は当日出荷します。お届けは出荷から1〜3日が目安です。"
+          }
+        }
+      },
+      "block_order": [
+        "fq31",
+        "fq32",
+        "fq33",
+        "fq34"
+      ],
+      "settings": {
+        "en": "FAQ",
+        "title": "よくある質問",
+        "open_first": true,
+        "background": "surface"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "trust",
+    "new",
+    "categories",
+    "purpose",
+    "ranking",
+    "deals",
+    "guide",
+    "why",
+    "quality",
+    "faq"
+  ]
+}

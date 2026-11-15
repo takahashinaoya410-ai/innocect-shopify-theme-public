@@ -1,0 +1,667 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "lead": "安さも、おいしさも、あきらめない。3kg・約100杯分の大容量で、自社で試作を重ねて仕上げたホエイプロテインです。",
+        "badges": "NEW\n3kg・約100杯分\nたんぱく質20.1g/杯\n国内製造\nWPC",
+        "media_badges": "NEW\n3kg・約100杯分",
+        "single_label": "",
+        "rating_label": "",
+        "rating_value": "",
+        "coming_soon": "キャラメル\nバナナミルク",
+        "coming_text": "発売日が決まりしだい、メールとLINEでお知らせします。",
+        "coming_button": "発売のお知らせを受け取る",
+        "default_subscription": true,
+        "show_dynamic_checkout": false,
+        "show_ship_info": true
+      }
+    },
+    "trust-1": {
+      "type": "trust-bar",
+      "blocks": {
+        "t1": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "国内工場で製造",
+            "text": "乳清たんぱくはポーランド製造"
+          }
+        },
+        "t2": {
+          "type": "item",
+          "settings": {
+            "icon": "scale",
+            "title": "3kg・約100杯分",
+            "text": "1杯30gで計算"
+          }
+        },
+        "t3": {
+          "type": "item",
+          "settings": {
+            "icon": "yen",
+            "title": "1杯あたり約{per}円",
+            "text": "定期便なら約{per_sub}円"
+          }
+        },
+        "t4": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "楽天市場 月間優良ショップ",
+            "text": "2026年1月度 受賞"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "settings": {
+        "background": "surface"
+      }
+    },
+    "reasons-2": {
+      "type": "product-reasons",
+      "blocks": {
+        "r5": {
+          "type": "reason",
+          "settings": {
+            "number": "01",
+            "icon": "yen",
+            "title": "3kg・約100杯分。毎日続けられる価格に",
+            "big": "約{per}円",
+            "big_sub": "1杯（30g）あたり／定期便なら約{per_sub}円",
+            "body": "毎日飲むものだからこそ「無理なく続けられること」を最優先に、大容量・コスパ設計で仕上げました。買い足しの手間も減らせます。",
+            "bullets": ""
+          }
+        },
+        "r6": {
+          "type": "reason",
+          "settings": {
+            "number": "02",
+            "icon": "sparkle",
+            "title": "自社で試作を重ねた、自信の味",
+            "big": "",
+            "big_sub": "",
+            "body": "「安いけど味はそこそこ」で終わらせないために、INNOCECTが自社で一から開発。何度も試作を重ね、甘さ・香り・後味のバランスを追い込みました。水で割ってもしっかり味を感じられます。",
+            "bullets": ""
+          }
+        },
+        "r7": {
+          "type": "reason",
+          "settings": {
+            "number": "03",
+            "icon": "dumbbell",
+            "title": "1杯でたんぱく質20.1g・脂質0.9g",
+            "big": "20.1g",
+            "big_sub": "たんぱく質（1杯30gあたり）",
+            "body": "食事だけでは不足しがちなたんぱく質を、シェイカーで振るだけで手軽に補えます。トレーニング後はもちろん、朝食や間食にも。",
+            "bullets": ""
+          }
+        }
+      },
+      "block_order": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "settings": {
+        "en": "REASONS",
+        "title": "INNOCECTのホエイを選ぶ3つの理由",
+        "lead": "毎日飲むプロテインだから、価格も味も妥協したくない。そんな想いから、自社で一から開発しました。",
+        "background": "surface"
+      }
+    },
+    "nutri-big-3": {
+      "type": "nutrition-highlight",
+      "blocks": {
+        "n8": {
+          "type": "cell",
+          "settings": {
+            "label": "たんぱく質",
+            "value": "20.1",
+            "unit": "g"
+          }
+        },
+        "n9": {
+          "type": "cell",
+          "settings": {
+            "label": "エネルギー",
+            "value": "115.8",
+            "unit": "kcal"
+          }
+        },
+        "n10": {
+          "type": "cell",
+          "settings": {
+            "label": "脂質",
+            "value": "0.9",
+            "unit": "g"
+          }
+        },
+        "n11": {
+          "type": "cell",
+          "settings": {
+            "label": "炭水化物",
+            "value": "7.1",
+            "unit": "g"
+          }
+        }
+      },
+      "block_order": [
+        "n8",
+        "n9",
+        "n10",
+        "n11"
+      ],
+      "settings": {
+        "en": "NUTRITION",
+        "title": "1杯（30g）あたりの栄養成分",
+        "note": "チョコレート風味の値（推定値）。フレーバーごとの値はページ下部の栄養成分表示をご覧ください。",
+        "background": "white"
+      }
+    },
+    "flavors-4": {
+      "type": "flavor-guide",
+      "blocks": {
+        "f12": {
+          "type": "flavor",
+          "settings": {
+            "name": "チョコレート",
+            "color": "#3E2419",
+            "tag": "",
+            "catch": "甘さとカカオ感の、ちょうどいいバランス",
+            "text": "試作を重ねて甘さとカカオ感のバランスを追い込んだ定番の味。水で割ってもしっかりチョコレートを感じられます。",
+            "mix": "牛乳で割ると、デザートのようなコクに"
+          }
+        },
+        "f13": {
+          "type": "flavor",
+          "settings": {
+            "name": "抹茶ラテ",
+            "color": "#3F5E2A",
+            "tag": "",
+            "catch": "抹茶の香りと、ミルクのコク",
+            "text": "抹茶本来の香りとコク、後味のバランスにこだわりました。水で割ってもしっかり抹茶を感じられます。",
+            "mix": "牛乳・豆乳で割ると抹茶ラテのように"
+          }
+        },
+        "f14": {
+          "type": "flavor",
+          "settings": {
+            "name": "ブルーベリーヨーグルト",
+            "color": "#3D3470",
+            "tag": "",
+            "catch": "軽やかな香りで、すっきり飲める",
+            "text": "ブルーベリーヨーグルトのような軽やかな香りとコク。ミルク系の味に飽きた日にもおすすめです。",
+            "mix": "冷たい水で、すっきりと"
+          }
+        },
+        "f15": {
+          "type": "flavor",
+          "settings": {
+            "name": "キャラメル",
+            "color": "#9A5A1C",
+            "tag": "近日発売",
+            "catch": "[キャッチコピー]",
+            "text": "[味の特徴を入力。発売日が決まるまでは「お知らせを受け取る」導線を表示]",
+            "mix": ""
+          }
+        },
+        "f16": {
+          "type": "flavor",
+          "settings": {
+            "name": "バナナミルク",
+            "color": "#EBCB4F",
+            "tag": "近日発売",
+            "catch": "[キャッチコピー]",
+            "text": "[味の特徴を入力]",
+            "mix": ""
+          }
+        }
+      },
+      "block_order": [
+        "f12",
+        "f13",
+        "f14",
+        "f15",
+        "f16"
+      ],
+      "settings": {
+        "en": "FLAVOR",
+        "title": "選べる5つのフレーバー",
+        "lead": "定番のチョコレートから、すっきり系まで。",
+        "background": "surface"
+      }
+    },
+    "cost-5": {
+      "type": "cost-rows",
+      "blocks": {
+        "c17": {
+          "type": "row",
+          "settings": {
+            "label": "定期便（{sub_pct}%OFF）",
+            "value": "約{per_sub}円",
+            "sub": "1杯（30g）あたり｜1か月 約{month_sub}円",
+            "highlight": true
+          }
+        },
+        "c18": {
+          "type": "row",
+          "settings": {
+            "label": "1回のみ購入",
+            "value": "約{per}円",
+            "sub": "1杯（30g）あたり｜1か月 約{month}円",
+            "highlight": false
+          }
+        },
+        "c19": {
+          "type": "row",
+          "settings": {
+            "label": "{bundle_qty}袋まとめ買い（{bundle_pct}%OFF）",
+            "value": "約{per_bundle}円",
+            "sub": "1杯（30g）あたり",
+            "highlight": false
+          }
+        }
+      },
+      "block_order": [
+        "c17",
+        "c18",
+        "c19"
+      ],
+      "settings": {
+        "en": "COST",
+        "title": "毎日1杯で、1か月あたり約{month}円",
+        "lead": "1杯あたりの価格で見ると、続けやすさがわかります。",
+        "note": "販売価格をもとにした計算値です。1か月＝30杯で計算しています。",
+        "background": "white"
+      }
+    },
+    "steps-6": {
+      "type": "how-to",
+      "blocks": {
+        "s20": {
+          "type": "step",
+          "settings": {
+            "icon": "cup",
+            "title": "水を入れる",
+            "text": "シェイカーに冷たい水150〜200mlを入れます。"
+          }
+        },
+        "s21": {
+          "type": "step",
+          "settings": {
+            "icon": "spoon",
+            "title": "粉を入れる",
+            "text": "付属スプーン山盛り1杯（約30g）を入れます。"
+          }
+        },
+        "s22": {
+          "type": "step",
+          "settings": {
+            "icon": "shake",
+            "title": "よく振る",
+            "text": "フタをしっかり閉めて、よく振れば完成です。"
+          }
+        },
+        "a23": {
+          "type": "arrange",
+          "settings": {
+            "title": "水",
+            "text": "すっきり飲みたい日に"
+          }
+        },
+        "a24": {
+          "type": "arrange",
+          "settings": {
+            "title": "牛乳",
+            "text": "コクが増してデザート感覚に"
+          }
+        },
+        "a25": {
+          "type": "arrange",
+          "settings": {
+            "title": "豆乳",
+            "text": "まろやかな口当たりに"
+          }
+        }
+      },
+      "block_order": [
+        "s20",
+        "s21",
+        "s22",
+        "a23",
+        "a24",
+        "a25"
+      ],
+      "settings": {
+        "en": "HOW TO",
+        "title": "かんたん3ステップ",
+        "tip_label": "ダマを防ぐコツ：",
+        "tip": "粉より先に水を入れると、底に粉が固まりにくくなります。",
+        "background": "surface"
+      }
+    },
+    "scenes-7": {
+      "type": "feature-cards",
+      "blocks": {
+        "sc26": {
+          "type": "card",
+          "settings": {
+            "icon": "dumbbell",
+            "title": "トレーニングのあとに",
+            "text": "運動後のたんぱく質補給に。ジムバッグに入れておけば、すぐに作れます。"
+          }
+        },
+        "sc27": {
+          "type": "card",
+          "settings": {
+            "icon": "sun",
+            "title": "朝食に",
+            "text": "忙しい朝でも、シェイカーで振るだけ。朝ごはんにたんぱく質をプラス。"
+          }
+        },
+        "sc28": {
+          "type": "card",
+          "settings": {
+            "icon": "clock",
+            "title": "間食に",
+            "text": "小腹がすいたときの一杯に。甘いものが欲しいときはチョコレート風味を。"
+          }
+        }
+      },
+      "block_order": [
+        "sc26",
+        "sc27",
+        "sc28"
+      ],
+      "settings": {
+        "en": "TIMING",
+        "title": "こんなタイミングに",
+        "style": "scene",
+        "background": "white"
+      }
+    },
+    "quality-8": {
+      "type": "feature-cards",
+      "blocks": {
+        "q29": {
+          "type": "card",
+          "settings": {
+            "icon": "factory",
+            "title": "国内工場で製造",
+            "text": "日本国内の工場で製造しています。"
+          }
+        },
+        "q30": {
+          "type": "card",
+          "settings": {
+            "icon": "leaf",
+            "title": "原料の産地を表示",
+            "text": "乳清たんぱくはポーランド製造。原材料の産地を、商品ページとパッケージに表示しています。"
+          }
+        },
+        "q31": {
+          "type": "card",
+          "settings": {
+            "icon": "shield",
+            "title": "WPC（ホエイプロテインコンセントレート）",
+            "text": "牛乳由来の乳清（ホエイ）から作られる、たんぱく質を濃縮したタイプのプロテインです。"
+          }
+        }
+      },
+      "block_order": [
+        "q29",
+        "q30",
+        "q31"
+      ],
+      "settings": {
+        "en": "QUALITY",
+        "title": "原料のことも、きちんと伝えます",
+        "lead": "",
+        "style": "card",
+        "background": "white"
+      }
+    },
+    "why-cheap-9": {
+      "type": "why-cheap",
+      "blocks": {
+        "w32": {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "title": "シンプルな設計のパッケージ",
+            "text": "見た目にお金をかけすぎず、そのぶんを中身と価格に回しています。"
+          }
+        },
+        "w33": {
+          "type": "item",
+          "settings": {
+            "icon": "tag",
+            "title": "広告宣伝費をかけすぎない",
+            "text": "過度な広告を打たず、使ってくださる方の声で広げています。"
+          }
+        },
+        "w34": {
+          "type": "item",
+          "settings": {
+            "icon": "flask",
+            "title": "原料・資材を自社で開発",
+            "text": "原料メーカー・工場と直接やりとりし、中間コストを抑えています。"
+          }
+        },
+        "w35": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "大ロット製造で加工費を低減",
+            "text": "まとめて製造することで、1袋あたりの加工費を下げています。"
+          }
+        },
+        "w36": {
+          "type": "item",
+          "settings": {
+            "icon": "repeat",
+            "title": "システムで運営を効率化",
+            "text": "受注から出荷までの仕組みを整え、人件費を抑えています。"
+          }
+        }
+      },
+      "block_order": [
+        "w32",
+        "w33",
+        "w34",
+        "w35",
+        "w36"
+      ],
+      "settings": {
+        "en": "WHY",
+        "title": "INNOCECTが、この価格で出せる理由",
+        "lead": "安さには、ちゃんと理由があります。品質を落とすのではなく、品質以外のコストを削っています。",
+        "background": "dark"
+      }
+    },
+    "reviews-10": {
+      "type": "product-reviews",
+      "settings": {
+        "en": "REVIEW",
+        "title": "お客様の声",
+        "background": "surface",
+        "anchor": "reviews",
+        "source_label": "",
+        "text": "購入者限定のレビューを受け付けています。"
+      }
+    },
+    "faq-11": {
+      "type": "faq",
+      "blocks": {
+        "faq37": {
+          "type": "qa",
+          "settings": {
+            "question": "1日に何杯飲めばいいですか？",
+            "answer": "1日1〜2杯を目安に、食事でとれるたんぱく質の量に合わせてお召し上がりください。"
+          }
+        },
+        "faq38": {
+          "type": "qa",
+          "settings": {
+            "question": "牛乳アレルギーでも飲めますか？",
+            "answer": "乳成分を含む原料を使用しています。牛乳アレルギーの方はお召し上がりにならないでください。"
+          }
+        },
+        "faq39": {
+          "type": "qa",
+          "settings": {
+            "question": "WPCとはなんですか？",
+            "answer": "Whey Protein Concentrate（ホエイプロテインコンセントレート）の略で、牛乳から作られる乳清（ホエイ）のたんぱく質を濃縮したものです。"
+          }
+        },
+        "faq40": {
+          "type": "qa",
+          "settings": {
+            "question": "開封後はどう保存すればいいですか？",
+            "answer": "チャックをしっかり閉め、高温・多湿、直射日光を避けて保管してください。賞味期限にかかわらず、なるべくお早めにお召し上がりください。"
+          }
+        },
+        "faq41": {
+          "type": "qa",
+          "settings": {
+            "question": "定期便はいつでも解約できますか？",
+            "answer": "回数のしばりはありません。次回お届け予定日の[5]日前までに、マイページからスキップ・解約ができます。"
+          }
+        }
+      },
+      "block_order": [
+        "faq37",
+        "faq38",
+        "faq39",
+        "faq40",
+        "faq41"
+      ],
+      "settings": {
+        "en": "FAQ",
+        "title": "よくある質問",
+        "open_first": true,
+        "background": "white"
+      }
+    },
+    "spec-12": {
+      "type": "product-spec",
+      "blocks": {
+        "sp42": {
+          "type": "row",
+          "settings": {
+            "label": "名称",
+            "value": "プロテインパウダー"
+          }
+        },
+        "sp43": {
+          "type": "row",
+          "settings": {
+            "label": "原材料名（チョコレート風味）",
+            "value": "乳清たんぱく（ポーランド製造）、乳製品、ココアパウダー／調味料（アミノ酸）、香料、甘味料（スクラロース、アセスルファムK）、乳化剤、（一部に乳成分を含む）"
+          }
+        },
+        "sp44": {
+          "type": "row",
+          "settings": {
+            "label": "原材料名（その他の風味）",
+            "value": "[フレーバーごとにパッケージの表示を入力]"
+          }
+        },
+        "sp45": {
+          "type": "row",
+          "settings": {
+            "label": "内容量",
+            "value": "3,000g（1杯30gで約100杯分）"
+          }
+        },
+        "sp46": {
+          "type": "row",
+          "settings": {
+            "label": "アレルギー物質（28品目中）",
+            "value": "乳成分"
+          }
+        },
+        "sp47": {
+          "type": "row",
+          "settings": {
+            "label": "保存方法",
+            "value": "高温・多湿、直射日光を避け、なるべく冷暗所に保存してください。"
+          }
+        },
+        "sp48": {
+          "type": "row",
+          "settings": {
+            "label": "製造国",
+            "value": "日本"
+          }
+        },
+        "sp49": {
+          "type": "row",
+          "settings": {
+            "label": "販売者",
+            "value": "[販売者名・所在地]"
+          }
+        }
+      },
+      "block_order": [
+        "sp42",
+        "sp43",
+        "sp44",
+        "sp45",
+        "sp46",
+        "sp47",
+        "sp48",
+        "sp49"
+      ],
+      "settings": {
+        "en": "SPEC",
+        "title": "商品情報・原材料・栄養成分",
+        "nutrition_title": "栄養成分表示",
+        "nutrition_header": "1杯（30g）あたり|エネルギー|たんぱく質|脂質|炭水化物|食塩相当量",
+        "nutrition_rows": "チョコレート|115.8kcal|20.1g|0.9g|7.1g|0.18g\n抹茶ラテ|117.7kcal|20.1g|0.9g|7.3g|0.18g\nブルーベリーヨーグルト|117.7kcal|20.1g|0.9g|7.3g|0.18g\nキャラメル|[入力]|[入力]|[入力]|[入力]|[入力]\nバナナミルク|[入力]|[入力]|[入力]|[入力]|[入力]",
+        "nutrition_note": "推定値。",
+        "spec_title": "商品情報",
+        "show_description": false,
+        "background": "white"
+      }
+    },
+    "cross-13": {
+      "type": "product-recommendations",
+      "settings": {
+        "en": "RECOMMEND",
+        "title": "ホエイと一緒に選ばれているアイテム",
+        "lead": "2点以上のご注文で、まとめ買い割が適用されます。",
+        "products": [
+          "creatine-1kg",
+          "eaa-600g",
+          "glutamine-1kg"
+        ],
+        "background": "white"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "trust-1",
+    "reasons-2",
+    "nutri-big-3",
+    "flavors-4",
+    "cost-5",
+    "steps-6",
+    "scenes-7",
+    "quality-8",
+    "why-cheap-9",
+    "reviews-10",
+    "faq-11",
+    "spec-12",
+    "cross-13"
+  ]
+}

@@ -1,0 +1,8 @@
+{%- comment -%} {% render 'section-head', en: 'REASONS', title: '...', lead: '...', align: 'center' %} {%- endcomment -%}
+{%- if title != blank or en != blank -%}
+  <div class="sec-head{% if align == 'left' %} sec-head--left{% endif %}">
+    {%- if en != blank -%}<p class="sec-head__en">{{ en }}</p>{%- endif -%}
+    {%- if title != blank -%}<h2 class="sec-head__title">{{ title }}</h2>{%- endif -%}
+    {%- if lead != blank -%}<div class="sec-head__lead">{{ lead }}</div>{%- endif -%}
+  </div>
+{%- endif -%}

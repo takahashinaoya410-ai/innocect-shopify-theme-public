@@ -1,0 +1,11 @@
+{%- comment -%} 商品画像が未登録のときの仮パッケージ {%- endcomment -%}
+{%- liquid
+  assign first_value = product.options_with_values.first.values.first
+  capture color
+    render 'swatch-color', value: first_value
+  endcapture
+-%}
+<div class="pouch" style="--pouch: {{ color | strip }};" role="img" aria-label="{{ product.title | escape }}（画像準備中）">
+  <span class="pouch__brand">INNOCECT</span>
+  <span class="pouch__name">{{ product.title | truncate: 28 }}</span>
+</div>

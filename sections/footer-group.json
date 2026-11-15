@@ -1,0 +1,18 @@
+{
+  "type": "footer",
+  "name": "フッター",
+  "sections": {
+    "line": { "type": "line-banner", "settings": {} },
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "col1": { "type": "menu", "settings": { "heading": "商品カテゴリ", "menu": "footer-category" } },
+        "col2": { "type": "menu", "settings": { "heading": "ご利用ガイド", "menu": "footer" } },
+        "col3": { "type": "menu", "settings": { "heading": "INNOCECTについて", "menu": "footer-brand" } }
+      },
+      "block_order": ["col1", "col2", "col3"],
+      "settings": {}
+    }
+  },
+  "order": ["line", "footer"]
+}

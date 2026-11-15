@@ -1,0 +1,744 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "sv1": {
+          "type": "serving",
+          "settings": {
+            "value": "プレーン",
+            "servings": 150,
+            "label": "1杯（20g）あたり"
+          }
+        }
+      },
+      "block_order": [
+        "sv1"
+      ],
+      "settings": {
+        "lead": "甘味料はステビアだけ。人工甘味料不使用だけど、ちゃんとおいしい。毎日続けやすい大容量のソイプロテインです。",
+        "badges": "人工甘味料不使用\n3kg・約100杯分\nたんぱく質20.2〜21.8g/杯\n国内製造",
+        "media_badges": "人工甘味料不使用\nシリーズ累計60万食",
+        "single_label": "",
+        "rating_label": "楽天市場レビュー（129件）",
+        "rating_value": "4.33",
+        "coming_soon": "",
+        "coming_text": "発売日が決まりしだい、メールとLINEでお知らせします。",
+        "coming_button": "発売のお知らせを受け取る",
+        "default_subscription": true,
+        "show_dynamic_checkout": false,
+        "show_ship_info": true
+      }
+    },
+    "trust-1": {
+      "type": "trust-bar",
+      "blocks": {
+        "t2": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "人工甘味料不使用",
+            "text": "甘味料はステビアのみ"
+          }
+        },
+        "t3": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "国内工場で製造",
+            "text": "ISO22000認証工場"
+          }
+        },
+        "t4": {
+          "type": "item",
+          "settings": {
+            "icon": "chat",
+            "title": "シリーズ累計60万食",
+            "text": "Amazon・楽天市場の合計"
+          }
+        },
+        "t5": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "楽天市場 月間優良ショップ",
+            "text": "2026年1月度 受賞"
+          }
+        }
+      },
+      "block_order": [
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "settings": {
+        "background": "surface"
+      }
+    },
+    "proof-2": {
+      "type": "proof-stats",
+      "blocks": {
+        "p6": {
+          "type": "stat",
+          "settings": {
+            "value": "60",
+            "unit": "万食",
+            "label": "ソイプロテインシリーズ 累計販売数"
+          }
+        },
+        "p7": {
+          "type": "stat",
+          "settings": {
+            "value": "4.33",
+            "unit": "",
+            "label": "楽天市場 レビュー平均（129件）"
+          }
+        },
+        "p8": {
+          "type": "stat",
+          "settings": {
+            "value": "2026.1",
+            "unit": "",
+            "label": "楽天市場 月間優良ショップ受賞"
+          }
+        }
+      },
+      "block_order": [
+        "p6",
+        "p7",
+        "p8"
+      ],
+      "settings": {
+        "en": "RESULTS",
+        "title": "たくさんの方に選ばれています",
+        "note": "累計販売数：2024年6月〜2025年7月のAmazon・楽天市場の合計。レビュー平均は2026年11月16日時点。",
+        "background": "white"
+      }
+    },
+    "reasons-3": {
+      "type": "product-reasons",
+      "blocks": {
+        "r9": {
+          "type": "reason",
+          "settings": {
+            "number": "01",
+            "icon": "sparkle",
+            "title": "おいしさに自信",
+            "big": "",
+            "big_sub": "",
+            "body": "ソイ特有のクセを抑え、天然甘味料の甘みを活かしたやさしい味わい。本当においしいものを届けたいから、味づくりにこだわりました。",
+            "bullets": "専属の開発スタッフが担当\n妥協なしのフレーバー調整\n納得いくまで繰り返した試飲テスト"
+          }
+        },
+        "r10": {
+          "type": "reason",
+          "settings": {
+            "number": "02",
+            "icon": "factory",
+            "title": "安心の国内製造",
+            "big": "",
+            "big_sub": "",
+            "body": "ISO22000を取得した国内工場で製造。製品の混合・充填・配送まで、国内で一貫して管理しています。",
+            "bullets": ""
+          }
+        },
+        "r11": {
+          "type": "reason",
+          "settings": {
+            "number": "03",
+            "icon": "leaf",
+            "title": "人工甘味料不使用",
+            "big": "",
+            "big_sub": "",
+            "body": "毎日口にするものだからこそ、人工甘味料は使わず、甘味料はステビアだけで甘さをつけました。",
+            "bullets": ""
+          }
+        }
+      },
+      "block_order": [
+        "r9",
+        "r10",
+        "r11"
+      ],
+      "settings": {
+        "en": "FEATURES",
+        "title": "INNOCECTのソイプロテインをおすすめする3つの特徴",
+        "lead": "",
+        "background": "surface"
+      }
+    },
+    "nutri-big-4": {
+      "type": "nutrition-highlight",
+      "blocks": {
+        "n12": {
+          "type": "cell",
+          "settings": {
+            "label": "たんぱく質",
+            "value": "20.2〜21.8",
+            "unit": "g"
+          }
+        },
+        "n13": {
+          "type": "cell",
+          "settings": {
+            "label": "エネルギー",
+            "value": "112〜114",
+            "unit": "kcal"
+          }
+        },
+        "n14": {
+          "type": "cell",
+          "settings": {
+            "label": "脂質",
+            "value": "0.7〜1.7",
+            "unit": "g"
+          }
+        },
+        "n15": {
+          "type": "cell",
+          "settings": {
+            "label": "炭水化物",
+            "value": "4.6〜7.2",
+            "unit": "g"
+          }
+        }
+      },
+      "block_order": [
+        "n12",
+        "n13",
+        "n14",
+        "n15"
+      ],
+      "settings": {
+        "en": "NUTRITION",
+        "title": "1杯（30g）あたりの栄養成分",
+        "note": "リッチチョコレート・カフェオレ・ミルクティー風味の範囲（推定値）。",
+        "background": "white"
+      }
+    },
+    "flavors-5": {
+      "type": "flavor-guide",
+      "blocks": {
+        "f16": {
+          "type": "flavor",
+          "settings": {
+            "name": "リッチチョコレート",
+            "color": "#4A2C1F",
+            "tag": "",
+            "catch": "ココアのコクを感じる、定番のチョコ",
+            "text": "ソイがはじめての方にも選ばれている、いちばん人気の味です。",
+            "mix": "豆乳で割ると、よりまろやかに"
+          }
+        },
+        "f17": {
+          "type": "flavor",
+          "settings": {
+            "name": "カフェオレ",
+            "color": "#8C5F3B",
+            "tag": "",
+            "catch": "コーヒーの香りで、すっきり",
+            "text": "コーヒーパウダーを使ったカフェオレ風味。朝の一杯にも。",
+            "mix": "牛乳で割ってカフェラテ風に"
+          }
+        },
+        "f18": {
+          "type": "flavor",
+          "settings": {
+            "name": "ミルクティー",
+            "color": "#22306A",
+            "tag": "",
+            "catch": "紅茶の香りが広がる",
+            "text": "紅茶エキスパウダーを使ったミルクティー風味。",
+            "mix": "アーモンドミルクで割るのもおすすめ"
+          }
+        },
+        "f19": {
+          "type": "flavor",
+          "settings": {
+            "name": "抹茶",
+            "color": "#4D6B2D",
+            "tag": "NEW",
+            "catch": "[キャッチコピー]",
+            "text": "[味の特徴を入力]",
+            "mix": ""
+          }
+        },
+        "f20": {
+          "type": "flavor",
+          "settings": {
+            "name": "プレーン",
+            "color": "#EFE8D8",
+            "tag": "",
+            "catch": "大豆そのままの、シンプルな味",
+            "text": "フレーバーなしのプレーンタイプ（1杯20g）。スムージーや料理に混ぜて使えます。",
+            "mix": "スムージー・ヨーグルト・料理に"
+          }
+        }
+      },
+      "block_order": [
+        "f16",
+        "f17",
+        "f18",
+        "f19",
+        "f20"
+      ],
+      "settings": {
+        "en": "FLAVOR",
+        "title": "選べる5つのフレーバー",
+        "lead": "人工甘味料を使わずに、ちゃんとおいしい。",
+        "background": "surface"
+      }
+    },
+    "compare-table-6": {
+      "type": "comparison-table",
+      "blocks": {
+        "x21": {
+          "type": "row",
+          "settings": {
+            "cells": "エネルギー|113.9kcal|227kcal|325kcal|230kcal"
+          }
+        },
+        "x22": {
+          "type": "row",
+          "settings": {
+            "cells": "たんぱく質|20.2g|4.3g|2.8g|0.5g"
+          }
+        },
+        "x23": {
+          "type": "row",
+          "settings": {
+            "cells": "炭水化物|4.6g|26g|32g|57g"
+          }
+        },
+        "x24": {
+          "type": "row",
+          "settings": {
+            "cells": "脂質|1.7g|12g|21g|0.0g"
+          }
+        }
+      },
+      "block_order": [
+        "x21",
+        "x22",
+        "x23",
+        "x24"
+      ],
+      "settings": {
+        "en": "COMPARE",
+        "title": "いつもの間食と比べてみると",
+        "lead": "リッチチョコレート風味1杯と、よくある間食の栄養成分です。",
+        "header": "1回分|リッチチョコ 1杯（30g）|ドーナツ 1個（60g）|ポテトチップス 1袋（60g）|コーラ 500ml",
+        "highlight_column": 1,
+        "min_width": 520,
+        "note": "出典：日本食品標準成分表（八訂）増補2023年をもとに算出。INNOCECTは推定値。",
+        "background": "white"
+      }
+    },
+    "steps-7": {
+      "type": "how-to",
+      "blocks": {
+        "s25": {
+          "type": "step",
+          "settings": {
+            "icon": "cup",
+            "title": "水か牛乳を入れる",
+            "text": "シェイカーに200〜300mlを入れます。"
+          }
+        },
+        "s26": {
+          "type": "step",
+          "settings": {
+            "icon": "spoon",
+            "title": "粉を入れる",
+            "text": "付属スプーンすり切り3杯（約30g）を入れます。"
+          }
+        },
+        "s27": {
+          "type": "step",
+          "settings": {
+            "icon": "shake",
+            "title": "よく混ぜる",
+            "text": "フタをしっかり閉めて、よく振れば完成です。"
+          }
+        },
+        "a28": {
+          "type": "arrange",
+          "settings": {
+            "title": "水",
+            "text": "すっきり飲みたいときに"
+          }
+        },
+        "a29": {
+          "type": "arrange",
+          "settings": {
+            "title": "豆乳・アーモンドミルク",
+            "text": "コクが増してまろやかに"
+          }
+        },
+        "a30": {
+          "type": "arrange",
+          "settings": {
+            "title": "牛乳",
+            "text": "よりクリーミーに"
+          }
+        }
+      },
+      "block_order": [
+        "s25",
+        "s26",
+        "s27",
+        "a28",
+        "a29",
+        "a30"
+      ],
+      "settings": {
+        "en": "HOW TO",
+        "title": "かんたん3ステップ",
+        "tip_label": "ダマを防ぐコツ：",
+        "tip": "水・牛乳を先に入れてから粉を入れると、ダマができにくくなります。",
+        "background": "surface"
+      }
+    },
+    "scenes-8": {
+      "type": "feature-cards",
+      "blocks": {
+        "sc31": {
+          "type": "card",
+          "settings": {
+            "icon": "sun",
+            "title": "朝食の代わりに",
+            "text": "食欲がない朝も、さっと飲める一杯で。"
+          }
+        },
+        "sc32": {
+          "type": "card",
+          "settings": {
+            "icon": "clock",
+            "title": "間食に",
+            "text": "おやつの代わりに、たんぱく質をとれる一杯を。"
+          }
+        },
+        "sc33": {
+          "type": "card",
+          "settings": {
+            "icon": "moon",
+            "title": "寝る前に",
+            "text": "ゆっくり過ごす夜の、リラックスタイムに。"
+          }
+        }
+      },
+      "block_order": [
+        "sc31",
+        "sc32",
+        "sc33"
+      ],
+      "settings": {
+        "en": "TIMING",
+        "title": "おすすめの飲み方",
+        "style": "scene",
+        "background": "white"
+      }
+    },
+    "honest-9": {
+      "type": "honest-notes",
+      "blocks": {
+        "h34": {
+          "type": "note",
+          "settings": {
+            "title": "ホエイより溶けにくいことがあります",
+            "text": "ソイプロテインは性質上、ダマや沈殿ができることがあります。品質には問題ありません。",
+            "tip": "シェイカーを使い、水を先に入れるのがおすすめです。"
+          }
+        },
+        "h35": {
+          "type": "note",
+          "settings": {
+            "title": "大豆の風味を感じることがあります",
+            "text": "クセは抑えていますが、大豆の風味を感じる方もいます。",
+            "tip": "味が心配な方は、1kgサイズから試すのもおすすめです。"
+          }
+        },
+        "h36": {
+          "type": "note",
+          "settings": {
+            "title": "3kgの袋は大きめです",
+            "text": "大容量のため、袋が大きく重さがあります。",
+            "tip": "小分けの容器に移しておくと、毎日の計量がラクになります。"
+          }
+        }
+      },
+      "block_order": [
+        "h34",
+        "h35",
+        "h36"
+      ],
+      "settings": {
+        "en": "BEFORE YOU BUY",
+        "title": "購入前に知っておいてほしいこと",
+        "lead": "良いところだけでなく、気になりやすい点も先にお伝えします。",
+        "background": "surface"
+      }
+    },
+    "why-cheap-10": {
+      "type": "why-cheap",
+      "blocks": {
+        "w37": {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "title": "シンプルな設計のパッケージ",
+            "text": "見た目にお金をかけすぎず、そのぶんを中身と価格に回しています。"
+          }
+        },
+        "w38": {
+          "type": "item",
+          "settings": {
+            "icon": "tag",
+            "title": "広告宣伝費をかけすぎない",
+            "text": "過度な広告を打たず、使ってくださる方の声で広げています。"
+          }
+        },
+        "w39": {
+          "type": "item",
+          "settings": {
+            "icon": "flask",
+            "title": "原料・資材を自社で開発",
+            "text": "原料メーカー・工場と直接やりとりし、中間コストを抑えています。"
+          }
+        },
+        "w40": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "大ロット製造で加工費を低減",
+            "text": "まとめて製造することで、1袋あたりの加工費を下げています。"
+          }
+        },
+        "w41": {
+          "type": "item",
+          "settings": {
+            "icon": "repeat",
+            "title": "システムで運営を効率化",
+            "text": "受注から出荷までの仕組みを整え、人件費を抑えています。"
+          }
+        }
+      },
+      "block_order": [
+        "w37",
+        "w38",
+        "w39",
+        "w40",
+        "w41"
+      ],
+      "settings": {
+        "en": "WHY",
+        "title": "INNOCECTが、この価格で出せる理由",
+        "lead": "安さには、ちゃんと理由があります。品質を落とすのではなく、品質以外のコストを削っています。",
+        "background": "dark"
+      }
+    },
+    "reviews-11": {
+      "type": "product-reviews",
+      "settings": {
+        "en": "REVIEW",
+        "title": "お客様の声",
+        "background": "surface",
+        "anchor": "reviews",
+        "source_label": "楽天市場のレビュー（2026/11/16時点）",
+        "source_rating": "4.33",
+        "source_count": "129件"
+      }
+    },
+    "faq-12": {
+      "type": "faq",
+      "blocks": {
+        "faq42": {
+          "type": "qa",
+          "settings": {
+            "question": "牛乳アレルギーですが、飲めますか？",
+            "answer": "リッチチョコレート・カフェオレ・ミルクティー風味には、乳成分を含む原料（クリーミングパウダー）を使用しています。アレルギーが心配な方は原材料をご確認のうえ、医師にご相談ください。"
+          }
+        },
+        "faq43": {
+          "type": "qa",
+          "settings": {
+            "question": "どのくらいの頻度で飲めばいいですか？",
+            "answer": "1日1〜2杯を目安に、朝食代わりや間食代わりとして飲まれる方が多いです。無理のない範囲で習慣にするのがおすすめです。"
+          }
+        },
+        "faq44": {
+          "type": "qa",
+          "settings": {
+            "question": "原産国はどこですか？",
+            "answer": "国内製造・中国製造の大豆たんぱくを使用しています。製品の混合・充填・配送は、すべて国内の工場で行っています。"
+          }
+        },
+        "faq45": {
+          "type": "qa",
+          "settings": {
+            "question": "大豆イソフラボンはどのくらい入っていますか？",
+            "answer": "製品ロットによってばらつきがありますが、1回分（約30g）あたり、おおよそ25〜60mg前後のイソフラボンが含まれています。"
+          }
+        },
+        "faq46": {
+          "type": "qa",
+          "settings": {
+            "question": "保存料は入っていますか？",
+            "answer": "保存料は使用していません。"
+          }
+        },
+        "faq47": {
+          "type": "qa",
+          "settings": {
+            "question": "1杯あたりのたんぱく質量は？",
+            "answer": "フレーバーによって異なりますが、1杯30gあたり20.2〜21.8gのたんぱく質を含みます（リッチチョコレート・カフェオレ・ミルクティー風味）。"
+          }
+        }
+      },
+      "block_order": [
+        "faq42",
+        "faq43",
+        "faq44",
+        "faq45",
+        "faq46",
+        "faq47"
+      ],
+      "settings": {
+        "en": "FAQ",
+        "title": "よくある質問",
+        "open_first": true,
+        "background": "white"
+      }
+    },
+    "spec-13": {
+      "type": "product-spec",
+      "blocks": {
+        "sp48": {
+          "type": "row",
+          "settings": {
+            "label": "名称",
+            "value": "プロテインパウダー"
+          }
+        },
+        "sp49": {
+          "type": "row",
+          "settings": {
+            "label": "原材料名（リッチチョコレート風味）",
+            "value": "大豆タンパク（中国製造、国内製造）、ココアパウダー、マルトデキストリン、ぶどう糖、クリーミングパウダー、食塩／調味料（アミノ酸）、香料、甘味料（ステビア）、乳化剤、（一部に乳成分・大豆を含む）"
+          }
+        },
+        "sp50": {
+          "type": "row",
+          "settings": {
+            "label": "原材料名（カフェオレ風味）",
+            "value": "大豆タンパク（中国製造、国内製造）、マルトデキストリン、クリーミングパウダー、コーヒーパウダー／香料、甘味料（ステビア）、乳化剤"
+          }
+        },
+        "sp51": {
+          "type": "row",
+          "settings": {
+            "label": "原材料名（ミルクティー風味）",
+            "value": "大豆たんぱく（中国製造、国内製造）、マルトデキストリン、紅茶エキスパウダー（紅茶、オリゴ糖）、クリーミングパウダー、食塩／甘味料（ステビア）、香料、乳化剤"
+          }
+        },
+        "sp52": {
+          "type": "row",
+          "settings": {
+            "label": "原材料名（抹茶・プレーン）",
+            "value": "[パッケージの表示を入力]"
+          }
+        },
+        "sp53": {
+          "type": "row",
+          "settings": {
+            "label": "内容量",
+            "value": "3,000g"
+          }
+        },
+        "sp54": {
+          "type": "row",
+          "settings": {
+            "label": "アレルギー物質（28品目中）",
+            "value": "乳成分・大豆（リッチチョコレート・カフェオレ・ミルクティー風味）"
+          }
+        },
+        "sp55": {
+          "type": "row",
+          "settings": {
+            "label": "保存方法",
+            "value": "高温多湿および直射日光を避けて保管してください。"
+          }
+        },
+        "sp56": {
+          "type": "row",
+          "settings": {
+            "label": "製造国",
+            "value": "日本"
+          }
+        },
+        "sp57": {
+          "type": "row",
+          "settings": {
+            "label": "販売者",
+            "value": "[販売者名・所在地]"
+          }
+        }
+      },
+      "block_order": [
+        "sp48",
+        "sp49",
+        "sp50",
+        "sp51",
+        "sp52",
+        "sp53",
+        "sp54",
+        "sp55",
+        "sp56",
+        "sp57"
+      ],
+      "settings": {
+        "en": "SPEC",
+        "title": "商品情報・原材料・栄養成分",
+        "nutrition_title": "栄養成分表示",
+        "nutrition_header": "1杯あたり|エネルギー|たんぱく質|脂質|炭水化物|食塩相当量",
+        "nutrition_rows": "リッチチョコレート（30g）|113.9kcal|20.2g|1.7g|4.6g|0.5g\nカフェオレ（30g）|112.6kcal|21.8g|1.4g|5.9g|0.5g\nミルクティー（30g）|112kcal|21.1g|0.7g|7.2g|0.5g\n抹茶（30g）|[入力]|[入力]|[入力]|[入力]|[入力]\nプレーン（20g）|[入力]|[入力]|[入力]|[入力]|[入力]",
+        "nutrition_note": "推定値。",
+        "spec_title": "商品情報",
+        "show_description": false,
+        "background": "white"
+      }
+    },
+    "cross-14": {
+      "type": "product-recommendations",
+      "settings": {
+        "en": "RECOMMEND",
+        "title": "あわせて選ばれているアイテム",
+        "lead": "2点以上のご注文で、まとめ買い割が適用されます。",
+        "products": [
+          "soy-protein-1kg",
+          "resistant-dextrin-2kg",
+          "creatine-1kg"
+        ],
+        "background": "white"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "trust-1",
+    "proof-2",
+    "reasons-3",
+    "nutri-big-4",
+    "flavors-5",
+    "compare-table-6",
+    "steps-7",
+    "scenes-8",
+    "honest-9",
+    "why-cheap-10",
+    "reviews-11",
+    "faq-12",
+    "spec-13",
+    "cross-14"
+  ]
+}

@@ -1,0 +1,671 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "lead": "高配合なのに、ウマい。9種類の必須アミノ酸に、6つのサポート成分をプラスした、成分と味で選ぶEAAです。",
+        "badges": "EAA 8,555mg/回\nβ-アラニン1,300mg\n600g・約37回分\n国内製造",
+        "media_badges": "EAA 8,555mg\n600g",
+        "single_label": "",
+        "rating_label": "楽天市場レビュー（63件）",
+        "rating_value": "4.4",
+        "coming_soon": "",
+        "coming_text": "発売日が決まりしだい、メールとLINEでお知らせします。",
+        "coming_button": "発売のお知らせを受け取る",
+        "default_subscription": true,
+        "show_dynamic_checkout": false,
+        "show_ship_info": true
+      }
+    },
+    "trust-1": {
+      "type": "trust-bar",
+      "blocks": {
+        "t1": {
+          "type": "item",
+          "settings": {
+            "icon": "flask",
+            "title": "EAA 8,555mg",
+            "text": "1回16gあたり"
+          }
+        },
+        "t2": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "国内のGMP認定工場で製造",
+            "text": "厳選した原料を使用"
+          }
+        },
+        "t3": {
+          "type": "item",
+          "settings": {
+            "icon": "chat",
+            "title": "シリーズ累計10万食",
+            "text": "[集計期間]Amazon・楽天市場の合計"
+          }
+        },
+        "t4": {
+          "type": "item",
+          "settings": {
+            "icon": "shield",
+            "title": "楽天市場 月間優良ショップ",
+            "text": "2026年1月度 受賞"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "settings": {
+        "background": "surface"
+      }
+    },
+    "reasons-2": {
+      "type": "product-reasons",
+      "blocks": {
+        "r5": {
+          "type": "reason",
+          "settings": {
+            "number": "01",
+            "icon": "flask",
+            "title": "惜しみない、欲張り配合",
+            "big": "8,555mg",
+            "big_sub": "EAA（1回16gあたり）",
+            "body": "9種類の必須アミノ酸に加えて、β-アラニン1,300mg、クレアチン、HMBカルシウム、L-グルタミン、L-アルギニン、L-シトルリンを配合しました。",
+            "bullets": ""
+          }
+        },
+        "r6": {
+          "type": "reason",
+          "settings": {
+            "number": "02",
+            "icon": "sparkle",
+            "title": "徹底した、味へのこだわり",
+            "big": "",
+            "big_sub": "",
+            "body": "アミノ酸特有の苦みや後味をおさえ、ジュースのようにゴクゴク飲める味を目指しました。",
+            "bullets": "専属の開発スタッフが担当\n妥協なしのフレーバー調整\n納得いくまで繰り返した試飲テスト"
+          }
+        },
+        "r7": {
+          "type": "reason",
+          "settings": {
+            "number": "03",
+            "icon": "factory",
+            "title": "国内のGMP認定工場で製造",
+            "big": "",
+            "big_sub": "",
+            "body": "厳選した原料を、GMP認定を受けた国内の工場で製造しています。",
+            "bullets": ""
+          }
+        }
+      },
+      "block_order": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "settings": {
+        "en": "REASONS",
+        "title": "INNOCECTのEAAが選ばれる3つの理由",
+        "lead": "",
+        "background": "surface"
+      }
+    },
+    "compare-table-3": {
+      "type": "comparison-table",
+      "blocks": {
+        "x8": {
+          "type": "row",
+          "settings": {
+            "cells": "L-ロイシン|3,000mg"
+          }
+        },
+        "x9": {
+          "type": "row",
+          "settings": {
+            "cells": "L-バリン|1,500mg"
+          }
+        },
+        "x10": {
+          "type": "row",
+          "settings": {
+            "cells": "L-イソロイシン|1,500mg"
+          }
+        },
+        "x11": {
+          "type": "row",
+          "settings": {
+            "cells": "L-フェニルアラニン|765mg"
+          }
+        },
+        "x12": {
+          "type": "row",
+          "settings": {
+            "cells": "L-リジン塩酸塩|740mg"
+          }
+        },
+        "x13": {
+          "type": "row",
+          "settings": {
+            "cells": "L-トレオニン|663mg"
+          }
+        },
+        "x14": {
+          "type": "row",
+          "settings": {
+            "cells": "L-メチオニン|180mg"
+          }
+        },
+        "x15": {
+          "type": "row",
+          "settings": {
+            "cells": "L-ヒスチジン|130mg"
+          }
+        },
+        "x16": {
+          "type": "row",
+          "settings": {
+            "cells": "L-トリプトファン|77mg"
+          }
+        },
+        "x17": {
+          "type": "row",
+          "settings": {
+            "cells": "合計|8,555mg"
+          }
+        }
+      },
+      "block_order": [
+        "x8",
+        "x9",
+        "x10",
+        "x11",
+        "x12",
+        "x13",
+        "x14",
+        "x15",
+        "x16",
+        "x17"
+      ],
+      "settings": {
+        "en": "AMINO ACIDS",
+        "title": "1回（16g）あたりのEAA配合量",
+        "lead": "BCAA（バリン：ロイシン：イソロイシン）は1：2：1で配合しています。",
+        "header": "必須アミノ酸|配合量",
+        "highlight_column": 0,
+        "min_width": 340,
+        "note": "推定値（マスカット風味）。このほか、β-アラニン1,300mg、クレアチン、HMBカルシウム、L-グルタミン、L-アルギニン、L-シトルリンを配合しています。",
+        "background": "white"
+      }
+    },
+    "compare-table-4": {
+      "type": "comparison-table",
+      "blocks": {
+        "x18": {
+          "type": "row",
+          "settings": {
+            "cells": "中身|9種類の必須アミノ酸|必須アミノ酸のうち3種類"
+          }
+        },
+        "x19": {
+          "type": "row",
+          "settings": {
+            "cells": "含まれる成分|バリン・ロイシン・イソロイシン＋6種|バリン・ロイシン・イソロイシン"
+          }
+        }
+      },
+      "block_order": [
+        "x18",
+        "x19"
+      ],
+      "settings": {
+        "en": "EAA / BCAA",
+        "title": "EAAとBCAAのちがい",
+        "lead": "",
+        "header": "|EAA|BCAA",
+        "highlight_column": 1,
+        "min_width": 340,
+        "note": "INNOCECTのEAAは、BCAAの3種類も含めた9種類すべてを配合しています。",
+        "background": "white"
+      }
+    },
+    "flavors-5": {
+      "type": "flavor-guide",
+      "blocks": {
+        "f20": {
+          "type": "flavor",
+          "settings": {
+            "name": "マスカット",
+            "color": "#7CB342",
+            "tag": "",
+            "catch": "ジューシーなマスカット風味",
+            "text": "マスカット果汁パウダーを使った、みずみずしい香り。",
+            "mix": "冷やすと、よりジュース感アップ"
+          }
+        },
+        "f21": {
+          "type": "flavor",
+          "settings": {
+            "name": "レモンライム",
+            "color": "#D4C82A",
+            "tag": "",
+            "catch": "すっきりしたレモンライム風味",
+            "text": "キリッとした酸味で、トレーニング中もすっきり飲めます。",
+            "mix": "炭酸水で割ってもさわやか"
+          }
+        },
+        "f22": {
+          "type": "flavor",
+          "settings": {
+            "name": "みかん",
+            "color": "#F08A1C",
+            "tag": "",
+            "catch": "甘さ弾けるフレッシュみかん風味",
+            "text": "みかんの甘さと香りが広がる、ジュースのような味わい。",
+            "mix": "冷たい水でゴクゴクと"
+          }
+        },
+        "f23": {
+          "type": "flavor",
+          "settings": {
+            "name": "マンゴーピーチ",
+            "color": "#F59E6B",
+            "tag": "NEW",
+            "catch": "[キャッチコピー]",
+            "text": "[味の特徴を入力]",
+            "mix": ""
+          }
+        }
+      },
+      "block_order": [
+        "f20",
+        "f21",
+        "f22",
+        "f23"
+      ],
+      "settings": {
+        "en": "FLAVOR",
+        "title": "選べる4つのフレーバー",
+        "lead": "水はもちろん、スポーツドリンクやジュースに溶かしても。",
+        "background": "surface"
+      }
+    },
+    "steps-6": {
+      "type": "how-to",
+      "blocks": {
+        "s24": {
+          "type": "step",
+          "settings": {
+            "icon": "spoon",
+            "title": "粉を入れる",
+            "text": "付属スプーンすり切り1杯（約16g）をシェイカーへ。"
+          }
+        },
+        "s25": {
+          "type": "step",
+          "settings": {
+            "icon": "cup",
+            "title": "冷たい水を注ぐ",
+            "text": "冷たい水を300〜400ml注ぎます。"
+          }
+        },
+        "s26": {
+          "type": "step",
+          "settings": {
+            "icon": "shake",
+            "title": "よく混ぜる",
+            "text": "よく混ぜれば、できあがりです。"
+          }
+        },
+        "a27": {
+          "type": "arrange",
+          "settings": {
+            "title": "水",
+            "text": "いちばん手軽に"
+          }
+        },
+        "a28": {
+          "type": "arrange",
+          "settings": {
+            "title": "スポーツドリンク",
+            "text": "トレーニング中のドリンクに"
+          }
+        },
+        "a29": {
+          "type": "arrange",
+          "settings": {
+            "title": "よく冷やして",
+            "text": "ジュース感が増してゴクゴク飲める"
+          }
+        }
+      },
+      "block_order": [
+        "s24",
+        "s25",
+        "s26",
+        "a27",
+        "a28",
+        "a29"
+      ],
+      "settings": {
+        "en": "HOW TO",
+        "title": "お召し上がり方",
+        "tip_label": "ダマを防ぐコツ：",
+        "tip": "",
+        "background": "surface"
+      }
+    },
+    "scenes-7": {
+      "type": "feature-cards",
+      "blocks": {
+        "sc30": {
+          "type": "card",
+          "settings": {
+            "icon": "dumbbell",
+            "title": "トレーニング中に",
+            "text": "ボトルに作っておけば、セットの合間に少しずつ飲めます。"
+          }
+        },
+        "sc31": {
+          "type": "card",
+          "settings": {
+            "icon": "clock",
+            "title": "トレーニングの前後に",
+            "text": "運動の30分前や、運動の直後に。"
+          }
+        },
+        "sc32": {
+          "type": "card",
+          "settings": {
+            "icon": "sun",
+            "title": "朝のスタートに",
+            "text": "すっきりした味で、朝の一杯にも。"
+          }
+        }
+      },
+      "block_order": [
+        "sc30",
+        "sc31",
+        "sc32"
+      ],
+      "settings": {
+        "en": "TIMING",
+        "title": "こんなタイミングに",
+        "style": "scene",
+        "background": "white"
+      }
+    },
+    "honest-8": {
+      "type": "honest-notes",
+      "blocks": {
+        "h33": {
+          "type": "note",
+          "settings": {
+            "title": "ピリピリすることがあります（β-アラニンフラッシュ）",
+            "text": "β-アラニンをとると、体にピリピリとした感覚が出ることがあります。β-アラニン特有の現象で、品質の問題ではありません。",
+            "tip": "気になる方は、量や飲み方を調整してください。"
+          }
+        },
+        "h34": {
+          "type": "note",
+          "settings": {
+            "title": "小麦・卵・乳成分を扱う工場で製造しています",
+            "text": "本製品は、小麦・卵・乳成分を含む製品と同じ工場で製造しています。",
+            "tip": "アレルギーが心配な方は、原材料をご確認ください。"
+          }
+        }
+      },
+      "block_order": [
+        "h33",
+        "h34"
+      ],
+      "settings": {
+        "en": "BEFORE YOU BUY",
+        "title": "購入前に知っておいてほしいこと",
+        "lead": "良いところだけでなく、気になりやすい点も先にお伝えします。",
+        "background": "surface"
+      }
+    },
+    "why-cheap-9": {
+      "type": "why-cheap",
+      "blocks": {
+        "w35": {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "title": "シンプルな設計のパッケージ",
+            "text": "見た目にお金をかけすぎず、そのぶんを中身と価格に回しています。"
+          }
+        },
+        "w36": {
+          "type": "item",
+          "settings": {
+            "icon": "tag",
+            "title": "広告宣伝費をかけすぎない",
+            "text": "過度な広告を打たず、使ってくださる方の声で広げています。"
+          }
+        },
+        "w37": {
+          "type": "item",
+          "settings": {
+            "icon": "flask",
+            "title": "原料・資材を自社で開発",
+            "text": "原料メーカー・工場と直接やりとりし、中間コストを抑えています。"
+          }
+        },
+        "w38": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "大ロット製造で加工費を低減",
+            "text": "まとめて製造することで、1袋あたりの加工費を下げています。"
+          }
+        },
+        "w39": {
+          "type": "item",
+          "settings": {
+            "icon": "repeat",
+            "title": "システムで運営を効率化",
+            "text": "受注から出荷までの仕組みを整え、人件費を抑えています。"
+          }
+        }
+      },
+      "block_order": [
+        "w35",
+        "w36",
+        "w37",
+        "w38",
+        "w39"
+      ],
+      "settings": {
+        "en": "WHY",
+        "title": "INNOCECTが、この価格で出せる理由",
+        "lead": "安さには、ちゃんと理由があります。品質を落とすのではなく、品質以外のコストを削っています。",
+        "background": "dark"
+      }
+    },
+    "reviews-10": {
+      "type": "product-reviews",
+      "settings": {
+        "en": "REVIEW",
+        "title": "お客様の声",
+        "background": "surface",
+        "anchor": "reviews",
+        "source_label": "楽天市場のレビュー（2026/11/16時点）",
+        "source_rating": "4.4",
+        "source_count": "63件"
+      }
+    },
+    "faq-11": {
+      "type": "faq",
+      "blocks": {
+        "faq40": {
+          "type": "qa",
+          "settings": {
+            "question": "EAAとBCAAの違いは？",
+            "answer": "EAAは体内で作ることができない9種類の必須アミノ酸、BCAAはそのうちのバリン・ロイシン・イソロイシンの3種類です。"
+          }
+        },
+        "faq41": {
+          "type": "qa",
+          "settings": {
+            "question": "いつ飲むのがおすすめですか？",
+            "answer": "トレーニングの30分前、運動中、運動の直後などのタイミングで飲まれる方が多いです。"
+          }
+        },
+        "faq42": {
+          "type": "qa",
+          "settings": {
+            "question": "初心者や女性でも飲めますか？",
+            "answer": "どなたでもお飲みいただけます。食生活は主食・主菜・副菜を基本に、バランスよくとりましょう。"
+          }
+        },
+        "faq43": {
+          "type": "qa",
+          "settings": {
+            "question": "プロテインやクレアチンと一緒に飲めますか？",
+            "answer": "あわせて使う方も多いです。本品にはクレアチン・HMB・グルタミンなども含まれているため、別に摂る場合は量を調整してください。"
+          }
+        },
+        "faq44": {
+          "type": "qa",
+          "settings": {
+            "question": "1日に何回飲めばいいですか？",
+            "answer": "1日1〜2回を目安に、運動量や食事の内容に合わせて調整してください。"
+          }
+        }
+      },
+      "block_order": [
+        "faq40",
+        "faq41",
+        "faq42",
+        "faq43",
+        "faq44"
+      ],
+      "settings": {
+        "en": "FAQ",
+        "title": "よくある質問",
+        "open_first": true,
+        "background": "white"
+      }
+    },
+    "spec-12": {
+      "type": "product-spec",
+      "blocks": {
+        "sp45": {
+          "type": "row",
+          "settings": {
+            "label": "名称",
+            "value": "アミノ酸含有食品"
+          }
+        },
+        "sp46": {
+          "type": "row",
+          "settings": {
+            "label": "原材料名（マスカット風味）",
+            "value": "マルトデキストリン（国内製造）、β-アラニン、マスカット果汁パウダー、食塩、クレアチンモノハイドレート、HMBカルシウム／L-ロイシン、L-バリン、L-イソロイシン、クエン酸、香料、L-フェニルアラニン、L-リジン塩酸塩、L-トレオニン、甘味料（アスパルテーム、スクラロース、アセスルファムK）、酸味料、環状オリゴ糖、L-メチオニン、L-ヒスチジン、L-トリプトファン、クチナシ色素、L-グルタミン、L-アルギニン、L-シトルリン、ビタミンC、ビタミンE、ナイアシン、パントテン酸Ca、ビタミンB1、ビタミンB6、ビタミンB2、ビタミンA、葉酸、ビタミンD、ビタミンB12"
+          }
+        },
+        "sp47": {
+          "type": "row",
+          "settings": {
+            "label": "原材料名（その他の風味）",
+            "value": "[パッケージの表示を入力]"
+          }
+        },
+        "sp48": {
+          "type": "row",
+          "settings": {
+            "label": "内容量",
+            "value": "600g（1回16gで約37回分）"
+          }
+        },
+        "sp49": {
+          "type": "row",
+          "settings": {
+            "label": "保存方法",
+            "value": "高温多湿を避け、密閉容器にて保管してください。"
+          }
+        },
+        "sp50": {
+          "type": "row",
+          "settings": {
+            "label": "製造国",
+            "value": "日本"
+          }
+        },
+        "sp51": {
+          "type": "row",
+          "settings": {
+            "label": "注意事項",
+            "value": "本製品は、小麦・卵・乳成分を含む製品と同じ工場で製造しています。"
+          }
+        },
+        "sp52": {
+          "type": "row",
+          "settings": {
+            "label": "販売者",
+            "value": "[販売者名・所在地]"
+          }
+        }
+      },
+      "block_order": [
+        "sp45",
+        "sp46",
+        "sp47",
+        "sp48",
+        "sp49",
+        "sp50",
+        "sp51",
+        "sp52"
+      ],
+      "settings": {
+        "en": "SPEC",
+        "title": "商品情報・原材料・栄養成分",
+        "nutrition_title": "栄養成分表示",
+        "nutrition_header": "1回（16g）あたり|エネルギー|たんぱく質|脂質|炭水化物|食塩相当量",
+        "nutrition_rows": "マスカット|56.8kcal|9.1g|0.0g|6.1g|0.01g\nレモンライム|[入力]|[入力]|[入力]|[入力]|[入力]\nみかん|[入力]|[入力]|[入力]|[入力]|[入力]\nマンゴーピーチ|[入力]|[入力]|[入力]|[入力]|[入力]",
+        "nutrition_note": "推定値。",
+        "spec_title": "商品情報",
+        "show_description": false,
+        "background": "white"
+      }
+    },
+    "cross-13": {
+      "type": "product-recommendations",
+      "settings": {
+        "en": "RECOMMEND",
+        "title": "EAAと一緒に選ばれているアイテム",
+        "lead": "2点以上のご注文で、まとめ買い割が適用されます。",
+        "products": [
+          "whey-protein-3kg",
+          "creatine-1kg",
+          "glutamine-1kg"
+        ],
+        "background": "white"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "trust-1",
+    "reasons-2",
+    "compare-table-3",
+    "compare-table-4",
+    "flavors-5",
+    "steps-6",
+    "scenes-7",
+    "honest-8",
+    "why-cheap-9",
+    "reviews-10",
+    "faq-11",
+    "spec-12",
+    "cross-13"
+  ]
+}

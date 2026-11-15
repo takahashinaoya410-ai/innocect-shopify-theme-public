@@ -1,0 +1,14 @@
+<div class="container container--form section">
+  <h1 class="page-title">アカウントの有効化</h1>
+  <div class="card form-card">
+    {%- form 'activate_customer_password', class: 'form-stack' -%}
+      {{ form.errors | default_errors }}
+      <label class="field"><span>パスワード</span><input class="input" type="password" name="customer[password]" autocomplete="new-password" required></label>
+      <label class="field"><span>パスワード（確認）</span><input class="input" type="password" name="customer[password_confirmation]" autocomplete="new-password" required></label>
+      <button class="btn btn--primary btn--block" type="submit">有効にする</button>
+    {%- endform -%}
+  </div>
+</div>
+{% schema %}
+{ "name": "アカウント有効化", "settings": [] }
+{% endschema %}

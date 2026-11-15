@@ -1,0 +1,206 @@
+<section class="section section--{{ section.settings.background }}" id="{{ section.settings.anchor | default: section.id }}">
+  <div class="container">
+    {% render 'section-head', en: section.settings.en, title: section.settings.title, lead: section.settings.lead %}
+    <div class="purposes">
+      {%- for block in section.blocks -%}
+        <a class="purpose card" href="{{ block.settings.link | default: '#' }}" {{ block.shopify_attributes }}>
+          <span class="icon-circle">{% render 'icon', name: block.settings.icon, size: 22 %}</span>
+          <span class="purpose__text"><span class="purpose__title">{{ block.settings.title }}</span><span class="purpose__sub">{{ block.settings.text }}</span></span>
+        </a>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "目的から探す",
+  "tag": "div",
+  "settings": [
+    {
+      "type": "text",
+      "id": "en",
+      "label": "英字の小見出し",
+      "default": "PURPOSE"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "見出し",
+      "default": "目的から探す"
+    },
+    {
+      "type": "select",
+      "id": "background",
+      "label": "背景",
+      "default": "surface",
+      "options": [
+        {
+          "value": "white",
+          "label": "白"
+        },
+        {
+          "value": "surface",
+          "label": "グレー"
+        },
+        {
+          "value": "tint",
+          "label": "淡いグリーン"
+        },
+        {
+          "value": "dark",
+          "label": "濃い色"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "anchor",
+      "label": "ページ内リンク用ID",
+      "info": "例：reviews（半角英数字）"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "link",
+      "name": "目的",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "アイコン",
+          "default": "sparkle",
+          "options": [
+            {
+              "value": "check",
+              "label": "チェック"
+            },
+            {
+              "value": "factory",
+              "label": "工場"
+            },
+            {
+              "value": "leaf",
+              "label": "葉（無添加）"
+            },
+            {
+              "value": "shield",
+              "label": "盾（安心）"
+            },
+            {
+              "value": "yen",
+              "label": "円"
+            },
+            {
+              "value": "scale",
+              "label": "はかり（容量）"
+            },
+            {
+              "value": "chat",
+              "label": "吹き出し（実績）"
+            },
+            {
+              "value": "sparkle",
+              "label": "キラキラ（味）"
+            },
+            {
+              "value": "dumbbell",
+              "label": "ダンベル"
+            },
+            {
+              "value": "flask",
+              "label": "フラスコ（成分）"
+            },
+            {
+              "value": "cup",
+              "label": "カップ"
+            },
+            {
+              "value": "spoon",
+              "label": "スプーン"
+            },
+            {
+              "value": "shake",
+              "label": "シェイカー"
+            },
+            {
+              "value": "sun",
+              "label": "太陽（朝）"
+            },
+            {
+              "value": "moon",
+              "label": "月（夜）"
+            },
+            {
+              "value": "clock",
+              "label": "時計（間食）"
+            },
+            {
+              "value": "drop",
+              "label": "しずく"
+            },
+            {
+              "value": "bean",
+              "label": "豆"
+            },
+            {
+              "value": "box",
+              "label": "箱"
+            },
+            {
+              "value": "tag",
+              "label": "タグ"
+            },
+            {
+              "value": "repeat",
+              "label": "定期便"
+            },
+            {
+              "value": "truck",
+              "label": "配送"
+            },
+            {
+              "value": "gift",
+              "label": "ギフト"
+            },
+            {
+              "value": "info",
+              "label": "情報"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "目的",
+          "default": "はじめてのプロテイン"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "補足（おすすめ商品など）"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "リンク"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 8,
+  "presets": [
+    {
+      "name": "目的から探す",
+      "blocks": [
+        {
+          "type": "link"
+        },
+        {
+          "type": "link"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

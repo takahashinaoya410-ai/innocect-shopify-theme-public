@@ -1,0 +1,9 @@
+{%- comment -%} 一覧カード用：「1杯（30g）あたり約◯円」 {%- endcomment -%}
+{%- liquid
+  assign servings = product.metafields.innocect.servings.value | default: 0
+  assign label = product.metafields.innocect.serving_label.value | default: '1回あたり'
+-%}
+{%- if servings > 0 -%}
+  {%- assign per = product.selected_or_first_available_variant.price | divided_by: servings | money_without_currency -%}
+  {{- label }}約{{ per }}円
+{%- endif -%}

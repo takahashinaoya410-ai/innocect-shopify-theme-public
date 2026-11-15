@@ -1,0 +1,121 @@
+{
+  "sections": {
+    "deals": {
+      "type": "deal-cards",
+      "blocks": {
+        "d15": {
+          "type": "deal",
+          "settings": {
+            "icon": "repeat",
+            "title": "定期便",
+            "highlight": "ずっと10%OFF",
+            "points": "回数しばりなし\nお届け周期は1・2・3か月から選べる\n次回お届けの[5]日前までスキップ・解約OK",
+            "link": ""
+          }
+        },
+        "d16": {
+          "type": "deal",
+          "settings": {
+            "icon": "tag",
+            "title": "まとめ買い割",
+            "highlight": "2点で5%OFF・3点以上で10%OFF",
+            "points": "フレーバー違い・商品違いでもOK\n定期便との併用はできません\nカートで自動で割引",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "d15",
+        "d16"
+      ],
+      "settings": {
+        "en": "SAVE",
+        "title": "おトクに続ける2つの方法",
+        "background": "tint"
+      }
+    },
+    "flow": {
+      "type": "how-to",
+      "blocks": {
+        "s17": {
+          "type": "step",
+          "settings": {
+            "icon": "box",
+            "title": "商品ページで「定期便」を選ぶ",
+            "text": "フレーバーと数量を選び、購入方法で「定期便」を選んでカートへ。"
+          }
+        },
+        "s18": {
+          "type": "step",
+          "settings": {
+            "icon": "truck",
+            "title": "お届け周期で自動でお届け",
+            "text": "選んだ周期（1・2・3か月）ごとに、定期便価格でお届けします。"
+          }
+        },
+        "s19": {
+          "type": "step",
+          "settings": {
+            "icon": "repeat",
+            "title": "スキップ・解約はマイページから",
+            "text": "次回お届け予定日の[5]日前まで、マイページから手続きできます。"
+          }
+        }
+      },
+      "block_order": [
+        "s17",
+        "s18",
+        "s19"
+      ],
+      "settings": {
+        "en": "SUBSCRIPTION",
+        "title": "定期便のしくみ",
+        "tip_label": "",
+        "tip": "",
+        "background": "white"
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "blocks": {
+        "fq20": {
+          "type": "qa",
+          "settings": {
+            "question": "定期便に回数のしばりはありますか？",
+            "answer": "ありません。1回目のお届けのあとでも、マイページからいつでも解約できます。"
+          }
+        },
+        "fq21": {
+          "type": "qa",
+          "settings": {
+            "question": "お届け周期は変えられますか？",
+            "answer": "マイページから変更できます。"
+          }
+        },
+        "fq22": {
+          "type": "qa",
+          "settings": {
+            "question": "まとめ買い割と定期便割引は一緒に使えますか？",
+            "answer": "併用はできません。カートでは、おトクになる方が自動で適用されます。"
+          }
+        }
+      },
+      "block_order": [
+        "fq20",
+        "fq21",
+        "fq22"
+      ],
+      "settings": {
+        "en": "FAQ",
+        "title": "よくある質問",
+        "open_first": true,
+        "background": "surface"
+      }
+    }
+  },
+  "order": [
+    "deals",
+    "flow",
+    "faq"
+  ]
+}

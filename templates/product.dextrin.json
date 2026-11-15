@@ -1,0 +1,499 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {},
+      "block_order": [],
+      "settings": {
+        "lead": "いつもの飲み物や料理に、ひとさじ混ぜるだけ。原材料は難消化性デキストリンのみの、無添加パウダーです。",
+        "badges": "食物繊維96.9g/100g\n無添加\n2kgの大容量\n国内製造",
+        "media_badges": "食物繊維 96.9g/100g\n2kg",
+        "single_label": "2kg",
+        "rating_label": "Amazonレビュー（269件）",
+        "rating_value": "4.0",
+        "coming_soon": "",
+        "coming_text": "発売日が決まりしだい、メールとLINEでお知らせします。",
+        "coming_button": "発売のお知らせを受け取る",
+        "default_subscription": true,
+        "show_dynamic_checkout": false,
+        "show_ship_info": true
+      }
+    },
+    "trust-1": {
+      "type": "trust-bar",
+      "blocks": {
+        "t1": {
+          "type": "item",
+          "settings": {
+            "icon": "leaf",
+            "title": "原材料は1つだけ",
+            "text": "難消化性デキストリン"
+          }
+        },
+        "t2": {
+          "type": "item",
+          "settings": {
+            "icon": "drop",
+            "title": "水溶性の食物繊維",
+            "text": "溶かして使えるパウダー"
+          }
+        },
+        "t3": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "国内で製造",
+            "text": "原料は韓国産"
+          }
+        },
+        "t4": {
+          "type": "item",
+          "settings": {
+            "icon": "yen",
+            "title": "1日あたり約{per}円",
+            "text": "1日10gで計算"
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4"
+      ],
+      "settings": {
+        "background": "surface"
+      }
+    },
+    "reasons-2": {
+      "type": "product-reasons",
+      "blocks": {
+        "r5": {
+          "type": "reason",
+          "settings": {
+            "number": "01",
+            "icon": "leaf",
+            "title": "食物繊維の量が違う",
+            "big": "96.9g",
+            "big_sub": "食物繊維（100gあたり）",
+            "body": "加工を加えないシンプルなパウダーだから、100gあたり96.9gの食物繊維を含みます。",
+            "bullets": ""
+          }
+        },
+        "r6": {
+          "type": "reason",
+          "settings": {
+            "number": "02",
+            "icon": "cup",
+            "title": "飲み物にも、料理にも",
+            "big": "",
+            "big_sub": "",
+            "body": "白色で甘さが少なく、熱や酸にも強いので、コーヒー・お茶・みそ汁・スープ・料理など、いつものメニューに混ぜて使えます。",
+            "bullets": ""
+          }
+        },
+        "r7": {
+          "type": "reason",
+          "settings": {
+            "number": "03",
+            "icon": "yen",
+            "title": "続けやすい価格",
+            "big": "",
+            "big_sub": "",
+            "body": "大手原料メーカーとの直接取引とシンプルなパッケージで、毎日使っても続けやすい価格にしました。",
+            "bullets": ""
+          }
+        }
+      },
+      "block_order": [
+        "r5",
+        "r6",
+        "r7"
+      ],
+      "settings": {
+        "en": "REASONS",
+        "title": "INNOCECTの難消化性デキストリンが選ばれる理由",
+        "lead": "",
+        "background": "surface"
+      }
+    },
+    "nutri-big-3": {
+      "type": "nutrition-highlight",
+      "blocks": {
+        "n8": {
+          "type": "cell",
+          "settings": {
+            "label": "食物繊維",
+            "value": "96.9",
+            "unit": "g"
+          }
+        },
+        "n9": {
+          "type": "cell",
+          "settings": {
+            "label": "エネルギー",
+            "value": "98",
+            "unit": "kcal"
+          }
+        },
+        "n10": {
+          "type": "cell",
+          "settings": {
+            "label": "糖質",
+            "value": "0.1",
+            "unit": "g"
+          }
+        },
+        "n11": {
+          "type": "cell",
+          "settings": {
+            "label": "脂質",
+            "value": "0",
+            "unit": "g"
+          }
+        }
+      },
+      "block_order": [
+        "n8",
+        "n9",
+        "n10",
+        "n11"
+      ],
+      "settings": {
+        "en": "NUTRITION",
+        "title": "100gあたりの栄養成分",
+        "note": "推定値（パッケージ表示より）。1日の目安量は5〜10gです。",
+        "background": "white"
+      }
+    },
+    "steps-4": {
+      "type": "how-to",
+      "blocks": {
+        "s12": {
+          "type": "step",
+          "settings": {
+            "icon": "spoon",
+            "title": "1日5〜10gを目安に",
+            "text": "スプーンで量ります。"
+          }
+        },
+        "s13": {
+          "type": "step",
+          "settings": {
+            "icon": "cup",
+            "title": "飲み物や料理に混ぜる",
+            "text": "コーヒー・お茶・みそ汁・スープなどに。"
+          }
+        },
+        "s14": {
+          "type": "step",
+          "settings": {
+            "icon": "shake",
+            "title": "よく混ぜる",
+            "text": "少しずつ加えて混ぜると、ダマになりにくくなります。"
+          }
+        },
+        "a15": {
+          "type": "arrange",
+          "settings": {
+            "title": "コーヒー・お茶",
+            "text": "いつもの一杯に"
+          }
+        },
+        "a16": {
+          "type": "arrange",
+          "settings": {
+            "title": "みそ汁・スープ",
+            "text": "温かいものに溶かしやすい"
+          }
+        },
+        "a17": {
+          "type": "arrange",
+          "settings": {
+            "title": "料理・お菓子作り",
+            "text": "熱に強いので加熱調理にも"
+          }
+        }
+      },
+      "block_order": [
+        "s12",
+        "s13",
+        "s14",
+        "a15",
+        "a16",
+        "a17"
+      ],
+      "settings": {
+        "en": "HOW TO",
+        "title": "使い方",
+        "tip_label": "ダマを防ぐコツ：",
+        "tip": "一度に入れずに少しずつ加え、温かい飲み物でよく混ぜると溶けやすくなります。",
+        "background": "surface"
+      }
+    },
+    "honest-5": {
+      "type": "honest-notes",
+      "blocks": {
+        "h18": {
+          "type": "note",
+          "settings": {
+            "title": "ダマになりやすいです",
+            "text": "高純度・低価格を保つため、顆粒加工はしていません。",
+            "tip": "少しずつ加えて、よく混ぜてください。"
+          }
+        },
+        "h19": {
+          "type": "note",
+          "settings": {
+            "title": "ほんのり甘みがあります",
+            "text": "食物繊維本来の甘みが少しあります。",
+            "tip": "みそ汁やコーヒーなど、味の強いものに混ぜると気になりにくくなります。"
+          }
+        },
+        "h20": {
+          "type": "note",
+          "settings": {
+            "title": "とりすぎに注意してください",
+            "text": "一度にたくさんとると、体質によってはおなかがゆるくなる場合があります。",
+            "tip": "目安量（1日5〜10g）を守ってお召し上がりください。"
+          }
+        }
+      },
+      "block_order": [
+        "h18",
+        "h19",
+        "h20"
+      ],
+      "settings": {
+        "en": "BEFORE YOU BUY",
+        "title": "メリットだけでなく、本音も",
+        "lead": "良いところだけでなく、気になりやすい点も先にお伝えします。",
+        "background": "surface"
+      }
+    },
+    "why-cheap-6": {
+      "type": "why-cheap",
+      "blocks": {
+        "w21": {
+          "type": "item",
+          "settings": {
+            "icon": "box",
+            "title": "シンプルな設計のパッケージ",
+            "text": "見た目にお金をかけすぎず、そのぶんを中身と価格に回しています。"
+          }
+        },
+        "w22": {
+          "type": "item",
+          "settings": {
+            "icon": "tag",
+            "title": "広告宣伝費をかけすぎない",
+            "text": "過度な広告を打たず、使ってくださる方の声で広げています。"
+          }
+        },
+        "w23": {
+          "type": "item",
+          "settings": {
+            "icon": "flask",
+            "title": "原料・資材を自社で開発",
+            "text": "原料メーカー・工場と直接やりとりし、中間コストを抑えています。"
+          }
+        },
+        "w24": {
+          "type": "item",
+          "settings": {
+            "icon": "factory",
+            "title": "大ロット製造で加工費を低減",
+            "text": "まとめて製造することで、1袋あたりの加工費を下げています。"
+          }
+        },
+        "w25": {
+          "type": "item",
+          "settings": {
+            "icon": "repeat",
+            "title": "システムで運営を効率化",
+            "text": "受注から出荷までの仕組みを整え、人件費を抑えています。"
+          }
+        }
+      },
+      "block_order": [
+        "w21",
+        "w22",
+        "w23",
+        "w24",
+        "w25"
+      ],
+      "settings": {
+        "en": "WHY",
+        "title": "INNOCECTが、この価格で出せる理由",
+        "lead": "安さには、ちゃんと理由があります。品質を落とすのではなく、品質以外のコストを削っています。",
+        "background": "dark"
+      }
+    },
+    "reviews-7": {
+      "type": "product-reviews",
+      "settings": {
+        "en": "REVIEW",
+        "title": "お客様の声",
+        "background": "surface",
+        "anchor": "reviews",
+        "source_label": "Amazonのレビュー（2026/11/16時点）",
+        "source_rating": "4.0",
+        "source_count": "269件"
+      }
+    },
+    "faq-8": {
+      "type": "faq",
+      "blocks": {
+        "faq26": {
+          "type": "qa",
+          "settings": {
+            "question": "いつとればいいですか？",
+            "answer": "食事の前や食事中に、飲み物などに溶かしてお召し上がりください。"
+          }
+        },
+        "faq27": {
+          "type": "qa",
+          "settings": {
+            "question": "どのくらいの量をとればいいですか？",
+            "answer": "1日5〜10gを目安にお召し上がりください。"
+          }
+        },
+        "faq28": {
+          "type": "qa",
+          "settings": {
+            "question": "味はありますか？",
+            "answer": "ほんのり甘みがありますが、ほとんど味はありません。"
+          }
+        },
+        "faq29": {
+          "type": "qa",
+          "settings": {
+            "question": "原料の産地は？",
+            "answer": "原料の難消化性デキストリンは韓国産で、日本国内で製造しています。"
+          }
+        },
+        "faq30": {
+          "type": "qa",
+          "settings": {
+            "question": "特定保健用食品や機能性表示食品ですか？",
+            "answer": "本品は一般の食品です。特定保健用食品・機能性表示食品ではありません。"
+          }
+        }
+      },
+      "block_order": [
+        "faq26",
+        "faq27",
+        "faq28",
+        "faq29",
+        "faq30"
+      ],
+      "settings": {
+        "en": "FAQ",
+        "title": "よくある質問",
+        "open_first": true,
+        "background": "white"
+      }
+    },
+    "spec-9": {
+      "type": "product-spec",
+      "blocks": {
+        "sp31": {
+          "type": "row",
+          "settings": {
+            "label": "商品区分",
+            "value": "食品"
+          }
+        },
+        "sp32": {
+          "type": "row",
+          "settings": {
+            "label": "名称",
+            "value": "水溶性食物繊維"
+          }
+        },
+        "sp33": {
+          "type": "row",
+          "settings": {
+            "label": "原材料名",
+            "value": "難消化性デキストリン（韓国産）"
+          }
+        },
+        "sp34": {
+          "type": "row",
+          "settings": {
+            "label": "内容量",
+            "value": "2,000g"
+          }
+        },
+        "sp35": {
+          "type": "row",
+          "settings": {
+            "label": "保存方法",
+            "value": "高温多湿を避け、密閉容器にて保管してください。"
+          }
+        },
+        "sp36": {
+          "type": "row",
+          "settings": {
+            "label": "製造国",
+            "value": "日本"
+          }
+        },
+        "sp37": {
+          "type": "row",
+          "settings": {
+            "label": "販売者",
+            "value": "[販売者名・所在地]"
+          }
+        }
+      },
+      "block_order": [
+        "sp31",
+        "sp32",
+        "sp33",
+        "sp34",
+        "sp35",
+        "sp36",
+        "sp37"
+      ],
+      "settings": {
+        "en": "SPEC",
+        "title": "商品情報・原材料・栄養成分",
+        "nutrition_title": "栄養成分表示",
+        "nutrition_header": "100gあたり|エネルギー|たんぱく質|脂質|炭水化物|糖質|食物繊維|食塩相当量",
+        "nutrition_rows": "難消化性デキストリン|98kcal|0g|0g|97.0g|0.1g|96.9g|0g",
+        "nutrition_note": "推定値（パッケージ表示より）。",
+        "spec_title": "商品情報",
+        "show_description": false,
+        "background": "white"
+      }
+    },
+    "cross-10": {
+      "type": "product-recommendations",
+      "settings": {
+        "en": "RECOMMEND",
+        "title": "あわせて選ばれているアイテム",
+        "lead": "2点以上のご注文で、まとめ買い割が適用されます。",
+        "products": [
+          "soy-protein-3kg",
+          "soy-protein-1kg",
+          "whey-protein-3kg"
+        ],
+        "background": "white"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "trust-1",
+    "reasons-2",
+    "nutri-big-3",
+    "steps-4",
+    "honest-5",
+    "why-cheap-6",
+    "reviews-7",
+    "faq-8",
+    "spec-9",
+    "cross-10"
+  ]
+}

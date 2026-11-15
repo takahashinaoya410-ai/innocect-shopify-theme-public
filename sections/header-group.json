@@ -1,0 +1,19 @@
+{
+  "type": "header",
+  "name": "ヘッダー",
+  "sections": {
+    "announcement": {
+      "type": "announcement-bar",
+      "blocks": {
+        "ann1": { "type": "announcement", "settings": { "text": "定期便はずっと10%OFF ｜ 税込5,000円以上で送料無料", "link": "" } }
+      },
+      "block_order": ["ann1"],
+      "settings": {}
+    },
+    "header": {
+      "type": "header",
+      "settings": { "logo_text": "INNOCECT", "logo_sub": "公式ストア", "menu": "main-menu", "logo_height": 28 }
+    }
+  },
+  "order": ["announcement", "header"]
+}

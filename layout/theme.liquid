@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="{{ settings.color_primary }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} – {{ current_tags | join: ', ' }}{% endif -%}
+      {%- if current_page != 1 %} – {{ current_page }}ページ{% endif -%}
+      {%- unless page_title contains shop.name %} | {{ shop.name }}{% endunless -%}
+    </title>
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+    {% render 'meta-tags' %}
+    {% render 'css-variables' %}
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'theme.js' | asset_url }}" defer="defer"></script>
+    {{ content_for_header }}
+  </head>
+  <body class="template-{{ template.name }}">
+    <a class="skip-link visually-hidden-focusable" href="#MainContent">本文へスキップ</a>
+    {% sections 'header-group' %}
+    <main id="MainContent" class="main" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+    {% sections 'footer-group' %}
+    <div class="toast" data-toast hidden>
+      <div class="toast__inner" role="status" aria-live="polite">
+        <span class="toast__msg" data-toast-msg></span>
+        <a class="toast__link" href="{{ routes.cart_url }}">カートを見る</a>
+        <button type="button" class="toast__close" data-toast-close aria-label="閉じる">{% render 'icon', name: 'close', size: 18 %}</button>
+      </div>
+    </div>
+    <script>
+      window.theme = {
+        routes: {
+          cart: {{ routes.cart_url | json }},
+          cartAdd: {{ routes.cart_add_url | json }},
+          cartChange: {{ routes.cart_change_url | json }},
+          cartUpdate: {{ routes.cart_update_url | json }},
+          root: {{ routes.root_url | json }}
+        },
+        moneyFormat: {{ shop.money_format | json }},
+        settings: {
+          freeShipping: {{ settings.free_shipping_threshold | default: 0 | json }},
+          subscriptionPercent: {{ settings.subscription_percent | default: 0 | json }},
+          bundleEnabled: {{ settings.bundle_enabled | json }},
+          bundle: [
+            { qty: {{ settings.bundle_tier1_qty | default: 0 | json }}, percent: {{ settings.bundle_tier1_percent | default: 0 | json }} },
+            { qty: {{ settings.bundle_tier2_qty | default: 0 | json }}, percent: {{ settings.bundle_tier2_percent | default: 0 | json }} }
+          ],
+          afterAdd: {{ settings.cart_after_add | json }}
+        }
+      };
+    </script>
+  </body>
+</html>

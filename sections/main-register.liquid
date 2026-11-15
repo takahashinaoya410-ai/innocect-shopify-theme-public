@@ -1,0 +1,17 @@
+<div class="container container--form section">
+  <h1 class="page-title">会員登録</h1>
+  <div class="card form-card">
+    {%- form 'create_customer', class: 'form-stack' -%}
+      {{ form.errors | default_errors }}
+      <label class="field"><span>姓</span><input class="input" type="text" name="customer[last_name]" autocomplete="family-name"></label>
+      <label class="field"><span>名</span><input class="input" type="text" name="customer[first_name]" autocomplete="given-name"></label>
+      <label class="field"><span>メールアドレス</span><input class="input" type="email" name="customer[email]" autocomplete="email" required></label>
+      <label class="field"><span>パスワード</span><input class="input" type="password" name="customer[password]" autocomplete="new-password" required></label>
+      <label class="check"><input type="checkbox" name="customer[accepts_marketing]" value="true">お得な情報をメールで受け取る</label>
+      <button class="btn btn--primary btn--block" type="submit">登録する</button>
+    {%- endform -%}
+  </div>
+</div>
+{% schema %}
+{ "name": "会員登録", "settings": [] }
+{% endschema %}

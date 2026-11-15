@@ -1,0 +1,24 @@
+<div class="container container--form section">
+  <h1 class="page-title">ログイン</h1>
+  <div class="card form-card">
+    {%- form 'customer_login', class: 'form-stack' -%}
+      {{ form.errors | default_errors }}
+      <label class="field"><span>メールアドレス</span><input class="input" type="email" name="customer[email]" autocomplete="email" required></label>
+      <label class="field"><span>パスワード</span><input class="input" type="password" name="customer[password]" autocomplete="current-password" required></label>
+      <button class="btn btn--primary btn--block" type="submit">ログイン</button>
+    {%- endform -%}
+    <details class="acc acc--plain">
+      <summary class="acc__summary">パスワードをお忘れの方</summary>
+      {%- form 'recover_customer_password', class: 'form-stack' -%}
+        {%- if form.posted_successfully? -%}<p class="note">再設定用のメールを送信しました。</p>{%- endif -%}
+        {{ form.errors | default_errors }}
+        <label class="field"><span>メールアドレス</span><input class="input" type="email" name="email" autocomplete="email" required></label>
+        <button class="btn btn--outline btn--block" type="submit">再設定メールを送る</button>
+      {%- endform -%}
+    </details>
+    <p class="form-card__foot">はじめての方は <a href="{{ routes.account_register_url }}">会員登録</a></p>
+  </div>
+</div>
+{% schema %}
+{ "name": "ログイン", "settings": [] }
+{% endschema %}

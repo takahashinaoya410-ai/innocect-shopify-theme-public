@@ -1,0 +1,45 @@
+{%- comment -%}
+  文章の中の記号を、商品の価格から計算した値に置き換えます（価格を変えても文章が自動で追従）。
+  {per}       1杯／1回あたりの価格（通常購入）
+  {per_sub}   定期便の1杯あたり
+  {per_bundle} まとめ買い割（2段階目）の1杯あたり
+  {month}     1日1杯×30日の金額（通常購入）
+  {month_sub} 同（定期便）
+  {price}     販売価格  {servings} 杯数・回数
+  {sub_pct}   定期便の割引率  {bundle_pct} {bundle_qty} まとめ買い割（2段階目）の割引率・点数
+  使い方: {% render 'tokens', text: block.settings.big, product: product %}
+  servings は商品メタフィールド innocect.servings（1袋あたりの杯数・回数）
+{%- endcomment -%}
+{%- liquid
+  assign v = variant | default: product.selected_or_first_available_variant
+  assign servings = product.metafields.innocect.servings.value | default: 0
+  assign price = v.price | default: 0
+  assign out = text
+  if out contains '{'
+    assign sub_rate = 100 | minus: settings.subscription_percent
+    assign sub_price = price | times: sub_rate | divided_by: 100
+    if v.selling_plan_allocations.size > 0
+      assign sub_price = v.selling_plan_allocations.first.price
+    endif
+    assign b_rate = 100 | minus: settings.bundle_tier2_percent
+    assign bundle_price = price | times: b_rate | divided_by: 100
+    assign per = '—'
+    assign per_sub = '—'
+    assign per_bundle = '—'
+    assign month = '—'
+    assign month_sub = '—'
+    if servings > 0
+      assign per_c = price | divided_by: servings
+      assign per = per_c | money_without_currency
+      assign per_sub_c = sub_price | divided_by: servings
+      assign per_sub = per_sub_c | money_without_currency
+      assign per_bundle = bundle_price | divided_by: servings | money_without_currency
+      assign month = per_c | times: 30 | money_without_currency
+      assign month_sub = per_sub_c | times: 30 | money_without_currency
+    endif
+    assign price_t = price | money_without_currency
+    assign out = out | replace: '{sub_pct}', settings.subscription_percent | replace: '{bundle_pct}', settings.bundle_tier2_percent | replace: '{bundle_qty}', settings.bundle_tier2_qty
+    assign out = out | replace: '{per_sub}', per_sub | replace: '{per_bundle}', per_bundle | replace: '{per}', per | replace: '{month_sub}', month_sub | replace: '{month}', month | replace: '{price}', price_t | replace: '{servings}', servings
+  endif
+-%}
+{{- out -}}
