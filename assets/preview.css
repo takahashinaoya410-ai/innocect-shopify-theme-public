@@ -1,0 +1,8 @@
+/* preview-only chrome */
+.preview-bar { position: relative; z-index: 60; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 14px; padding: 7px 16px; background: #FFF6D9; color: #4A3B00; font-size: 12px; line-height: 1.5; border-bottom: 1px solid #F0DE9A; text-align: center; }
+.preview-bar b { font-weight: 800; }
+.preview-bar__reset { appearance: none; border: 1px solid #C9B25A; background: #fff; color: #4A3B00; border-radius: 999px; padding: 3px 12px; font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; }
+.preview-bar__reset:hover { background: #FFF0B8; }
+#preview-notice { position: fixed; left: 50%; bottom: 24px; z-index: 1000; transform: translate(-50%, 16px); max-width: calc(100vw - 32px); padding: 12px 18px; border-radius: 12px; background: #17191C; color: #fff; font-size: 13px; font-weight: 600; line-height: 1.5; box-shadow: 0 8px 24px rgba(0,0,0,.18); opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; }
+#preview-notice.is-show { opacity: 1; transform: translate(-50%, 0); }
+body.has-sticky-atc #preview-notice { bottom: 96px; }
